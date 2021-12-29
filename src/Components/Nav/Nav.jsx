@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navlink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 // Components
 
@@ -8,12 +8,14 @@ import { Navlink } from 'react-router-dom'
 const Nav = () => {
   return(
     <nav className='nav-bar'>
-      <Navlink id="logo" to='/'>Home</Navlink>  //* <img src={Logo}/> */
-      <Navlink to='/about'>About me</Navlink>
-      <Navlink to='/work'>My work</Navlink>
-      <Navlink to='/skills'>My skills</Navlink>
-      <Navlink to='/passion'>My passion projects</Navlink>
-      <Navlink to='/contact'>Contact me</Navlink>
+      <NavLink id="logo" to='/'>Home</NavLink> 
+      <NavLink to='/about'>About me</NavLink>
+      <NavLink to='/work'>My work</NavLink>
+      <NavLink to='/skills'>My skills</NavLink>
+      <NavLink to='/passion'>My passion projects</NavLink>
+      <NavLink to='/contact'>Contact me</NavLink>
     </nav>
   )
 }
+
+export default Nav

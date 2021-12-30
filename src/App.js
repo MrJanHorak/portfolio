@@ -1,6 +1,6 @@
 import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import './styles/App.css';
 
 // Components
 import Nav from './Components/Nav/Nav'

@@ -1,11 +1,17 @@
 import React from 'react';
 
+//components
+import ContentCard from '../ContentCard/ContentCard';
+
+//assests 
+import work from '../../assests/data.js'
+
 const Work = () => {
 
   return (
-    <>
-    This page is about work I have done as a developer
-    </>
+    <div className='work-container'>
+    <ContentCard className='card' work={work} />
+    </div>
   )
 
 }

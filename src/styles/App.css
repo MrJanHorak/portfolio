@@ -28,20 +28,15 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .nav-bar {
-  height: 50px;
+  min-height: 50px;
   padding: 10px;
   background-color: rgb(182, 182, 182);
   opacity: .6;
+  z-index: 20;
+  position: fixed;
+  width:100%;
+  top: 0
 }
 
 .page-link {
@@ -52,4 +47,40 @@
 
 .page-link:hover  {
   color: blue;
+}
+
+.card {
+  padding: 10px;
+  min-width:150px;
+  min-height: 150px;
+  background-color: rgb(248, 251, 253);
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: black 4px 4px;
+  opacity: .7;
+}
+
+/* .news-item {
+  clear: both;
+  border-top: 1px solid #dadada;
+} */
+.card:nth-child(odd) div.card {
+  float: right;
+}
+.card:nth-child(odd) div.card {
+  float: left;
+}
+.card:nth-child(even) div.card {
+  float: left;
+}
+.card:nth-child(even) div.card {
+  float: right;
+}
+
+
+
+.work-container {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
 }

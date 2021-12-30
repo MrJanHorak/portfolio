@@ -8,12 +8,12 @@ import { NavLink } from 'react-router-dom'
 const Nav = () => {
   return(
     <nav className='nav-bar'>
-      <NavLink id="logo" to='/'>Home</NavLink> 
-      <NavLink to='/about'>About me</NavLink>
-      <NavLink to='/work'>My work</NavLink>
-      <NavLink to='/skills'>My skills</NavLink>
-      <NavLink to='/passion'>My passion projects</NavLink>
-      <NavLink to='/contact'>Contact me</NavLink>
+      <NavLink className='page-link' id="logo" to='/'>Home</NavLink> 
+      <NavLink className='page-link' to='/about'>About me</NavLink>
+      <NavLink className='page-link' to='/work'>My work</NavLink>
+      <NavLink className='page-link' to='/skills'>My skills</NavLink>
+      <NavLink className='page-link' to='/passion'>My passion projects</NavLink>
+      <NavLink className='page-link' to='/contact'>Contact me</NavLink>
     </nav>
   )
 }

@@ -19,7 +19,6 @@ function App() {
     <main>
 
     <div className="App">
-hello, world
     </div>
       <Routes>
         <Route path="/" element={<Landing />} />

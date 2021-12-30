@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-bar {
+  height: 50px;
+  padding: 10px;
+  background-color: rgb(182, 182, 182);
+  opacity: .6;
+}
+
+.page-link {
+  display: inline-flex;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.page-link:hover  {
+  color: blue;
+}

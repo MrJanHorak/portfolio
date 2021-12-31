@@ -4,9 +4,13 @@ const ContentCard = (props) => {
 console.log(props)
   return(
     props.work.map((element, index) => 
-    <div className='card' key={index}>
-      <img className='card' src="https://github.com/MrJanHorak/portfolio/blob/main/src/assests/placeholder-image-icon-3.jpg" alt="placeholder" />
+    <div className='card'>
+    <div className='card-info' key={index}>      
     {element}
+    </div>
+    <div className='card-image'>
+    <img className='card-image' src="/placeholder-image-icon-3.jpg" alt="placeholder" />
+    </div>
     </div>
   ))
 }

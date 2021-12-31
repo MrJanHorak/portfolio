@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
 .App {
   text-align: center;
 }
@@ -24,63 +28,210 @@
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 .nav-bar {
+  text-align: center;
   min-height: 50px;
-  padding: 10px;
-  background-color: rgb(182, 182, 182);
-  opacity: .6;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.6;
   z-index: 20;
   position: fixed;
-  width:100%;
-  top: 0
+  width: 100%;
+  top: 0;
 }
 
 .page-link {
   display: inline-flex;
   margin: 10px;
   text-decoration: none;
+  color: black;
 }
 
-.page-link:hover  {
+/* .page-link:hover {
   color: blue;
-}
+} */
 
-.card {
+.card:nth-child(odd) {
   padding: 10px;
-  min-width:150px;
+  min-width: 300px;
+  max-width: 600px;
   min-height: 150px;
-  background-color: rgb(248, 251, 253);
+  /* background: rgb(255,255,255); */
+  background: -moz-linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 246, 246, 1) 52%,
+    rgba(230, 236, 237, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 246, 246, 1) 52%,
+    rgba(230, 236, 237, 1) 100%
+  );
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 246, 246, 1) 52%,
+    rgba(230, 236, 237, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
   margin: 10px;
   border-radius: 5px;
-  box-shadow: black 4px 4px;
-  opacity: .7;
+  /* box-shadow: black 4px 4px; */
+  /* opacity: 0.7; */
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: right;
 }
 
-/* .news-item {
+.card:nth-child(even) {
+  padding: 10px;
+  min-width: 300px;
+  max-width: 600px;
+  min-height: 150px;
+  /* background: rgb(255,255,255); */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 246, 246, 1) 52%,
+    rgba(230, 236, 237, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 246, 246, 1) 52%,
+    rgba(230, 236, 237, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 246, 246, 1) 52%,
+    rgba(230, 236, 237, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
+  margin: 10px;
+  border-radius: 5px;
+  /* box-shadow: black 4px 4px; */
+  /* opacity: 0.7; */
+}
+
+img.card-image {
+  background: #dadada;
+  height: 250px;
+  width: 300px;
+  box-shadow: 2px 2px;
+  border-radius: 5px;
+}
+
+.card-info {
+  min-width: 300px;
+  max-width: 400px;
   clear: both;
-  border-top: 1px solid #dadada;
-} */
-.card:nth-child(odd) div.card {
-  float: right;
-}
-.card:nth-child(odd) div.card {
-  float: left;
-}
-.card:nth-child(even) div.card {
-  float: left;
-}
-.card:nth-child(even) div.card {
-  float: right;
+  margin: 0 10px 0 10px;
 }
 
-
+.card:nth-child(odd) div.card-info {
+  float: right;
+}
+.card:nth-child(odd) div.card-image {
+  float: left;
+}
+.card:nth-child(even) div.card-info {
+  float: left;
+}
+.card:nth-child(even) div.card-image {
+  float: right;
+}
 
 .work-container {
   margin-top: 70px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin: 20px;
+  outline: none;
+}
+.custom-btn {
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  /* padding: 10px 25px; */
+  border: 2px solid #000;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+}
+
+.btn-3 {
+  line-height: 39px;
+  padding: 0;
+}
+.btn-3:hover {
+  background: transparent;
+  color: #000;
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
 }

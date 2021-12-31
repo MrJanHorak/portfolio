@@ -4,13 +4,13 @@ import React from 'react';
 import ContentCard from '../ContentCard/ContentCard';
 
 //assests 
-import work from '../../assests/data.js'
+import {work, links, projectPics} from '../../assests/data.js'
 
 const Work = () => {
 
   return (
     <div className='work-container'>
-    <ContentCard className='card' work={work} />
+    <ContentCard className='card' work={work} links={links} projectPics={projectPics}/>
     </div>
   )
 

@@ -4,7 +4,10 @@ body {
 
 .App {
   text-align: center;
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -57,7 +60,7 @@ body {
 .card:nth-child(odd) {
   padding: 10px;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 650px;
   min-height: 150px;
   /* background: rgb(255,255,255); */
   background: -moz-linear-gradient(
@@ -92,7 +95,7 @@ body {
 .card:nth-child(even) {
   padding: 10px;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 650px;
   min-height: 150px;
   /* background: rgb(255,255,255); */
   background: -moz-linear-gradient(
@@ -234,4 +237,30 @@ img.card-image {
 }
 .btn-3 span:hover:after {
   width: 100%;
+}
+
+.landing {
+  align-self: center;
+  justify-self:center;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 20%;
+}
+
+.aboutContainer{
+  margin-top: 18%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.aboutMeInfo{
+  width: 350px;
+  margin-left: 15px;
+}
+
+.meetJan img{
+  width: 350px;
+  margin-top: 10px;
 }

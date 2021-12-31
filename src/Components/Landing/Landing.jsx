@@ -2,9 +2,10 @@ import React from 'react';
 
 const Landing = () => {
  return (
-   <>
-  This is the landing or Home page
-  </>
+  <div className='landing'>
+    <img src='./janHorakPortfolioLogo.png' alt="logo"/>
+  </div>
+
  ) 
 }
 

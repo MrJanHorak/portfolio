@@ -15,11 +15,11 @@ const links = [
 ] 
 
 const projectPics = [
-  ('/junctionAppSamp.gif'),
-  ('/stickyNoteSamp.gif'),
-  ('/homeCookedSamp.gif'),
-  ('/battleshipSamp.gif'),
-  ('/tictactoeSamp.gif')
+  ('https://github.com/MrJanHorak/portfolio/blob/59f295907a8713ccf7e209e9b6d220a03b8bf720/public/junctionAppSamp.gif'),
+  ('https://github.com/MrJanHorak/portfolio/blob/59f295907a8713ccf7e209e9b6d220a03b8bf720/public/stickyNoteSamp.gif'),
+  ('https://github.com/MrJanHorak/portfolio/blob/59f295907a8713ccf7e209e9b6d220a03b8bf720/public/homeCookedSamp.gif'),
+  ('https://github.com/MrJanHorak/portfolio/blob/59f295907a8713ccf7e209e9b6d220a03b8bf720/public/battleshipSamp.gif'),
+  ('https://github.com/MrJanHorak/portfolio/blob/59f295907a8713ccf7e209e9b6d220a03b8bf720/public/tictactoeSamp.gif')
 ]
 
 export {work, links, projectPics}

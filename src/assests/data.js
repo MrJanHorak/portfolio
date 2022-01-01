@@ -15,11 +15,11 @@ const links = [
 ] 
 
 const projectPics = [
-  ('public/junctionAppSamp.gif'),
-  ('public/stickyNoteSamp.gif'),
-  ('public/homeCookedSamp.gif'),
-  ('public/battleshipSamp.gif'),
-  ('public/tictactoeSamp.gif')
+  ('./junctionAppSamp.gif'),
+  ('./stickyNoteSamp.gif'),
+  ('./homeCookedSamp.gif'),
+  ('./battleshipSamp.gif'),
+  ('./tictactoeSamp.gif')
 ]
 
 export {work, links, projectPics}

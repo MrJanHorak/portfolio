@@ -53,16 +53,12 @@ body {
   color: black;
 }
 
-/* .page-link:hover {
-  color: blue;
-} */
+.card{
+  padding: 10px;
+  white-space: pre-wrap;
+}
 
 .card:nth-child(odd) {
-  padding: 10px;
-  min-width: 300px;
-  max-width: 650px;
-  min-height: 150px;
-  /* background: rgb(255,255,255); */
   background: -moz-linear-gradient(
     270deg,
     rgba(255, 255, 255, 1) 0%,
@@ -84,20 +80,10 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
   margin: 10px;
   border-radius: 5px;
-  /* box-shadow: black 4px 4px; */
-  /* opacity: 0.7; */
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
   text-align: right;
 }
 
 .card:nth-child(even) {
-  padding: 10px;
-  min-width: 300px;
-  max-width: 650px;
-  min-height: 150px;
-  /* background: rgb(255,255,255); */
   background: -moz-linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 0%,
@@ -119,14 +105,10 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
   margin: 10px;
   border-radius: 5px;
-  /* box-shadow: black 4px 4px; */
-  /* opacity: 0.7; */
 }
 
 img.card-image {
   background: #dadada;
-  /* height: 250px; */
-  /* width: 300px; */
   box-shadow: 2px 2px;
   border-radius: 5px;
 }
@@ -135,7 +117,11 @@ img.card-image {
   min-width: 300px;
   max-width: 250px;
   clear: both;
-  margin: 0 10px 0 10px;
+  margin: 10px;
+}
+
+.card-info::first-line{
+  font-weight: bold;
 }
 
 .card:nth-child(odd) div.card-info {
@@ -263,4 +249,5 @@ img.card-image {
 .meetJan img{
   width: 350px;
   margin-top: 10px;
+  border-radius: 8px;
 }

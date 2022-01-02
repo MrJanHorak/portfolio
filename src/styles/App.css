@@ -251,3 +251,27 @@ img.card-image {
   margin-top: 10px;
   border-radius: 8px;
 }
+
+#skills-container{
+  display: flex;
+  width:100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#gallery-container {
+  width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  align-items: center;
+  justify-content:space-around;
+  gap: 20px;
+}
+
+#gallery-container img{
+  max-height: 80px;
+  max-width: 125px;
+
+}

@@ -111,6 +111,7 @@ img.card-image {
   background: #dadada;
   box-shadow: 2px 2px;
   border-radius: 5px;
+  width: 300px;
 }
 
 .card-info {

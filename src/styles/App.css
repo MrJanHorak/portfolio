@@ -2,35 +2,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.App {
-  text-align: center;
-  margin-left: calc(100vw - 100%);
-  margin-right: 0;
-}
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .nav-bar {
   text-align: center;
   min-height: 50px;
@@ -49,7 +20,7 @@ body {
   color: black;
 }
 
-.card{
+.card {
   padding: 10px;
   white-space: pre-wrap;
 }
@@ -117,7 +88,7 @@ img.card-image {
   margin: 10px;
 }
 
-.card-info::first-line{
+.card-info::first-line {
   font-weight: bold;
 }
 
@@ -143,9 +114,10 @@ img.card-image {
 }
 
 .button {
-  margin: 20px;
+  margin: 1%;
   outline: none;
 }
+
 .custom-btn {
   text-align: center;
   width: 100px;
@@ -227,10 +199,13 @@ img.card-image {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px;
 }
 
-.aboutContainer{
+.landing img {
+  max-width: 100%;
+  height: auto;
+}
+.aboutContainer {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -239,20 +214,20 @@ img.card-image {
   display: flex;
 }
 
-.aboutMeInfo{
+.aboutMeInfo {
   width: 350px;
   margin-left: 15px;
 }
 
-.meetJan img{
+.meetJan img {
   width: 350px;
   margin-top: 10px;
   border-radius: 8px;
 }
 
-#skills-container{
+#skills-container {
   display: flex;
-  width:100%;
+  width: 100%;
   align-content: center;
   justify-content: center;
   text-align: center;
@@ -264,28 +239,28 @@ img.card-image {
   flex-wrap: wrap;
   margin-top: 150px;
   align-items: center;
-  justify-content:space-around;
+  justify-content: space-around;
   gap: 20px;
 }
 
-#gallery-container img{
+#gallery-container img {
   max-height: 80px;
   max-width: 125px;
 }
 
-#contact-logo-container{
+#contact-logo-container {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
-  display:flex ; 
+  display: flex;
 }
 
-#contact-logo-container img{
-  width:100px;
+#contact-logo-container img {
+  width: 100px;
 }
 
-.contact{
+.contact {
   margin: 0 25px 0 25px;
 }

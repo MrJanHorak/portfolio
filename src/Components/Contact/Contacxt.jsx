@@ -14,6 +14,11 @@ const Contact = () => {
             <img alt="linkedIn-logo" src="./linkedIn-logo.png" />
           </a>
         </div>
+        <div className="contact">
+          <a href="https://github.com/MrJanHorak">
+            <img alt="Github logo" src="./gitHubLogo.png" />
+          </a>
+        </div>
       </div>
     </div>
   );

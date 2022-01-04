@@ -19,6 +19,11 @@ const Contact = () => {
             <img alt="Github logo" src="./gitHubLogo.png" />
           </a>
         </div>
+        <div className="contact">
+          <a href="./Horak Resume.pdf">
+            <img alt="resume" src="./resumeIcon.png" />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -264,3 +264,9 @@ img.card-image {
 .contact {
   margin: 0 25px 0 25px;
 }
+
+@media screen and (max-width: 710px) {
+  div.example {
+    display: none;
+  }
+}

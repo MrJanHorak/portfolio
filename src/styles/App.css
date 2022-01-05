@@ -305,30 +305,11 @@ img.card-image {
     text-align: center;
   }
   
-  .card-info {
-    min-width: 300px;
-    max-width: 250px;
-    clear: both;
-    margin: 10px;
-    margin-bottom: 10px;
+  .passion-intro {
+    width: 60%;
+    font: bolder ;
   }
-  
-  .card-info::first-line {
-    font-weight: bold;
-  }
-  
-  .card:nth-child(odd) div.card-info {
-    float: right;
-  }
-  .card:nth-child(odd) div.card-image {
-    float: left;
-  }
-  .card:nth-child(even) div.card-info {
-    float: left;
-  }
-  .card:nth-child(even) div.card-image {
-    float: right;
-  }
+
 
   }
 

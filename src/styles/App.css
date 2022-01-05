@@ -205,6 +205,7 @@ img.card-image {
   max-width: 100%;
   height: auto;
 }
+
 .aboutContainer {
   position: absolute;
   left: 50%;
@@ -265,8 +266,47 @@ img.card-image {
   margin: 0 25px 0 25px;
 }
 
-@media screen and (max-width: 710px) {
-  div.example {
-    display: none;
+
+@media screen and (max-width: 720px) {
+    
+.aboutContainer {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.aboutMeInfo {
+  width: 310px;
+  margin-left: 15px;
+}
+
+.meetJan img {
+  width: 310px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+}
+
+@media screen and (max-width: 580px) {
+  #contact-logo-container {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-logo-container img {
+    width: 100px;
+  }
+  
+  .contact {
+    margin: 10px 0 10px 0;
   }
 }

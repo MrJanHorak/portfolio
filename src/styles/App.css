@@ -45,7 +45,7 @@ body {
     rgba(230, 236, 237, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
-  margin: 10px;
+  margin: 20px;
   border-radius: 5px;
   text-align: right;
 }
@@ -70,7 +70,7 @@ body {
     rgba(230, 236, 237, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
-  margin: 10px;
+  margin: 20px;
   border-radius: 5px;
 }
 
@@ -131,12 +131,14 @@ img.card-image {
   transition: all 0.3s ease;
   position: relative;
   display: inline-flex;
+  margin-top: 10px;
 }
 
 .btn-3 {
   line-height: 39px;
   padding: 0;
 }
+
 .btn-3:hover {
   background: transparent;
   color: #000;
@@ -289,6 +291,17 @@ img.card-image {
   border-radius: 8px;
 }
 
+.custom-btn {
+  width: 80px;
+  height: 35px;
+  font-weight: 500;
+}
+
+.btn-3 {
+  line-height: 36px;
+  padding: 0;
+}
+
 }
 
 @media screen and (max-width: 680px) {
@@ -337,4 +350,71 @@ img.card-image {
   .contact {
     margin: 10px 0 10px 0;
   }
+
+  .custom-btn {
+    width: 60px;
+    height: 25px;
+    font-weight:normal;
+    font-size: .7em;
+  }
+
+  .btn-3 {
+    line-height: 25px;
+    padding: 0;
+  }
+
+}
+
+@media screen and (max-width: 455px) {
+  
+  .custom-btn {
+    width: 54px;
+    height: 25px;
+    font-weight:normal;
+    font-size: .7em;
+    margin: 2px;
+    margin-top: 10px;
+  }
+
+  .btn-3 {
+    line-height: 25px;
+    padding: 0;
+  }
+
+}
+
+@media screen and (max-width: 390px) {
+  
+  .custom-btn {
+    width: 52px;
+    height: 25px;
+    font-weight:bolder;
+    font-size: .6em;
+    margin: 2px;
+    margin-top: 10px;
+  }
+
+  .btn-3 {
+    line-height: 25px;
+    padding: 0;
+  }
+
+}
+
+@media screen and (max-width: 349px) {
+  
+  .custom-btn {
+    width: 49px;
+    height: 25px;
+    font-weight:bolder;
+    font-size: .59em;
+    margin: 1.3px;
+    margin-top: 10px;
+  }
+
+  .btn-3 {
+    line-height: 25px;
+    padding: 0;
+  }
+
 }

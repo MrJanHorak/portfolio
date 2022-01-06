@@ -84,7 +84,6 @@ img.card-image {
 .card-info {
   min-width: 300px;
   max-width: 250px;
-  clear: both;
   margin: 10px;
 }
 
@@ -269,43 +268,40 @@ img.card-image {
 }
 
 @media screen and (max-width: 720px) {
-    
-.aboutContainer {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
+  .aboutContainer {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
 
-.aboutMeInfo {
-  width: 310px;
-  margin-left: 15px;
-}
+  .aboutMeInfo {
+    width: 310px;
+    margin-left: 15px;
+  }
 
-.meetJan img {
-  width: 310px;
-  margin-top: 10px;
-  border-radius: 8px;
-}
+  .meetJan img {
+    width: 310px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
 
-.custom-btn {
-  width: 80px;
-  height: 35px;
-  font-weight: 500;
-}
+  .custom-btn {
+    width: 80px;
+    height: 35px;
+    font-weight: 500;
+  }
 
-.btn-3 {
-  line-height: 36px;
-  padding: 0;
-}
-
+  .btn-3 {
+    line-height: 36px;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 680px) {
-
   .card {
     padding: 10px;
     white-space: pre-wrap;
@@ -313,25 +309,24 @@ img.card-image {
     display: flex;
     flex-direction: column;
   }
-  
+
   .card-image {
     text-align: center;
   }
-  
+
   .passion-intro {
     width: 60%;
-    font: bolder ;
+    font: bolder;
   }
 
   #gallery-container {
     width: 70%;
   }
 
-  #gallery-container img{
-    max-height:60px;
+  #gallery-container img {
+    max-height: 60px;
   }
-
-  }
+}
 
 @media screen and (max-width: 580px) {
   #contact-logo-container {
@@ -342,11 +337,11 @@ img.card-image {
     display: flex;
     flex-direction: column;
   }
-  
+
   #contact-logo-container img {
     width: 100px;
   }
-  
+
   .contact {
     margin: 10px 0 10px 0;
   }
@@ -354,24 +349,22 @@ img.card-image {
   .custom-btn {
     width: 60px;
     height: 25px;
-    font-weight:normal;
-    font-size: .7em;
+    font-weight: normal;
+    font-size: 0.7em;
   }
 
   .btn-3 {
     line-height: 25px;
     padding: 0;
   }
-
 }
 
 @media screen and (max-width: 455px) {
-  
   .custom-btn {
     width: 54px;
     height: 25px;
-    font-weight:normal;
-    font-size: .7em;
+    font-weight: normal;
+    font-size: 0.7em;
     margin: 2px;
     margin-top: 10px;
   }
@@ -380,16 +373,14 @@ img.card-image {
     line-height: 25px;
     padding: 0;
   }
-
 }
 
 @media screen and (max-width: 390px) {
-  
   .custom-btn {
     width: 52px;
     height: 25px;
-    font-weight:bolder;
-    font-size: .6em;
+    font-weight: bolder;
+    font-size: 0.6em;
     margin: 2px;
     margin-top: 10px;
   }
@@ -398,16 +389,14 @@ img.card-image {
     line-height: 25px;
     padding: 0;
   }
-
 }
 
 @media screen and (max-width: 349px) {
-  
   .custom-btn {
     width: 49px;
     height: 25px;
-    font-weight:bolder;
-    font-size: .59em;
+    font-weight: bolder;
+    font-size: 0.59em;
     margin: 1.3px;
     margin-top: 10px;
   }
@@ -416,5 +405,4 @@ img.card-image {
     line-height: 25px;
     padding: 0;
   }
-
 }

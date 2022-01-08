@@ -20,6 +20,18 @@ body {
   color: black;
 }
 
+.slider {
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-row{
+  margin: 20px;
+}
+
 .card {
   padding: 10px;
   white-space: pre-wrap;
@@ -45,7 +57,6 @@ body {
     rgba(230, 236, 237, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
-  margin: 20px;
   border-radius: 5px;
   text-align: right;
 }
@@ -70,7 +81,6 @@ body {
     rgba(230, 236, 237, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
-  margin: 20px;
   border-radius: 5px;
 }
 
@@ -269,7 +279,7 @@ img.card-image {
   margin: 0 25px 0 25px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 730px) {
   .aboutContainer {
     left: 50%;
     top: 50%;
@@ -301,6 +311,22 @@ img.card-image {
     line-height: 36px;
     padding: 0;
   }
+
+  .slider {
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carousel-row{
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  
 }
 
 @media screen and (max-width: 680px) {

@@ -1,8 +1,22 @@
+import Slider from 'infinite-react-carousel/lib';
 import React from 'react';
 
+
 const ContentCard = (props) => {
+
+  const settings =  {
+    adaptiveHeight: true,
+    arrowsBlock: false,
+    centerMode: false,
+    centerPadding: 0,
+    className: 'slider',
+    dots: true,
+    wheelScroll: 2
+  };
+
   return(
-    props.work.map((element, index) =>
+    <Slider {...settings} >
+    {props.work.map((element, index) =>
     <div key={1+index} className='card'>
     <div className='card-info' key={index}>      
     {element}
@@ -15,7 +29,8 @@ const ContentCard = (props) => {
     </a>
     </div>
     </div>
-  ))
-}
+  )}
+  </Slider>
+  )}
 
 export default ContentCard

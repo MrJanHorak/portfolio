@@ -9,9 +9,7 @@ import { passionProjects, passionProjectsLinks, passionProjectPics, } from "../.
 const Passion = () => {
   return (
     <div className='work-container'>
-      <div className='passion-intro'>
-      <br/><br/>These are passion projects and project ideas I am working on on the side and as I have time.<br/><br/>
-      </div>
+
       <ContentCard
         className="card"
         work={passionProjects}

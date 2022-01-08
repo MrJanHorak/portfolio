@@ -6,6 +6,8 @@ const ContentCard = (props) => {
 
   const settings =  {
     adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
     arrowsBlock: false,
     centerMode: false,
     centerPadding: 0,

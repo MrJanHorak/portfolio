@@ -37,7 +37,7 @@ body {
   white-space: pre-wrap;
 }
 
-.card:nth-child(odd) {
+.carousel-item:nth-child(odd) {
   background: -moz-linear-gradient(
     270deg,
     rgba(255, 255, 255, 1) 0%,
@@ -61,7 +61,7 @@ body {
   text-align: right;
 }
 
-.card:nth-child(even) {
+.carousel-item:nth-child(even) {
   background: -moz-linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 0%,
@@ -101,16 +101,16 @@ img.card-image {
   font-weight: bold;
 }
 
-.card:nth-child(odd) div.card-info {
+.carousel-item:nth-child(odd) div.card-info {
   float: right;
 }
-.card:nth-child(odd) div.card-image {
+.carousel-item:nth-child(odd) div.card-image {
   float: left;
 }
-.card:nth-child(even) div.card-info {
+.carousel-item:nth-child(even) div.card-info {
   float: left;
 }
-.card:nth-child(even) div.card-image {
+.carousel-item:nth-child(even) div.card-image {
   float: right;
 }
 
@@ -239,6 +239,12 @@ img.card-image {
   border-radius: 8px;
 }
 
+#passion-intro{
+  width: 75%;
+  margin: 18px;
+  text-align: center;
+}
+
 #skills-container {
   display: flex;
   width: 100%;
@@ -316,7 +322,7 @@ img.card-image {
     width: 350px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    margin-top: 60px;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
@@ -326,7 +332,14 @@ img.card-image {
     margin-left: 15px;
     margin-right: 20px;
   }
-  
+
+  #passion-intro{
+    margin: -28px;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+
+
 }
 
 @media screen and (max-width: 680px) {

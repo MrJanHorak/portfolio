@@ -239,12 +239,6 @@ img.card-image {
   border-radius: 8px;
 }
 
-#passion-intro {
-  width: 75%;
-  margin: 18px;
-  text-align: center;
-}
-
 #skills-container {
   display: flex;
   width: 100%;

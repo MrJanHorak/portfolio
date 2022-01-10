@@ -3,12 +3,12 @@ import React from "react";
 
 const ContentCard = (props) => {
   const settings = {
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     autoplay: true,
     autoplaySpeed: 8000,
     arrowsBlock: false,
-    centerMode: false,
-    centerPadding: 0,
+    centerMode: true,
+    centerPadding:0,
     className: "slider",
     dots: true,
     wheelScroll: 2,

@@ -283,6 +283,7 @@ img.card-image {
 }
 
 @media screen and (max-width: 730px) {
+
   .aboutContainer {
     left: 50%;
     top: 50%;
@@ -328,6 +329,26 @@ img.card-image {
   .carousel-row {
     margin-left: 15px;
     margin-right: 20px;
+  }
+
+  .carousel-item{
+    padding: 0;
+    height: 750px;
+  }
+
+  .card-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-image img{
+    display: block;
+    max-width:300px;
+    max-height:300px;
+    width: auto;
+    height: auto;
   }
 
   #passion-intro {

@@ -40,21 +40,21 @@ body {
 .carousel-item:nth-child(odd) {
   background: -moz-linear-gradient(
     270deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(247, 246, 246, 1) 52%,
-    rgba(230, 236, 237, 1) 100%
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(247, 246, 246, 0.7) 52%,
+    rgba(231, 234, 235, 0.7) 100%
   );
   background: -webkit-linear-gradient(
     270deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(247, 246, 246, 1) 52%,
-    rgba(230, 236, 237, 1) 100%
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(247, 246, 246, 0.7) 52%,
+    rgba(231, 234, 235, 0.7) 100%
   );
   background: linear-gradient(
     270deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(247, 246, 246, 1) 52%,
-    rgba(230, 236, 237, 1) 100%
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(247, 246, 246, 0.7) 52%,
+    rgba(231, 234, 235, 0.7) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
   border-radius: 5px;
@@ -64,21 +64,21 @@ body {
 .carousel-item:nth-child(even) {
   background: -moz-linear-gradient(
     90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(247, 246, 246, 1) 52%,
-    rgba(230, 236, 237, 1) 100%
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(247, 246, 246, 0.7) 52%,
+    rgba(230, 236, 237, 0.7) 100%
   );
   background: -webkit-linear-gradient(
     90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(247, 246, 246, 1) 52%,
-    rgba(230, 236, 237, 1) 100%
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(247, 246, 246, 0.7) 52%,
+    rgba(230, 236, 237, 0.7) 100%
   );
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(247, 246, 246, 1) 52%,
-    rgba(230, 236, 237, 1) 100%
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(247, 246, 246, 0.7) 52%,
+    rgba(230, 236, 237, 0.7) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
   border-radius: 5px;
@@ -283,7 +283,6 @@ img.card-image {
 }
 
 @media screen and (max-width: 730px) {
-
   .aboutContainer {
     left: 50%;
     top: 50%;
@@ -331,22 +330,22 @@ img.card-image {
     margin-right: 20px;
   }
 
-  .carousel-item{
+  .carousel-item {
     padding: 0;
     height: 750px;
   }
 
-  .card-image{
+  .card-image {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .card-image img{
+  .card-image img {
     display: block;
-    max-width:300px;
-    max-height:300px;
+    max-width: 300px;
+    max-height: 300px;
     width: auto;
     height: auto;
   }

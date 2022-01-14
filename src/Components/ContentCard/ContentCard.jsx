@@ -8,7 +8,7 @@ const ContentCard = (props) => {
     autoplaySpeed: 8000,
     arrowsBlock: false,
     centerMode: true,
-    centerPadding:0,
+    centerPadding: 0,
     className: "slider",
     dots: true,
     wheelScroll: 2,
@@ -36,7 +36,7 @@ const ContentCard = (props) => {
                 <img
                   className="card-image"
                   src={props.projectPics[index]}
-                  alt="placeholder"
+                  alt="passed-project"
                 />
               </a>
             </div>
@@ -45,7 +45,7 @@ const ContentCard = (props) => {
               <img
                 className="card-image"
                 src={props.projectPics[index]}
-                alt="placeholder"
+                alt="passion-project"
               />
             </div>
           )}

@@ -29,7 +29,7 @@ const passionProjects = [
 
 ];
 
-const passionProjectsLinks = ["", "", ""];
+const passionProjectsLinks = ["https://github.com/MrJanHorak/high-frequency-word-diagnosis-tool", "https://github.com/MrJanHorak/spelling-bee-practice-tool", ""];
 
 const passionProjectPics = [
   "./passionProjects/sightWords.jpg",

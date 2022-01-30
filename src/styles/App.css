@@ -1,7 +1,8 @@
 body {
   background-color: rgb(255, 255, 255);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
 }
 .nav-bar {
   text-align: center;
@@ -234,6 +235,10 @@ img.card-image {
   margin-left: 15px;
 }
 
+.aboutMeInfo p{
+  margin-top: 6px;
+}
+
 .meetJan img {
   width: 350px;
   margin-top: 10px;
@@ -296,11 +301,11 @@ img.card-image {
 
   .aboutMeInfo {
     width: 310px;
-    margin-left: 15px;
+    margin-left: 5px;
   }
 
   .meetJan img {
-    width: 310px;
+    width: 100%;
     margin-top: 10px;
     border-radius: 8px;
   }

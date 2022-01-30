@@ -23,7 +23,7 @@ const ContentCard = (props) => {
             <br />
             <br />
             {props.links[index] !== "" ? (
-              <a key={20 + index} href={props.links[index]}>
+              <a key={20 + index} href={props.links[index]} target="_blank" rel="noopener noreferrer">
                 Visit Site
               </a>
             ) : (
@@ -32,7 +32,7 @@ const ContentCard = (props) => {
           </div>
           {props.links[index] !== "" ? (
             <div key={30 + index} className="card-image">
-              <a href={props.links[index]}>
+              <a href={props.links[index]} target="_blank" rel="noopener noreferrer"  >
                 <img
                   className="card-image"
                   src={props.projectPics[index]}

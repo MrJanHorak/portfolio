@@ -4,7 +4,7 @@ const work = [
   "Homecooked\n\nA social website for recipe sharing and 7-day mealplan creation. Uses MongoDb and EJS implementing Google OAuth.",
   "Battleship2022\n\nA remake of the game Battleship using Vanilla JavaScript. One player places the boats; the second tries to guess where they are at. One twist in this version is that a spy gives away the location of one boat.",
   "Tic-Tac-Toe\n\nThe classic game of Tic-Tac-Toe. This was written in vanilla JavaScript in my early days of learning. I have gone back and added a computer player to the game simply using a series of conditional statements to mimic my own thought process of how I play the game.",
-  "ea$e\n\nA personal finance app to help track spending, set goals and save money. This is a decoupled MERN stack app borne out of a 3-day hackathon in a cross functional team. In less than 3  days I worked with 3 UX/UI designers and 3 other engineers to create this app. After the hackathon I worked hard to complete full functionality of the app, tweaking the backend data models and routes to better match the desired functionality of the frontend. I also implemented the logic for the dashboard giving the pie chart and progress bar full functionality.",
+  "ea$e\n\nA personal finance app to help track spending, set goals and save money. This decoupled MERN app is from a 3-day hackathon in a cross functional team. I worked on the backend data models, routes, controllers and implemented the frontend logic for the dashboard.",
 ];
 
 const links = [
@@ -22,6 +22,7 @@ const projectPics = [
   "./homeCookedSamp.gif",
   "./battleshipSamp.gif",
   "./tictactoeSamp.gif",
+  "./ease.gif",
 ];
 
 const passionProjects = [

@@ -2,8 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 // Components
-
-// import Logo from '../../assests/logo.png'
+import DarkMode from "../DarkMode/DarkMode";
 
 const Nav = () => {
   return (
@@ -26,6 +25,7 @@ const Nav = () => {
       <NavLink className="custom-btn btn-3 button page-link" to="/contact">
         <span>Contact</span>
       </NavLink>
+      <DarkMode /> 
     </nav>
   );
 };

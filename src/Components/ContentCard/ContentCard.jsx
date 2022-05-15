@@ -9,9 +9,11 @@ const ContentCard = (props) => {
     arrowsBlock: false,
     centerMode: true,
     centerPadding: 0,
-    className: "slider",
+    className: "slider-card",
     dots: true,
+    dotsClass: "slider-dots",
     wheelScroll: 2,
+
   };
 
   return (

@@ -1,15 +1,21 @@
 import React from "react";
 
 const Landing = () => {
+  
   return (
     <div className="landing">
-      {/* <picture>
+      <picture>
+        <source srcSet="./janHorakPortfolioLogo.png" />
         <source
-          srcset="./janHorakPortfolioLogoInverse.png"
+          media="(prefers-color-scheme: light)"
+          srcSet="./janHorakPortfolioLogo.png"
+        />
+        <source
+          srcSet="./janHorakPortfolioLogoInverse.png"
           media="(prefers-color-scheme: dark)"
         />
-      </picture> */}
-      <img src="./janHorakPortfolioLogo.png" alt="logo" />
+        <img src="./janHorakPortfolioLogo.png" alt="logo" />
+      </picture>
     </div>
   );
 };

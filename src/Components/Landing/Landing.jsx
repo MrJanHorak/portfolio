@@ -2,14 +2,20 @@ import React, { useRef } from "react";
 
 const Landing = () => {
   const storedTheme = localStorage.getItem("theme");
-  let janHorakPortfolioLogo = useRef('')
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const prefersLight =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches;
+  let janHorakPortfolioLogo = useRef("");
 
-  if (storedTheme==='light'){
-    janHorakPortfolioLogo = "./janHorakPortfolioLogo.png"
+  if (storedTheme === "light" || (storedTheme === null && prefersLight)) {
+    janHorakPortfolioLogo = "./janHorakPortfolioLogo.png";
   } else {
-    janHorakPortfolioLogo = "./janHorakPortfolioLogoInverse.png"
+    janHorakPortfolioLogo = "./janHorakPortfolioLogoInverse.png";
   }
-  
+
   return (
     <div className="landing">
       <picture>

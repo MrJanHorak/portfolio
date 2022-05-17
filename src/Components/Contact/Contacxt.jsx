@@ -2,12 +2,18 @@ import React, { useRef } from "react";
 
 const Contact = () => {
   const storedTheme = localStorage.getItem("theme");
-  let email = useRef("");
-  let linkedIn = useRef("");
-  let gitHub = useRef("");
-  let resume = useRef("");
+  let email = useRef("./email.png");
+  let linkedIn = useRef("./linkedIn-logo.png");
+  let gitHub = useRef("./gitHubLogo.png");
+  let resume = useRef("./resumeIcon.png");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const prefersLight =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches;
 
-  if (storedTheme === "light") {
+  if (storedTheme === "light" || (storedTheme === null && prefersLight)) {
     email = "./email.png";
     linkedIn = "./linkedIn-logo.png";
     gitHub = "./gitHubLogo.png";

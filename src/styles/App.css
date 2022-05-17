@@ -320,6 +320,7 @@ img.card-image {
 .btn-3 {
   line-height: 39px;
   padding: 0;
+  border-color: var(--font-color)
 }
 
 .btn-3:hover {

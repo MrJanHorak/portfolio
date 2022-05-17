@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const Landing = () => {
+  const storedTheme = localStorage.getItem("theme");
+  let janHorakPortfolioLogo = useRef('')
+
+  if (storedTheme==='light'){
+    janHorakPortfolioLogo = "./janHorakPortfolioLogo.png"
+  } else {
+    janHorakPortfolioLogo = "./janHorakPortfolioLogoInverse.png"
+  }
   
   return (
     <div className="landing">
       <picture>
-        <source srcSet="./janHorakPortfolioLogo.png" />
+        <source srcSet={janHorakPortfolioLogo} />
         <source
           media="(prefers-color-scheme: light)"
           srcSet="./janHorakPortfolioLogo.png"

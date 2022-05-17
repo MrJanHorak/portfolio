@@ -16,7 +16,9 @@
   --carousel-background2: rgba(112, 112, 112, 0.7);
   --carousel-background3: rgba(59, 59, 59, 0.7);
   --slider-color: rgb(199, 199, 199);
+  --filter:invert(100);
 }
+
 
 /*toggle element*/
 .toggle-theme-wrapper {
@@ -402,6 +404,7 @@ img.card-image {
 .landing img {
   max-width: 100%;
   height: auto;
+  filter: var(--filter);
 }
 
 .aboutContainer {
@@ -452,6 +455,7 @@ img.card-image {
 #gallery-container img {
   max-height: 80px;
   max-width: 125px;
+  filter: var(--filter);
 }
 
 #contact-logo-container {

@@ -62,7 +62,6 @@ const Nav = () => {
               </NavLink>
             </li>
           </ul>
-          <DarkMode />
         </nav>
       </div>
       <div id="nav-bar">
@@ -85,9 +84,9 @@ const Nav = () => {
           <NavLink className="custom-btn btn-3 button " to="/contact">
             <span>Contact</span>
           </NavLink>
-          <DarkMode />
         </nav>
       </div>
+      <DarkMode />
     </>
   );
 };

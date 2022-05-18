@@ -202,7 +202,7 @@ img.card-image {
 .custom-btn {
   text-align: center;
   width: 90px;
-  height: 35px;
+  height: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   background: transparent;
@@ -210,14 +210,12 @@ img.card-image {
   transition: all 0.3s ease;
   position: relative;
   display: inline-flex;
-  margin-top: 10px;
-  border-radius: 8px;
+  margin-top: 5px;
 }
 
 .btn-3 {
   line-height: 39px;
   padding: 0;
-  border-radius: 8px;
 }
 
 .btn-3 span {
@@ -231,8 +229,8 @@ img.card-image {
 .btn-3:after {
   position: absolute;
   content: "";
-  left: 0.05px;
-  top: 0.05px;
+  left: 1px;
+  top: 1px;
   background: var(--font-color);
   transition: all 0.3s ease;
 }
@@ -261,7 +259,7 @@ img.card-image {
   content: "";
   right: 0;
   bottom: 0;
-  background: var(--background-color);
+  background: transparent;
   transition: all 0.3s ease;
 }
 
@@ -403,26 +401,26 @@ img.card-image {
       var(--carousel-background2) 52%,
       var(--carousel-background3) 100%
     );
-  
+
     background: -webkit-linear-gradient(
       270deg,
       var(--carousel-background1) 0%,
       var(--carousel-background2) 52%,
       var(--carousel-background3) 100%
     );
-  
+
     background: linear-gradient(
       270deg,
       var(--carousel-background1) 0%,
       var(--carousel-background2) 52%,
       var(--carousel-background3) 100%
     );
-  
+
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
     border-radius: 5px;
     text-align: right;
   }
-  
+
   .card:nth-child(even) {
     flex-direction: column;
     background: -moz-linear-gradient(
@@ -431,25 +429,24 @@ img.card-image {
       var(--carousel-background2) 52%,
       var(--carousel-background3) 100%
     );
-  
+
     background: -webkit-linear-gradient(
       90deg,
       var(--carousel-background1) 0%,
       var(--carousel-background2) 52%,
       var(--carousel-background3) 100%
     );
-  
+
     background: linear-gradient(
       90deg,
       var(--carousel-background1) 0%,
       var(--carousel-background2) 52%,
       var(--carousel-background3) 100%
     );
-  
+
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
     border-radius: 5px;
   }
-
 
   .card {
     padding: 5px;
@@ -479,7 +476,6 @@ img.card-image {
 }
 
 @media screen and (max-width: 680px) {
-
   .passion-intro {
     width: 60%;
     font: bolder;
@@ -524,13 +520,14 @@ img.card-image {
 .nav-bar {
   position: fixed;
   width: 100%;
+  max-height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.5% 1% 0.5% 1%;
   z-index: 20;
   background-color: var(--background-color);
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .nav-bar a {

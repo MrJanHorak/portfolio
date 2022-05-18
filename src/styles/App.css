@@ -20,6 +20,7 @@
 }
 
 /*toggle element*/
+
 .toggle-theme-wrapper {
   display: flex;
   flex-direction: row;
@@ -101,92 +102,18 @@ body {
 
 .slider-card {
   width: 700px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.carousel-row {
-  margin: 20px;
-}
-
-.slider-dots {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-top: 1em;
-  list-style: none;
-  text-align: center;
-}
-
-.slider-dots li {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.slider-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-
-.slider-dots li button:hover,
-.slider-dots li button:focus {
-  outline: none;
-}
-
-.slider-dots li button:hover:before,
-.slider-dots li button:focus:before {
-  opacity: 1;
-}
-
-.slider-dots li button:before {
-  font-family: "slick";
-  font-size: 40px;
-  line-height: 20px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 20px;
-  height: 20px;
-
-  content: "•";
-  text-align: center;
-
-  opacity: 0.25;
-  color: var(--font-color);
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slider-dots li.slider-dots-active button:before {
-  opacity: 0.75;
-  color: var(--font-color);
 }
 
 .card {
+  display: flex;
   padding: 10px;
   white-space: pre-wrap;
+  height: auto;
 }
 
-.carousel-item:nth-child(odd) {
+.card:nth-child(odd) {
+  flex-direction: row;
+  margin: 10px 20px 50px 20px;
   background: -moz-linear-gradient(
     270deg,
     var(--carousel-background1) 0%,
@@ -213,7 +140,9 @@ body {
   text-align: right;
 }
 
-.carousel-item:nth-child(even) {
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+  margin: 10px 20px 50px 20px;
   background: -moz-linear-gradient(
     90deg,
     var(--carousel-background1) 0%,
@@ -243,32 +172,18 @@ img.card-image {
   box-shadow: 2px 2px;
   border-radius: 5px;
   width: 300px;
+  height: auto;
+  margin: 8px;
 }
 
 .card-info {
   min-width: 300px;
-  max-width: 250px;
   margin: 10px;
+  height: auto;
 }
 
 .card-info::first-line {
   font-weight: bold;
-}
-
-.carousel-item:nth-child(odd) div.card-info {
-  float: right;
-}
-
-.carousel-item:nth-child(odd) div.card-image {
-  float: left;
-}
-
-.carousel-item:nth-child(even) div.card-info {
-  float: left;
-}
-
-.carousel-item:nth-child(even) div.card-image {
-  float: right;
 }
 
 .work-container {
@@ -474,23 +389,71 @@ img.card-image {
   }
 
   .slider-card {
-    width: 350px;
-    position: absolute;
-    left: 50%;
-    margin-top: 60px;
-    transform: translate(-50%, -50%);
+    width: 365px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
   }
 
-  .carousel-row {
-    margin-left: 15px;
-    margin-right: 20px;
+  .card:nth-child(odd) {
+    flex-direction: column;
+    background: -moz-linear-gradient(
+      270deg,
+      var(--carousel-background1) 0%,
+      var(--carousel-background2) 52%,
+      var(--carousel-background3) 100%
+    );
+  
+    background: -webkit-linear-gradient(
+      270deg,
+      var(--carousel-background1) 0%,
+      var(--carousel-background2) 52%,
+      var(--carousel-background3) 100%
+    );
+  
+    background: linear-gradient(
+      270deg,
+      var(--carousel-background1) 0%,
+      var(--carousel-background2) 52%,
+      var(--carousel-background3) 100%
+    );
+  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
+    border-radius: 5px;
+    text-align: right;
+  }
+  
+  .card:nth-child(even) {
+    flex-direction: column;
+    background: -moz-linear-gradient(
+      90deg,
+      var(--carousel-background1) 0%,
+      var(--carousel-background2) 52%,
+      var(--carousel-background3) 100%
+    );
+  
+    background: -webkit-linear-gradient(
+      90deg,
+      var(--carousel-background1) 0%,
+      var(--carousel-background2) 52%,
+      var(--carousel-background3) 100%
+    );
+  
+    background: linear-gradient(
+      90deg,
+      var(--carousel-background1) 0%,
+      var(--carousel-background2) 52%,
+      var(--carousel-background3) 100%
+    );
+  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
+    border-radius: 5px;
   }
 
-  .carousel-item {
-    padding: 0;
-    height: 750px;
+
+  .card {
+    padding: 5px;
+    height: auto;
   }
 
   .card-image {
@@ -516,17 +479,6 @@ img.card-image {
 }
 
 @media screen and (max-width: 680px) {
-  .card {
-    padding: 10px;
-    white-space: pre-wrap;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card-image {
-    text-align: center;
-  }
 
   .passion-intro {
     width: 60%;
@@ -570,11 +522,15 @@ img.card-image {
 }
 
 .nav-bar {
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.5% 1% 0.5% 1%;
   z-index: 20;
+  background-color: var(--background-color);
+  opacity: .9;
 }
 
 .nav-bar a {

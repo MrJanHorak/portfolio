@@ -1,23 +1,8 @@
-import Slider from "infinite-react-carousel/lib";
 import React from "react";
 
 const ContentCard = (props) => {
-  const settings = {
-    adaptiveHeight: false,
-    autoplay: true,
-    autoplaySpeed: 8000,
-    arrowsBlock: false,
-    centerMode: true,
-    centerPadding: 0,
-    className: "slider-card",
-    dots: true,
-    dotsClass: "slider-dots",
-    wheelScroll: 2,
-
-  };
-
   return (
-    <Slider {...settings}>
+    <div className="slider-card">
       {props.work.map((element, index) => (
         <div key={1 + index} className="card">
           <div className="card-info" key={index}>
@@ -25,7 +10,12 @@ const ContentCard = (props) => {
             <br />
             <br />
             {props.links[index] !== "" ? (
-              <a key={20 + index} href={props.links[index]} target="_blank" rel="noopener noreferrer">
+              <a
+                key={20 + index}
+                href={props.links[index]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Visit Site
               </a>
             ) : (
@@ -34,7 +24,11 @@ const ContentCard = (props) => {
           </div>
           {props.links[index] !== "" ? (
             <div key={30 + index} className="card-image">
-              <a href={props.links[index]} target="_blank" rel="noopener noreferrer"  >
+              <a
+                href={props.links[index]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   className="card-image"
                   src={props.projectPics[index]}
@@ -53,7 +47,7 @@ const ContentCard = (props) => {
           )}
         </div>
       ))}
-    </Slider>
+    </div>
   );
 };
 

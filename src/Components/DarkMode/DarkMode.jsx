@@ -39,7 +39,7 @@ const DarkMode = () => {
   return (
     <div className="toggle-theme-wrapper">
       <span role="img" aria-label="light theme">
-        ☀️
+      ⚪
       </span>
       <label className="toggle-theme" htmlFor="checkbox">
         <input
@@ -51,7 +51,7 @@ const DarkMode = () => {
         <div className="slider round"></div>
       </label>
       <span role="img" aria-label="dark theme">
-        🌒
+      ⚫
       </span>
     </div>
   );

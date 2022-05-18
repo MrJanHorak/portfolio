@@ -1,24 +1,23 @@
 :root {
   --font-color: #333;
   --background-color: rgb(255, 255, 255);
-  --link-color: cornflowerblue;
   --carousel-background1: rgba(255, 255, 255, 0.7);
   --carousel-background2: rgba(247, 246, 246, 0.7);
   --carousel-background3: rgba(231, 234, 235, 0.7);
   --slider-color: rgb(219, 219, 219);
+  --focus-color: rgb(188, 190, 190);
 }
 
 [data-theme="dark"] {
   --font-color: #eee;
   --background-color: #333;
-  --link-color: lightblue;
   --carousel-background1: rgba(119, 119, 119, 0.7);
   --carousel-background2: rgba(112, 112, 112, 0.7);
   --carousel-background3: rgba(59, 59, 59, 0.7);
   --slider-color: rgb(199, 199, 199);
-  --filter:invert(100);
+  --filter: invert(100);
+  --focus-color: rgb(135, 133, 133);
 }
-
 
 /*toggle element*/
 .toggle-theme-wrapper {
@@ -98,24 +97,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1.1em;
-}
-
-.nav-bar {
-  text-align: center;
-  min-height: 50px;
-  background-color: var(--background-color);
-  opacity: 0.6;
-  z-index: 20;
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
-
-.page-link {
-  display: inline-flex;
-  margin: 10px;
-  text-decoration: none;
-  color: var(--font-color);
 }
 
 .slider-card {
@@ -305,10 +286,8 @@ img.card-image {
 
 .custom-btn {
   text-align: center;
-  width: 100px;
-  height: 40px;
-  /* padding: 10px 25px; */
-  border: 2px solid #000;
+  width: 90px;
+  height: 35px;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   background: transparent;
@@ -317,17 +296,13 @@ img.card-image {
   position: relative;
   display: inline-flex;
   margin-top: 10px;
+  border-radius: 8px;
 }
 
 .btn-3 {
   line-height: 39px;
   padding: 0;
-  border-color: var(--font-color)
-}
-
-.btn-3:hover {
-  background: transparent;
-  color: var(--font-color);
+  border-radius: 8px;
 }
 
 .btn-3 span {
@@ -336,32 +311,33 @@ img.card-image {
   width: 100%;
   height: 100%;
 }
+
 .btn-3:before,
 .btn-3:after {
   position: absolute;
   content: "";
-  left: 0;
-  top: 0;
+  left: 0.05px;
+  top: 0.05px;
   background: var(--font-color);
   transition: all 0.3s ease;
 }
 
 .btn-3:before {
   height: 0%;
-  width: 2px;
+  width: 4px;
 }
 
 .btn-3:after {
   width: 0%;
-  height: 2px;
+  height: 4px;
 }
 
 .btn-3:hover:before {
-  height: 100%;
+  height: 98%;
 }
 
 .btn-3:hover:after {
-  width: 100%;
+  width: 98%;
 }
 
 .btn-3 span:before,
@@ -375,21 +351,21 @@ img.card-image {
 }
 
 .btn-3 span:before {
-  width: 2px;
+  width: 4px;
   height: 0%;
 }
 
 .btn-3 span:after {
   width: 0%;
-  height: 2px;
+  height: 4px;
 }
 
 .btn-3 span:hover:before {
-  height: 100%;
+  height: 98%;
 }
 
 .btn-3 span:hover:after {
-  width: 100%;
+  width: 98%;
 }
 
 .landing {
@@ -497,17 +473,6 @@ img.card-image {
     border-radius: 8px;
   }
 
-  .custom-btn {
-    width: 80px;
-    height: 35px;
-    font-weight: 500;
-  }
-
-  .btn-3 {
-    line-height: 36px;
-    padding: 0;
-  }
-
   .slider-card {
     width: 350px;
     position: absolute;
@@ -594,64 +559,108 @@ img.card-image {
   .contact {
     margin: 10px 0 10px 0;
   }
-
-  .custom-btn {
-    width: 60px;
-    height: 25px;
-    font-weight: normal;
-    font-size: 0.7em;
-  }
-
-  .btn-3 {
-    line-height: 25px;
-    padding: 0;
-  }
 }
 
-@media screen and (max-width: 455px) {
-  .custom-btn {
-    width: 54px;
-    height: 25px;
-    font-weight: normal;
-    font-size: 0.7em;
-    margin: 2px;
-    margin-top: 10px;
-  }
+/* Hamburger Menu and Nav Bar */
 
-  .btn-3 {
-    line-height: 25px;
-    padding: 0;
-  }
+#nav-bar {
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
 }
 
-@media screen and (max-width: 390px) {
-  .custom-btn {
-    width: 52px;
-    height: 25px;
-    font-weight: bolder;
-    font-size: 0.6em;
-    margin: 2px;
-    margin-top: 10px;
-  }
-
-  .btn-3 {
-    line-height: 25px;
-    padding: 0;
-  }
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5% 1% 0.5% 1%;
+  z-index: 20;
 }
 
-@media screen and (max-width: 349px) {
-  .custom-btn {
-    width: 49px;
-    height: 25px;
-    font-weight: bolder;
-    font-size: 0.59em;
-    margin: 1.3px;
-    margin-top: 10px;
-  }
+.nav-bar a {
+  padding: 0.5% 1% 0.5% 1%;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
-  .btn-3 {
-    line-height: 25px;
-    padding: 0;
+.nav-bar a:hover {
+  color: rgb(209, 209, 209);
+}
+
+.nav-bar a:focus {
+  color: var(--focus-color);
+}
+
+/* sidebar Nav */
+
+.hamburger-button {
+  margin-top: 10px;
+  color: var(--font-color);
+  transition: 250ms;
+}
+
+.menuNav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--font-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navBar {
+  display: none;
+  position: relative;
+  z-index: 20;
+}
+
+.navBar button {
+  position: fixed;
+  top: 8px;
+  z-index: 10;
+  background: transparent;
+  border: none;
+}
+
+.menuNav {
+  display: none;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: rgba(127, 127, 127, 0.88);
+  left: -44px;
+  bottom: 0;
+  height: 295px;
+  width: 0;
+  overflow: hidden;
+  max-width: 140px;
+  z-index: 9;
+  border-radius: 12px;
+  box-shadow: 1.5px 1.5px 3px;
+  transition: width 250ms;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+  transition: width 250ms;
+}
+
+.menuNav li:first-child {
+  margin-top: 2.4rem;
+}
+
+@media screen and (max-width: 750px) {
+  #nav-bar {
+    display: none;
+  }
+  #hamburger {
+    display: inline;
+  }
+  .menuNav {
+    display: inline;
+  }
+  .navBar {
+    display: inline;
   }
 }

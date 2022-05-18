@@ -6,9 +6,9 @@ const Contact = () => {
   let linkedIn = useRef("./linkedIn-logo.png");
   let gitHub = useRef("./gitHubLogo.png");
   let resume = useRef("./resumeIcon.png");
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  // const prefersDark =
+  //   window.matchMedia &&
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches;
   const prefersLight =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: light)").matches;

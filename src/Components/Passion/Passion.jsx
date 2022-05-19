@@ -7,6 +7,7 @@ import ContentCard from "../ContentCard/ContentCard";
 import {
   passionProjects,
   passionProjectsLinks,
+  passionProjectsRepositories,
   passionProjectPics,
 } from "../../assests/data.js";
 
@@ -17,6 +18,7 @@ const Passion = () => {
         className="card"
         work={passionProjects}
         links={passionProjectsLinks}
+        repositories={passionProjectsRepositories}
         projectPics={passionProjectPics}
       />
     </div>

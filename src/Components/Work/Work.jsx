@@ -4,7 +4,7 @@ import React from "react";
 import ContentCard from "../ContentCard/ContentCard";
 
 //assests
-import { work, links, projectPics } from "../../assests/data.js";
+import { work, links, repositories, projectPics } from "../../assests/data.js";
 
 const Work = () => {
   return (
@@ -13,6 +13,7 @@ const Work = () => {
         className="card"
         work={work}
         links={links}
+        repositories={repositories}
         projectPics={projectPics}
       />
     </div>

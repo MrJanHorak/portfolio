@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 const ContentCard = (props) => {
   return (
@@ -16,10 +17,27 @@ const ContentCard = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit Site
+                <FaLink /> explore the site
               </a>
             ) : (
-              "Link coming soon!"
+              <>
+                <FaLink /> Link coming soon!
+              </>
+            )}
+            <br />
+            {props.repositories[index] !== "" ? (
+              <a
+                key={22 + index}
+                href={props.repositories[index]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub /> explore the code
+              </a>
+            ) : (
+              <>
+                <FaLink /> Link coming soon!
+              </>
             )}
           </div>
           {props.links[index] !== "" ? (

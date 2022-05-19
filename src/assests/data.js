@@ -17,6 +17,15 @@ const links = [
   "https://tictactoe-namenottaken.netlify.app/",
 ];
 
+const repositories = [
+  "https://github.com/MrJanHorak/frontend",
+  "https://github.com/MrJanHorak/sticky-note-bulletin-board",
+  "https://github.com/MrJanHorak/home-cooked",
+  "https://github.com/MrJanHorak/junction",
+  "https://github.com/MrJanHorak/battleship",
+  "https://github.com/MrJanHorak/ttt-weekend",
+];
+
 const projectPics = [
   "./ease.gif",
   "./stickyNoteSamp.gif",
@@ -35,6 +44,11 @@ const passionProjects = [
 
 const passionProjectsLinks = [
   "https://spelling-bee-practice-app.netlify.app/",
+  "",
+  ""]
+
+const passionProjectsRepositories = [
+  "https://github.com/MrJanHorak/spelling-bee-practice-tool",
   "https://github.com/MrJanHorak/high-frequency-word-diagnosis-tool",
   ""]
 
@@ -47,8 +61,10 @@ const passionProjectPics = [
 export {
   work,
   links,
+  repositories,
   projectPics,
   passionProjects,
   passionProjectsLinks,
+  passionProjectsRepositories,
   passionProjectPics,
 };

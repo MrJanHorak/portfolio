@@ -316,6 +316,7 @@ img.card-image {
 ::-webkit-scrollbar-track { /* Background */
   background: var(--scrollbar-background);
   border-radius: 12px;
+  margin-bottom: 45px;
 }
 
 /*  pages */

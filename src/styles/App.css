@@ -7,6 +7,8 @@
   --slider-color: rgb(219, 219, 219);
   --focus-color: rgb(188, 190, 190);
   --font-weight: 300;
+  --scrollbar-foreground: rgb(202, 202, 202);
+  --scrollbar-background: rgb(255, 255, 255);
 }
 
 [data-theme="dark"] {
@@ -19,6 +21,8 @@
   --slider-color: rgb(199, 199, 199);
   --filter: invert(100);
   --focus-color: rgb(135, 133, 133);
+  --scrollbar-foreground: rgb(112, 112, 112);
+  --scrollbar-background: rgb(51, 51, 51);
 }
 
 body {
@@ -198,7 +202,7 @@ img.card-image {
 }
 
 .work-container {
-  margin-top: 40px;
+  margin-top: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,6 +210,7 @@ img.card-image {
   overflow-y: auto;
 }
 
+/* nav bar buttons */
 .button {
   margin: 1%;
   outline: none;
@@ -292,6 +297,28 @@ img.card-image {
 .btn-3 span:hover:after {
   width: 98%;
 }
+
+/* Scroll bar */
+.styled-scrollbars {
+  --scrollbar-foreground: rgb(172, 98, 98);
+  --scrollbar-background: rgb(8, 8, 8);
+  /* Foreground, Background */
+  scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+}
+::-webkit-scrollbar {
+  width: 10px; /* Mostly for vertical scrollbars */
+  height: 10px; /* Mostly for horizontal scrollbars */
+}
+::-webkit-scrollbar-thumb { /* Foreground */
+  background: var(--scrollbar-foreground);
+  border-radius: 12px;
+}
+::-webkit-scrollbar-track { /* Background */
+  background: var(--scrollbar-background);
+  border-radius: 12px;
+}
+
+/*  pages */
 
 .landing {
   width: 90%;

@@ -21,6 +21,10 @@
   --focus-color: rgb(135, 133, 133);
 }
 
+body {
+  overflow: hidden;
+}
+
 /*toggle element*/
 
 .toggle-theme-wrapper {
@@ -194,11 +198,12 @@ img.card-image {
 }
 
 .work-container {
-  margin-top: 70px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .button {

@@ -546,6 +546,11 @@ img.card-image {
   .contact {
     margin: 10px 0 10px 0;
   }
+
+  ::-webkit-scrollbar {
+    width: 5px; /* Mostly for vertical scrollbars */
+    height: 5px; /* Mostly for horizontal scrollbars */
+  }
 }
 
 /* Hamburger Menu and Nav Bar */

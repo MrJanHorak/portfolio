@@ -53,7 +53,7 @@ const passionProjectsRepositories = [
   ""]
 
 const passionProjectPics = [
-  "./passionProjects/spellingBee.jpg",
+  "./passionProjects/spellingbeeappanimated.gif",
   "./passionProjects/sightWords.jpg",
   "./passionProjects/arduino.jpg",
 ];

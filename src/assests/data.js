@@ -1,4 +1,5 @@
 const work = [
+  "Bridge\n\n An environmental and climate oriented social app to share, learn and communicate about climate change related topics. This decoupled MERN app is from a 3-day hackathon in a cross functional team. I worked on the backend data models, routes, controllers and implemented the frontend services, AWS S3 upload, CSS and submission form for forum posts.",
   "ea$e\n\nA personal finance app to help track spending, set goals and save money. This decoupled MERN app is from a 3-day hackathon in a cross functional team. I worked on the backend data models, routes, controllers and implemented the frontend logic for the dashboard.",
   "Sticky-Note-Bulletin-Board\n\nAn attempt to create a classic bulletin board in a web-browser. Using Django, Python, JavaScript and jQuery. Offers option to use a personal background, a personal board and team view board.",
   "Homecooked\n\nA social website for recipe sharing and 7-day mealplan creation. Uses MongoDb and EJS implementing Google OAuth.",
@@ -9,6 +10,7 @@ const work = [
 ];
 
 const links = [
+  "https://bridge-climate-app.netlify.app/",
   "https://frontend-nine-tawny.vercel.app/",
   "https://sticky-note-bulletin-board.herokuapp.com/",
   "https://home-cooked-meal-planner.herokuapp.com/",
@@ -18,6 +20,7 @@ const links = [
 ];
 
 const repositories = [
+  "https://github.com/International-Aid-Hackathon-Team-7/frontend",
   "https://github.com/MrJanHorak/frontend",
   "https://github.com/MrJanHorak/sticky-note-bulletin-board",
   "https://github.com/MrJanHorak/home-cooked",
@@ -27,6 +30,7 @@ const repositories = [
 ];
 
 const projectPics = [
+  "./bridgeApp.gif",
   "./ease.gif",
   "./stickyNoteSamp.gif",
   "./homeCookedSamp.gif",

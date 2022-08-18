@@ -21,7 +21,7 @@ const Nav = () => {
     <>
       <div id="humburger">
         <nav className="navBar">
-          <button className="hamburger-button" onClick={handleToggle}>
+          <button className="hamburger-button" aria-label="navigation button" onClick={handleToggle}>
             {navbarOpen ? (
               <MdClose style={{ width: "40px", height: "40px" }} />
             ) : (

@@ -39,18 +39,18 @@ body {
   position: fixed;
   justify-content: center;
   width: 100%;
-  bottom: 0;
+  bottom: 10px;
 }
 
 .toggle-theme-wrapper span {
-  font-size: 28px;
+  font-size: 15px;
 }
 
 .toggle-theme {
   position: relative;
   display: inline-block;
-  height: 44px;
-  width: 60px;
+  height: 36px;
+  width: 28px;
 }
 
 .toggle-theme input {
@@ -61,9 +61,8 @@ body {
   background-color: var(--font-color);
   position: relative;
   cursor: pointer;
-  top: 10px;
-  height: 26px;
-  width: 52px;
+  top: 11px;
+  height: 15px;
   transition: 0.2s;
   border-radius: 34px;
 }
@@ -72,15 +71,15 @@ body {
   background-color: var(--slider-color);
   bottom: 0px;
   content: "";
-  height: 26px;
+  height: 15px;
+  width: 15px;
   left: 0px;
   position: absolute;
   transition: 0.4s;
-  width: 26px;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(12px);
 }
 
 input:checked + .slider {
@@ -88,13 +87,27 @@ input:checked + .slider {
 }
 
 .slider.round {
-  border-radius: 34px;
-  width: 52px;
+  width: 28px;
 }
 
 .slider.round:before {
   border-radius: 50%;
 }
+
+.footer-info {
+  position: fixed;
+  padding-left: 15px;
+  text-align: left;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+}
+
+.footer-info a {
+  padding-left: 6px;
+  font-size: smaller;
+}
+
 
 a {
   color: var(--link-color);
@@ -105,7 +118,7 @@ a {
 body {
   background-color: var(--background-color);
   color: var(--font-color);
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: var(--font-weight);
   font-size: 1.1em;
 }
@@ -196,7 +209,7 @@ img.card-image {
   font-weight: bold;
 }
 
-.card-info a{
+.card-info a {
   font-weight: 500;
   text-decoration: none;
 }
@@ -309,11 +322,13 @@ img.card-image {
   width: 10px; /* Mostly for vertical scrollbars */
   height: 10px; /* Mostly for horizontal scrollbars */
 }
-::-webkit-scrollbar-thumb { /* Foreground */
+::-webkit-scrollbar-thumb {
+  /* Foreground */
   background: var(--scrollbar-foreground);
   border-radius: 12px;
 }
-::-webkit-scrollbar-track { /* Background */
+::-webkit-scrollbar-track {
+  /* Background */
   background: var(--scrollbar-background);
   border-radius: 12px;
   margin-bottom: 45px;
@@ -660,5 +675,10 @@ img.card-image {
   }
   .navBar {
     display: inline;
+  }
+
+  .toggle-theme-wrapper {
+    bottom: 10px;
+    justify-content: right;
   }
 }

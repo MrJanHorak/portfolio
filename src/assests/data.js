@@ -6,7 +6,6 @@ const work = [
   "Junction\n\nA social networking app for people seeking others with similar interests and hobbies to meet up or share insight, things learned or accomplishments. Using React, JavaScript, MaterialUi.",
   "Battleship2022\n\nA remake of the game Battleship using Vanilla JavaScript. One player places the boats; the second tries to guess where they are at. One twist in this version is that a spy gives away the location of one boat.",
   "Tic-Tac-Toe\n\nThe classic game of Tic-Tac-Toe. This was written in vanilla JavaScript in my early days of learning. I have gone back and added a computer player to the game simply using a series of conditional statements to mimic my own thought process of how I play the game.",
-
 ];
 
 const links = [
@@ -44,20 +43,21 @@ const passionProjects = [
   "3 in 1 Word Puzzle Solving Helpers\n\nThis set of three distinct projects grew out of the Letter Boxed Solver project, which was the first of these three tools. My 8th grade son was always finding better words to solve the New York times word puzzle than I, so I came up with an app to help me find possible solutions. After that I created the Spelling Bee helper, and finally a Wordle Solution helper. Each of these apps uses React, there is no backend and each has a unique algorithm to help find the solution. These were fun projects to practice CSS. After completing them all I wrapped them up in a nav bar linking to each site and gave each one a light and dark mode.",
   "FRY Word Diagnosis Tool\n\nThis app will start as a simple one to help track student acquisition of the first 300 Fry sight words.  Teachers for students in grades K-3 will be able to use the app to track the skill acquisition of individual students and print learning lists per student or for a group of students.  Words themselves will be categorized in order of frequency of occurrence in written text, as well as by regularity of spelling and included spelling patterns, so that teachers can choose word lists for instruction based on those useful characteristics.  Flashcards or word lists for groups or individual students may be printed for teacher reference. Later versions of the app may include research-supported instruction and games that include responsive feedback and track student progress for the teacher.",
   "Arduino Based weather station\n\nSeveral years ago I was part of a team that sent up a weather balloon to the stratosphere, some of the technology we used from that is still laying around my garage so I thought: I should be able to build something with some of this, and thus the idea of a weather station running off an Arduino or Raspberry Pi came to mind. It is a side project I hope to realize in the next few months.",
-
 ];
 
 const passionProjectsLinks = [
   "https://spelling-bee-practice-app.netlify.app/",
   "https://wordle-solving-helper.netlify.app/",
   "",
-  ""]
+  "",
+];
 
 const passionProjectsRepositories = [
   "https://github.com/MrJanHorak/spelling-bee-practice-tool",
   "https://github.com/MrJanHorak/wordle-solution-helper",
   "https://github.com/MrJanHorak/high-frequency-word-diagnosis-tool",
-  ""]
+  "",
+];
 
 const passionProjectPics = [
   "./passionProjects/spellingbeeappanimated.gif",

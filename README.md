@@ -29,7 +29,7 @@ If you have any questions, or would perhaps like to work with me on any projects
 
 ## Assests
 
-[Infinite carousel for react](https://reactjsexample.com/infinite-carousel-for-react/) was used to display my work and passion projects.
+[Infinite carousel for react](https://reactjsexample.com/infinite-carousel-for-react/) was used to display my work and passion projects. in the first version of my site
 
 [Black and white nav bar button](https://csshint.com/black-white-button/) Come from csshint.com
 

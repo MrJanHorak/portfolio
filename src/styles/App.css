@@ -131,7 +131,6 @@ body {
   padding: 10px;
   white-space: pre-wrap;
   height: auto;
-
 }
 
 .card:nth-child(odd) {
@@ -337,6 +336,11 @@ img.card-image {
 /*  pages */
 
 .landing {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 96vh;
   width: 90%;
   position: absolute;
   left: 50%;
@@ -352,12 +356,24 @@ img.card-image {
 }
 
 .aboutContainer {
+  height: 96vh;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+  padding: 10px;
+  display: flex;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: row;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px;
-  display: flex;
 }
 
 .aboutMeInfo {
@@ -377,6 +393,7 @@ img.card-image {
 
 #skills-container {
   display: flex;
+  height: 100vh;
   width: 100%;
   align-content: center;
   justify-content: center;
@@ -402,6 +419,11 @@ img.card-image {
   filter: var(--filter);
 }
 
+#contact-container {
+  width: 100%;
+  height: 100vh;
+}
+
 #contact-logo-container {
   position: absolute;
   left: 50%;
@@ -421,13 +443,11 @@ img.card-image {
 
 @media screen and (max-width: 730px) {
   .aboutContainer {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    display: flex;
     flex-direction: column;
-    align-content: center;
+  }
+
+  .about-info {
+    flex-direction: column;
   }
 
   .aboutMeInfo {

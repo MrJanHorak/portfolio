@@ -1,9 +1,14 @@
 import React from "react";
 import skills from "../../assests/skills";
 
-const Skills = () => {
+const Skills = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
   return (
-    <div id="skills-container">
+    <div
+      id="skills-container"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <div id="gallery-container">
         {skills.map((img, index) => (
           <div key={100 + index}>

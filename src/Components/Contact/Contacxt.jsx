@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const Contact = () => {
+const Contact = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
   const storedTheme = localStorage.getItem("theme");
   let email = useRef("./email.png");
   let linkedIn = useRef("./linkedIn-logo.png");
@@ -26,7 +26,12 @@ const Contact = () => {
   }
 
   return (
-    <div id="contact-container">
+    <div
+      id="contact-container"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <div id="contact-logo-container">
         <div className="contact">
           <a href="mailto: jan-horak@gmx.de">

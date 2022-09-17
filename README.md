@@ -29,8 +29,12 @@ If you have any questions, or would perhaps like to work with me on any projects
 
 ## Assests
 
-[Infinite carousel for react](https://reactjsexample.com/infinite-carousel-for-react/) was used to display my work and passion projects. in the first version of my site
+[Infinite carousel for react](https://reactjsexample.com/infinite-carousel-for-react/) was used to display my work and passion projects. in the first version of my site (only used in the first iteration of this site.)
 
 [Black and white nav bar button](https://csshint.com/black-white-button/) Come from csshint.com
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+
+## Credits
+[code for swipe navigation](https://stackoverflow.com/questions/70612769/how-do-i-recognize-swipe-events-in-react) Adapted this code found on StackOverflow by using "useNavigate" and "useLocation" to create an endless left or right navigation by swipe for mobile devices. 

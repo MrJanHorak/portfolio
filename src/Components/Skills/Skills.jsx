@@ -9,6 +9,7 @@ const Skills = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
+      <h1 className="mobileHeaders">Skills</h1>
       <div id="gallery-container">
         {skills.map((img, index) => (
           <div key={100 + index}>

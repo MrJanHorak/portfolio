@@ -9,6 +9,7 @@ const AboutMe = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
       onTouchEnd={onTouchEnd}
     >
       <div className="about-info">
+        <h1 className="mobileHeaders">Meet Jan</h1>
         <div className="meetJan">
           <img src="./meetJan.png" alt="Jan" />
         </div>

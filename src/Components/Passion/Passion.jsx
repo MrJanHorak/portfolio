@@ -19,6 +19,7 @@ const Passion = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
+      <h1 className="mobileHeaders">Projects</h1>
       <ContentCard
         className="card"
         work={passionProjects}

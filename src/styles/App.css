@@ -41,7 +41,7 @@ body {
   width: 100%;
   bottom: 0px;
   background-color: var(--background-color);
-    opacity: .8;
+  opacity: 0.8;
 }
 
 .toggle-theme-wrapper span {
@@ -122,6 +122,10 @@ body {
   font-family: "Lexend", sans-serif;
   font-weight: var(--font-weight);
   font-size: 1.1em;
+}
+
+.mobileHeaders {
+  display: none;
 }
 
 .slider-card {
@@ -687,6 +691,21 @@ img.card-image {
 }
 
 @media screen and (max-width: 750px) {
+  .mobileHeaders {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .work-container .mobileHeaders{
+    margin: 80px 0 15px 75px;
+    margin-left: 95px;
+  }
+
+  #skills-container .mobileHeaders{
+    margin: 130px 0 0 75px;
+  }
+
   #nav-bar {
     display: none;
   }
@@ -703,6 +722,6 @@ img.card-image {
   .toggle-theme-wrapper {
     justify-content: right;
     background-color: var(--background-color);
-    opacity: .8;
+    opacity: 0.8;
   }
 }

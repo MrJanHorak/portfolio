@@ -13,7 +13,8 @@ const Work = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
-    >
+      >
+      <h1 className="mobileHeaders">Work</h1>
       <ContentCard
         className="card"
         work={work}

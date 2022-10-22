@@ -713,12 +713,12 @@ img.card-image {
     animation-delay: 1s;
   }
 
-  .work-container .mobileHeaders{
+  .work-container .mobileHeaders {
     margin: 80px 0 15px 75px;
     margin-left: 95px;
   }
 
-  #skills-container .mobileHeaders{
+  #skills-container .mobileHeaders {
     margin: 130px 0 0 75px;
   }
 
@@ -743,9 +743,22 @@ img.card-image {
 }
 
 @keyframes swipeIcon {
-  0% {opacity: 0;}
-  25% {opacity: 0.5;}
-  50% {opacity: 1;}
-  75% {opacity: 0.5;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 0;
+    left: 20px;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+    left: 40px;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    left: 20px;
+  }
 }

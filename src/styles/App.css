@@ -228,6 +228,10 @@ img.card-image {
   overflow-y: auto;
 }
 
+.attentionGraber {
+  display: none;
+}
+
 /* nav bar buttons */
 .button {
   margin: 1%;
@@ -697,6 +701,18 @@ img.card-image {
     width: 100%;
   }
 
+  .attentionGraber {
+    opacity: 0;
+    z-index: 25;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 40px;
+    animation-name: swipeIcon;
+    animation-duration: 2s;
+    animation-delay: 1s;
+  }
+
   .work-container .mobileHeaders{
     margin: 80px 0 15px 75px;
     margin-left: 95px;
@@ -724,4 +740,12 @@ img.card-image {
     background-color: var(--background-color);
     opacity: 0.8;
   }
+}
+
+@keyframes swipeIcon {
+  0% {opacity: 0;}
+  25% {opacity: 0.5;}
+  50% {opacity: 1;}
+  75% {opacity: 0.5;}
+  100% {opacity: 0;}
 }

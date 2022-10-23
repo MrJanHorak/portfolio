@@ -695,20 +695,20 @@ img.card-image {
 }
 
 @media screen and (max-width: 750px) {
-  .mobileHeaders {
+  /* .mobileHeaders {
     display: block;
     text-align: left;
     width: 100%;
-  }
+  } */
 
-  .work-container .mobileHeaders {
+  /* .work-container .mobileHeaders {
     margin: 80px 0 15px 75px;
     margin-left: 95px;
-  }
+  } */
 
-  #skills-container .mobileHeaders {
+  /* #skills-container .mobileHeaders {
     margin: 130px 0 0 75px;
-  }
+  } */
 
   #nav-bar {
     display: none;

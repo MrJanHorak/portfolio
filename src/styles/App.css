@@ -29,13 +29,13 @@ body {
   overflow: hidden;
 }
 
-/*toggle element*/
+/*dark / light mode element*/
 
 .toggle-theme-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
+  /* gap: 4px; */
   position: fixed;
   justify-content: center;
   width: 100%;
@@ -55,11 +55,11 @@ body {
   width: 28px;
 }
 
-.toggle-theme input {
+/* .toggle-theme input {
   display: none;
-}
+} */
 
-.slider {
+/* .slider {
   background-color: var(--font-color);
   position: relative;
   cursor: pointer;
@@ -94,7 +94,7 @@ input:checked + .slider {
 
 .slider.round:before {
   border-radius: 50%;
-}
+} */
 
 .footer-info {
   position: fixed;
@@ -725,8 +725,10 @@ img.card-image {
 
   .toggle-theme-wrapper {
     justify-content: right;
+    right: 15px;
     background-color: var(--background-color);
     opacity: 0.8;
+    z-index: 10;
   }
 }
 

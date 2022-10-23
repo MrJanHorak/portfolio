@@ -53,18 +53,14 @@ function App() {
     const isRightSwipe = distance < -minSwipeDistance;
     if (isLeftSwipe) {
       if (currentNum + 1 > 5) {
-        console.log(pathNums[0]);
         navigate(pathNums[0]);
       } else {
-        console.log(pathNums[currentNum + 1]);
         navigate(pathNums[currentNum + 1]);
       }
     } else if (isRightSwipe) {
       if (currentNum - 1 < 0) {
-        console.log(pathNums[5]);
         navigate(pathNums[5]);
       } else {
-        console.log(pathNums[currentNum - 1]);
         navigate(pathNums[currentNum - 1]);
       }
     }

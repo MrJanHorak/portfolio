@@ -53,7 +53,7 @@ const DarkMode = () => {
 
   return (
     <div className="toggle-theme-wrapper">
-      <IoColorPaletteSharp />
+      {/* <IoColorPaletteSharp /> */}
       <span role="img" aria-label="light theme">
         <div onClick={toggleTheme}>{themeIcon}</div>
       </span>

@@ -24,6 +24,20 @@
   --scrollbar-foreground: rgb(112, 112, 112);
   --scrollbar-background: rgb(51, 51, 51);
 }
+[data-theme="color"] {
+  --font-color: #F96765;
+  --font-weight: 100;
+  --background-color: #E7F7F3;
+  --carousel-background1: rgba(160, 244, 231, 0.7);
+  --carousel-background2: rgba(133, 196, 187, 0.7);
+  --carousel-background3: rgba(103, 153, 145, 0.7);
+  --slider-color: rgb(199, 199, 199);
+  --filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(310deg) brightness(95%) contrast(80%);
+  
+  --focus-color: rgb(135, 133, 133);
+  --scrollbar-foreground: #F89F92;
+  --scrollbar-background: #be837a;
+}
 
 body {
   overflow: hidden;

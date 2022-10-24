@@ -18,6 +18,11 @@ const DarkMode = () => {
     document.documentElement.setAttribute("data-theme", "light");
   };
 
+  const setColor = () => {
+    localStorage.setItem("theme", "color");
+    document.documentElement.setAttribute("data-theme", "color");
+  };
+
   const storedTheme = localStorage.getItem("theme");
 
   const prefersDark =
@@ -36,12 +41,12 @@ const DarkMode = () => {
   }
 
   const toggleTheme = (e) => {
-    if (storedTheme === "light") {
+    if (storedTheme === "light" || storedTheme === "color") {
       setDark();
       setPicturesThemed("dark");
       setMode("dark");
       themeIcon = <MdOutlineDarkMode />;
-    } else {
+    } else if (storedTheme === "dark" || storedTheme === "color") {
       setLight();
       setPicturesThemed("light");
       setMode("light");
@@ -49,11 +54,23 @@ const DarkMode = () => {
     }
   };
 
+  const toggleColor = (e) => {
+    if (storedTheme === "light" || storedTheme === "dark") {
+      setColor();
+      setPicturesThemed("color");
+      setMode("color");
+    }
+  };
+
   // useEffect(() => {console.log(mode)}, [mode]);
 
   return (
     <div className="toggle-theme-wrapper">
-      {/* <IoColorPaletteSharp /> */}
+      <span role="img" aria-label="light theme">
+        <div onClick={toggleColor}>
+          <IoColorPaletteSharp />
+        </div>
+      </span>
       <span role="img" aria-label="light theme">
         <div onClick={toggleTheme}>{themeIcon}</div>
       </span>

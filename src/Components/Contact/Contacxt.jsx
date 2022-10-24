@@ -18,11 +18,16 @@ const Contact = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
     linkedIn = "./linkedIn-logo.png";
     gitHub = "./gitHubLogo.png";
     resume = "./resumeIcon.png";
-  } else {
+  } else if (storedTheme === "dark" ){
     email = "./emailInvert.png";
     linkedIn = "./linkedIn-logoInverse.png";
     gitHub = "./gitHubLogoInverse.png";
     resume = "./resumeIconInvert.png";
+  } else if (storedTheme === "color"){
+    email = "./email.png";
+    linkedIn = "./linkedIn-logo.png";
+    gitHub = "./gitHubLogo.png";
+    resume = "./resumeIcon.png";
   }
 
   return (

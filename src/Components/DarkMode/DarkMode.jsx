@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { setPicturesThemed } from "../../assests/setPicturesThemed";
 import { FaGithub } from "react-icons/fa";
 import { CiLight } from "react-icons/ci";
@@ -61,8 +61,6 @@ const DarkMode = () => {
       setMode("color");
     }
   };
-
-  // useEffect(() => {console.log(mode)}, [mode]);
 
   return (
     <div className="toggle-theme-wrapper">

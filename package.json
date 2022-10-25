@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/react": "^4.0.0",
     "@klarr-agency/circum-icons-react": "^2.0.0"
   }
 }

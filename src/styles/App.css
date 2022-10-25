@@ -459,10 +459,17 @@ img.card-image {
 
 #contact-logo-container img {
   width: 100px;
+  filter: --filter;
 }
 
 .contact {
   margin: 0 25px 0 25px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 730px) {

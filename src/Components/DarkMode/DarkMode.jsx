@@ -38,15 +38,15 @@ const DarkMode = () => {
     setDark();
     setPicturesThemed("dark");
     themeIcon = <MdOutlineDarkMode />;
-  }
+  } 
 
   const toggleTheme = (e) => {
-    if (storedTheme === "light" || storedTheme === "color") {
+    if (storedTheme === "light" || storedTheme === "color" || storedTheme === null) {
       setDark();
       setPicturesThemed("dark");
       setMode("dark");
       themeIcon = <MdOutlineDarkMode />;
-    } else if (storedTheme === "dark" || storedTheme === "color") {
+    } else if (storedTheme === "dark" || storedTheme === "color" || storedTheme === null) {
       setLight();
       setPicturesThemed("light");
       setMode("light");

@@ -38,15 +38,27 @@ const DarkMode = () => {
     setDark();
     setPicturesThemed("dark");
     themeIcon = <MdOutlineDarkMode />;
-  } 
+  }
+  if (mode === "color") {
+    setColor();
+    setPicturesThemed("color");
+  }
 
   const toggleTheme = (e) => {
-    if (storedTheme === "light" || storedTheme === "color" || storedTheme === null) {
+    if (
+      storedTheme === "light" ||
+      storedTheme === "color" ||
+      storedTheme === null
+    ) {
       setDark();
       setPicturesThemed("dark");
       setMode("dark");
       themeIcon = <MdOutlineDarkMode />;
-    } else if (storedTheme === "dark" || storedTheme === "color" || storedTheme === null) {
+    } else if (
+      storedTheme === "dark" ||
+      storedTheme === "color" ||
+      storedTheme === null
+    ) {
       setLight();
       setPicturesThemed("light");
       setMode("light");
@@ -72,18 +84,6 @@ const DarkMode = () => {
       <span role="img" aria-label="light theme">
         <div onClick={toggleTheme}>{themeIcon}</div>
       </span>
-      {/* <label className="toggle-theme" htmlFor="checkbox">
-        <input
-          type="checkbox"
-          id="checkbox"
-          onChange={toggleTheme}
-          defaultChecked={defaultDark}
-        />
-        <div className="slider round"></div>
-      </label> */}
-      {/* <span role="img" aria-label="dark theme">
-        <MdOutlineDarkMode />
-      </span> */}
       <div className="footer-info">
         <p>
           ©2022 Jan Horak

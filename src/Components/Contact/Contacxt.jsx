@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { Icon } from "@iconify/react";

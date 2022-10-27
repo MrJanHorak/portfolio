@@ -27,9 +27,9 @@ const Nav = () => {
             onClick={handleToggle}
           >
             {navbarOpen ? (
-              <MdClose style={{ width: "40px", height: "40px" }} />
+              <MdClose style={{ width: "25px", height: "40px" }} />
             ) : (
-              <FiMenu style={{ width: "40px", height: "40px" }} />
+              <FiMenu style={{ width: "25px", height: "40px" }} />
             )}
           </button>
           <ul className={`menuNav ${navbarOpen ? "showMenu" : ""}`}>

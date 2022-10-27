@@ -5,7 +5,7 @@
   --carousel-background2: rgba(247, 246, 246, 0.7);
   --carousel-background3: rgba(231, 234, 235, 0.7);
   --slider-color: rgb(219, 219, 219);
-  --focus-color: rgb(188, 190, 190);
+  --focus-color: rgb(163, 163, 163);
   --font-weight: 300;
   --scrollbar-foreground: rgb(202, 202, 202);
   --scrollbar-background: rgb(255, 255, 255);
@@ -20,22 +20,29 @@
   --carousel-background3: rgba(59, 59, 59, 0.7);
   --slider-color: rgb(199, 199, 199);
   --filter: invert(100);
+  --filter2: invert(100);
+  --filter3: white;
   --focus-color: rgb(135, 133, 133);
   --scrollbar-foreground: rgb(112, 112, 112);
   --scrollbar-background: rgb(51, 51, 51);
 }
 [data-theme="color"] {
-  --font-color: #F96765;
+  --font-color: white;
   --font-weight: 100;
-  --background-color: #E7F7F3;
-  --carousel-background1: rgba(160, 244, 231, 0.7);
-  --carousel-background2: rgba(133, 196, 187, 0.7);
-  --carousel-background3: rgba(103, 153, 145, 0.7);
+  --background-color: #0093e9;
+  --background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  --carousel-background1: rgba(29, 92, 133, 0.7);
+  --carousel-background2: rgba(129, 92, 133, 0.7);
+  --carousel-background3: rgba(292, 92, 133, 0.7);
   --slider-color: rgb(199, 199, 199);
-  --filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(310deg) brightness(95%) contrast(80%);
-  
-  --focus-color: rgb(135, 133, 133);
-  --scrollbar-foreground: #F89F92;
+  --filter: invert(45%) sepia(55%) saturate(1287%) hue-rotate(147deg)
+    brightness(65%) contrast(545%);
+  --filter2: invert(45%) sepia(55%) saturate(1287%) hue-rotate(147deg)
+    brightness(69%) contrast(545%);
+  --filter3: invert(51%) sepia(58%) saturate(1287%) hue-rotate(147deg)
+    brightness(65%) contrast(545%);
+  --focus-color: rgb(0, 56, 139);
+  --scrollbar-foreground: #f89f92;
   --scrollbar-background: #be837a;
 }
 
@@ -55,12 +62,14 @@ body {
   width: 100%;
   bottom: 0px;
   background-color: var(--background-color);
+  background-image: var(--background-image);
   opacity: 0.8;
   z-index: 25;
 }
 
 .toggle-theme-wrapper span {
   font-size: 25px;
+  color: var(--focus-color);
 }
 
 .toggle-theme {
@@ -118,6 +127,7 @@ input:checked + .slider {
   bottom: -10px;
   left: 0;
   width: 250px;
+  color: var(--focus-color);
 }
 
 .footer-info a {
@@ -133,6 +143,7 @@ a {
 
 body {
   background-color: var(--background-color);
+  background-image: var(--background-image);
   color: var(--font-color);
   font-family: "Lexend", sans-serif;
   font-weight: var(--font-weight);
@@ -365,23 +376,24 @@ img.card-image {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  height: 96vh;
-  width: 90%;
+  height: 100vh;
+  width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  background-image: var(--background-image);
 }
 
 .landing img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   filter: var(--filter);
 }
 
 .aboutContainer {
-  height: 96vh;
+  height: 100vh;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -441,7 +453,7 @@ img.card-image {
 #gallery-container img {
   max-height: 80px;
   max-width: 125px;
-  filter: var(--filter);
+  filter: var(--filter2);
 }
 
 #contact-container {
@@ -460,7 +472,6 @@ img.card-image {
 
 #contact-logo-container img {
   width: 100px;
-  filter: --filter;
 }
 
 .contact {
@@ -471,6 +482,7 @@ img.card-image {
   justify-content: center;
   align-items: center;
   text-align: center;
+  filter: var(--filter3);
 }
 
 @media screen and (max-width: 730px) {
@@ -662,7 +674,7 @@ img.card-image {
 
 .hamburger-button {
   margin-top: 10px;
-  color: var(--font-color);
+  color: var(--focus-color);
   transition: 250ms;
 }
 
@@ -694,7 +706,8 @@ img.card-image {
   list-style: none;
   position: fixed;
   top: 0;
-  background: rgba(127, 127, 127, 0.88);
+  background: var(--background-color);
+  opacity: 0.8;
   left: -44px;
   bottom: 0;
   height: 295px;
@@ -747,7 +760,9 @@ img.card-image {
 
   .toggle-theme-wrapper {
     justify-content: right;
-    right: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    right: 0px;
     background-color: var(--background-color);
     opacity: 0.8;
     z-index: 10;

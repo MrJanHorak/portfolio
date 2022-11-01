@@ -63,7 +63,7 @@ const DarkMode = () => {
 
   if (mode === "colorDark") {
     setColorDark();
-    setPicturesThemed("colorDark");
+    setPicturesThemed("color");
     colorIcon = <VscColorMode />;
     themeIcon = <CiLight />;
   }

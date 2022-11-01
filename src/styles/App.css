@@ -49,20 +49,17 @@
 
 [data-theme="colorDark"] {
   --font-color: #bababa;
-  --font-weight: 100;
-  --background-color: #015b8f;
-  --background-image: linear-gradient(160deg, #0270af 0%, #649f98 100%);
+  --font-weight: 300;
+  --background-color: #003757;
+  --background-image: linear-gradient(160deg, #04456a 0%, #48746e 100%);
   --carousel-background1: rgba(18, 54, 77, 0.7);
-  --carousel-background2: rgba(77, 55, 79, 0.7);
-  --carousel-background3: rgba(292, 92, 133, 0.7);
+  --carousel-background2: rgba(70, 30, 74, 0.7);
+  --carousel-background3: rgba(153, 56, 82, 0.7);
   --slider-color: rgb(199, 199, 199);
-  --filter: invert(45%) sepia(55%) saturate(1287%) hue-rotate(147deg)
-    brightness(65%) contrast(545%);
-  --filter2: invert(45%) sepia(55%) saturate(1287%) hue-rotate(147deg)
-    brightness(69%) contrast(545%);
-  --filter3: invert(51%) sepia(58%) saturate(1287%) hue-rotate(147deg)
-    brightness(65%) contrast(545%);
-  --focus-color: rgb(1, 31, 75);
+  --filter: invert(68%) brightness(85%) sepia(100%) hue-rotate(90deg);
+  --filter2: invert(45%) brightness(155%) sepia(100%) hue-rotate(90deg);;
+  --filter3: grayscale(100%) sepia(100%) hue-rotate(90deg);
+  --focus-color: rgb(197, 197, 197);
   --scrollbar-foreground: #ae7269;
   --scrollbar-background: #6d4c47;
 }

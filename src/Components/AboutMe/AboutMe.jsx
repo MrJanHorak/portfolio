@@ -5,15 +5,15 @@ const AboutMe = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
   const prefersLight =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: light)").matches;
-    let jan = useRef("./meetJan.png");
+  let jan = useRef("./meetJan.png");
 
-    if (storedTheme === "light" || (storedTheme === null && prefersLight)) {
-      jan = "./meetJan.png";
-    } else if (storedTheme === "dark" || (storedTheme === null && prefersLight)){
-      jan = "./meetJan.png";
-    } else if (storedTheme === "color"){
-      jan = "./meetJanColor.png";
-    }
+  if (storedTheme === "light" || (storedTheme === null && prefersLight)) {
+    jan = "./meetJan.png";
+  } else if (storedTheme === "dark" || (storedTheme === null && !prefersLight)) {
+    jan = "./meetJan.png";
+  } else if (storedTheme === "color") {
+    jan = "./meetJanColor.png";
+  }
 
   return (
     <div
@@ -25,22 +25,22 @@ const AboutMe = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
       <div className="about-info">
         <h1 className="mobileHeaders">Meet Jan</h1>
         <div className="meetJan">
-        <picture>
-              <source srcSet={jan} />
-              <source
-                media="(prefers-color-scheme: light)"
-                srcSet="./meetJan.png"
-              />
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcSet="./meetJan.png"
-              />
-              <source
-                srcSet="./meetJanColor.png"
-                media="(prefers-color-scheme: color)"
-              />
-              <img src={jan} alt="Jan" />
-            </picture>
+          <picture>
+            <source srcSet={jan} />
+            <source
+              media="(prefers-color-scheme: light)"
+              srcSet="./meetJan.png"
+            />
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcSet="./meetJan.png"
+            />
+            <source
+              srcSet="./meetJanColor.png"
+              media="(prefers-color-scheme: color)"
+            />
+            <img src={jan} alt="Jan" />
+          </picture>
         </div>
         <div className="aboutMeInfo">
           <p>

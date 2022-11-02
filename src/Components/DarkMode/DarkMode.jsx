@@ -44,6 +44,7 @@ const DarkMode = () => {
   if (defaultDark) {
     setDark();
     setPicturesThemed("dark");
+    colorIcon = <IoColorPaletteSharp />;
     themeIcon = <CiLight />;
   }
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import "./styles/App.css";
 
+
 // Components
 import Nav from "./Components/Nav/Nav";
 import AboutMe from "./Components/AboutMe/AboutMe";
@@ -10,7 +11,7 @@ import Skills from "./Components/Skills/Skills";
 import Passion from "./Components/Passion/Passion";
 import Contact from "./Components/Contact/Contacxt";
 import Landing from "./Components/Landing/Landing";
-
+  
 function App() {
   // the following consts are all to assist in a swipe navigation in mobile views
   const [touchStart, setTouchStart] = useState(null);
@@ -65,6 +66,7 @@ function App() {
       }
     }
   };
+
 
   return (
     <>

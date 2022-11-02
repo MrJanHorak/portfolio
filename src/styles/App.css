@@ -48,7 +48,7 @@
 }
 
 [data-theme="colorDark"] {
-  --font-color: #bababa;
+  --font-color: #8ac19f;
   --font-weight: 300;
   --background-color: #003757;
   --background-image: linear-gradient(160deg, #04456a 0%, #48746e 100%);
@@ -692,7 +692,7 @@ img.card-image {
 
 .hamburger-button {
   margin-top: 10px;
-  color: var(--focus-color);
+  color: var(--font-color);
   transition: 250ms;
 }
 

@@ -455,6 +455,7 @@ img.card-image {
   text-align: center;
 }
 
+
 #gallery-container {
   width: 650px;
   display: flex;
@@ -468,9 +469,9 @@ img.card-image {
   transform: translate(-50%, -50%);
 }
 
-#gallery-container img {
-  max-height: 80px;
-  max-width: 125px;
+#gallery-container img{
+  height: 80px;
+  width: 125px;
   filter: var(--filter2);
 }
 

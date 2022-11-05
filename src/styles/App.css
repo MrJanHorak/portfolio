@@ -1,5 +1,6 @@
 :root {
   --font-color: #333;
+  --skill-color: #333;
   --background-color: rgb(255, 255, 255);
   --carousel-background1: rgba(255, 255, 255, 0.7);
   --carousel-background2: rgba(247, 246, 246, 0.7);
@@ -13,6 +14,7 @@
 
 [data-theme="dark"] {
   --font-color: #eee;
+  --skill-color: #eee;
   --font-weight: 100;
   --background-color: #333;
   --carousel-background1: rgba(119, 119, 119, 0.7);
@@ -42,6 +44,7 @@
     brightness(69%) contrast(545%);
   --filter3: invert(51%) sepia(58%) saturate(1287%) hue-rotate(147deg)
     brightness(65%) contrast(545%);
+  --skill-color: #006db2;
   --focus-color: rgb(0, 56, 139);
   --scrollbar-foreground: #f89f92;
   --scrollbar-background: #be837a;
@@ -49,6 +52,7 @@
 
 [data-theme="colorDark"] {
   --font-color: #8ac19f;
+  --skill-color: #8ac19f;
   --font-weight: 300;
   --background-color: #003757;
   --background-image: linear-gradient(160deg, #04456a 0%, #48746e 100%);
@@ -467,13 +471,14 @@ img.card-image {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: var(--skill-color)
 }
 
-#gallery-container img{
+/* #gallery-container img{
   height: 80px;
   width: 125px;
   filter: var(--filter2);
-}
+} */
 
 #contact-container {
   width: 100%;

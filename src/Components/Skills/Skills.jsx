@@ -29,9 +29,9 @@ const Skills = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
     >
       <h1 className='mobileHeaders'>Skills</h1>
       <div id='gallery-container'>
-        <IconContext.Provider value={{ size: '5em' }}>
+        <IconContext.Provider value={{ size: '70' }}>
           <IoLogoJavascript />
-          <SiTypescript size='75' />
+          <SiTypescript size='61' />
           <IoLogoPython />
           <FaJava />
           <TiHtml5 />

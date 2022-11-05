@@ -12,7 +12,7 @@
   --scrollbar-background: rgb(255, 255, 255);
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --font-color: #eee;
   --skill-color: #eee;
   --font-weight: 100;
@@ -29,7 +29,7 @@
   --scrollbar-background: rgb(51, 51, 51);
 }
 
-[data-theme="color"] {
+[data-theme='color'] {
   --font-color: white;
   --font-weight: 100;
   --background-color: #0093e9;
@@ -50,7 +50,7 @@
   --scrollbar-background: #be837a;
 }
 
-[data-theme="colorDark"] {
+[data-theme='colorDark'] {
   --font-color: #8ac19f;
   --skill-color: #8ac19f;
   --font-weight: 300;
@@ -61,7 +61,7 @@
   --carousel-background3: rgba(153, 56, 82, 0.7);
   --slider-color: rgb(199, 199, 199);
   --filter: invert(68%) brightness(85%) sepia(100%) hue-rotate(90deg);
-  --filter2: invert(45%) brightness(155%) sepia(100%) hue-rotate(90deg);;
+  --filter2: invert(45%) brightness(155%) sepia(100%) hue-rotate(90deg);
   --filter3: grayscale(100%) sepia(100%) hue-rotate(90deg);
   --focus-color: rgb(197, 197, 197);
   --scrollbar-foreground: #ae7269;
@@ -167,7 +167,7 @@ body {
   background-color: var(--background-color);
   background-image: var(--background-image);
   color: var(--font-color);
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-weight: var(--font-weight);
   font-size: 1.1em;
 }
@@ -290,7 +290,7 @@ img.card-image {
   text-align: center;
   width: 90px;
   height: 20px;
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-weight: 400;
   background: transparent;
   cursor: pointer;
@@ -315,7 +315,7 @@ img.card-image {
 .btn-3:before,
 .btn-3:after {
   position: absolute;
-  content: "";
+  content: '';
   left: 1px;
   top: 1px;
   background: var(--font-color);
@@ -343,7 +343,7 @@ img.card-image {
 .btn-3 span:before,
 .btn-3 span:after {
   position: absolute;
-  content: "";
+  content: '';
   right: 0;
   bottom: 0;
   background: transparent;
@@ -459,7 +459,6 @@ img.card-image {
   text-align: center;
 }
 
-
 #gallery-container {
   width: 650px;
   display: flex;
@@ -471,7 +470,7 @@ img.card-image {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: var(--skill-color)
+  color: var(--skill-color);
 }
 
 /* #gallery-container img{

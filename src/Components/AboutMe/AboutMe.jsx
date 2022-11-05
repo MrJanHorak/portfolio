@@ -1,48 +1,54 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 
 const AboutMe = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
-  const storedTheme = localStorage.getItem("theme");
+  const storedTheme = localStorage.getItem('theme');
   const prefersLight =
     window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches;
-  let jan = useRef("./meetJan.png");
+    window.matchMedia('(prefers-color-scheme: light)').matches;
+  let jan = useRef('./meetJan.png');
 
-  if (storedTheme === "light" || (storedTheme === null && prefersLight)) {
-    jan = "./meetJan.png";
-  } else if (storedTheme === "dark" || (storedTheme === null && !prefersLight)) {
-    jan = "./meetJan.png";
-  } else if (storedTheme === "color") {
-    jan = "./meetJanColor.png";
+  if (storedTheme === 'light' || (storedTheme === null && prefersLight)) {
+    jan = './meetJan.png';
+  } else if (
+    storedTheme === 'dark' ||
+    (storedTheme === null && !prefersLight)
+  ) {
+    jan = './meetJan.png';
+  }
+  if (storedTheme === 'color') {
+    jan = './meetJanColor.png';
+  } else if (storedTheme === 'colorDark') {
+    jan = './meetJanColor.png';
   }
 
   return (
     <div
-      className="aboutContainer"
+      className='aboutContainer'
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
-      <div className="about-info">
-        <h1 className="mobileHeaders">Meet Jan</h1>
-        <div className="meetJan">
+      <div className='about-info'>
+        <h1 className='mobileHeaders'>Meet Jan</h1>
+        <div className='meetJan'>
           <picture>
             <source srcSet={jan} />
             <source
-              media="(prefers-color-scheme: light)"
-              srcSet="./meetJan.png"
+              media='(prefers-color-scheme: light)'
+              srcSet='./meetJan.png'
             />
             <source
-              media="(prefers-color-scheme: dark)"
-              srcSet="./meetJan.png"
+              media='(prefers-color-scheme: dark)'
+              srcSet='./meetJan.png'
             />
             <source
-              srcSet="./meetJanColor.png"
-              media="(prefers-color-scheme: color)"
+              srcSet='./meetJanColor.png'
+              media='(prefers-color-scheme: color)'
             />
-            <img src={jan} alt="Jan" />
+            <img src={jan} alt='Jan' />
           </picture>
         </div>
-        <div className="aboutMeInfo">
+        <div className='aboutMeInfo'>
           <p>
             Multicultural, bilingual full stack developer with a background in
             creative communication. Using analytical approaches to solve

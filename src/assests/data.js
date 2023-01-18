@@ -12,7 +12,7 @@ const links = [
   "https://bridge-climate-app.netlify.app/",
   "https://frontend-nine-tawny.vercel.app/",
   "https://sticky-note-bulletin-board.herokuapp.com/",
-  "https://home-cooked.fly.dev/",
+  "https://home-cooked-meal-planner.herokuapp.com/",
   "https://junction.herokuapp.com/",
   "https://battleship2022.netlify.app/",
   "https://tictactoe-namenottaken.netlify.app/",

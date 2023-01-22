@@ -9,7 +9,7 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Work from "./Components/Work/Work";
 import Skills from "./Components/Skills/Skills";
 import Passion from "./Components/Passion/Passion";
-import Contact from "./Components/Contact/Contacxt";
+import Contact from "./Components/Contact/Contact";
 import Landing from "./Components/Landing/Landing";
   
 function App() {

@@ -19,7 +19,7 @@ const Nav = () => {
 
   return (
     <>
-      <div id="humburger">
+      <div id="hamburger">
         <nav className="navBar">
           <button
             className="hamburger-button"

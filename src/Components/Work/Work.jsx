@@ -3,8 +3,8 @@ import React from "react";
 //components
 import ContentCard from "../ContentCard/ContentCard";
 
-//assests
-import { work, links, repositories, projectPics } from "../../assests/data.js";
+//assets
+import { work, links, repositories, projectPics } from "../../assets/data.js";
 
 const Work = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
   return (

@@ -652,8 +652,8 @@ img.card-image {
   }
 
   ::-webkit-scrollbar {
-    width: 5px; /* Mostly for vertical scrollbars */
-    height: 5px; /* Mostly for horizontal scrollbars */
+    width: 5px; /* Mostly for vertical scroll bars */
+    height: 5px; /* Mostly for horizontal scroll bars */
   }
 }
 

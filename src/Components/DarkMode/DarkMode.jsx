@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { setPicturesThemed } from '../../assests/setPicturesThemed';
+import { setPicturesThemed } from '../../assets/setPicturesThemed';
 import { FaGithub } from 'react-icons/fa';
 import { CiLight } from 'react-icons/ci';
 import { MdOutlineDarkMode } from 'react-icons/md';
@@ -9,14 +9,14 @@ import { VscColorMode } from 'react-icons/vsc';
 const DarkMode = () => {
   const [mode, setMode] = useState(localStorage.getItem('theme'));
 
-  const setDark = () => {
-    localStorage.setItem('theme', 'dark');
-    document.documentElement.setAttribute('data-theme', 'dark');
+  const setBwDark = () => {
+    localStorage.setItem('theme', 'bwDark');
+    document.documentElement.setAttribute('data-theme', 'bwDark');
   };
 
-  const setLight = () => {
-    localStorage.setItem('theme', 'light');
-    document.documentElement.setAttribute('data-theme', 'light');
+  const setBwLight = () => {
+    localStorage.setItem('theme', 'bwLight');
+    document.documentElement.setAttribute('data-theme', 'bwLight');
   };
 
   const setColor = () => {
@@ -36,20 +36,20 @@ const DarkMode = () => {
     window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const defaultDark =
-    storedTheme === 'dark' || (storedTheme === null && prefersDark);
+    storedTheme === 'colorDark' ;
 
   let themeIcon = <CiLight />;
   let colorIcon = <IoColorPaletteSharp />;
 
   if (defaultDark && mode!=="colorDark") {
-    setDark();
+    setBwDark();
     setPicturesThemed('dark');
     colorIcon = <IoColorPaletteSharp />;
     themeIcon = <CiLight />;
   }
 
-  if (mode === 'light') {
-    setLight();
+  if (mode === 'bwLight') {
+    setBwLight();
     setPicturesThemed('light');
     colorIcon = <IoColorPaletteSharp />;
     themeIcon = <MdOutlineDarkMode />;
@@ -62,7 +62,7 @@ const DarkMode = () => {
     themeIcon = <MdOutlineDarkMode />;
   }
 
-  if (mode === 'colorDark') {
+  if (mode === 'colorDark' ) {
     setColorDark();
     setPicturesThemed('color');
     colorIcon = <VscColorMode />;
@@ -70,19 +70,19 @@ const DarkMode = () => {
   }
 
   const toggleTheme = (e) => {
-    if (storedTheme === 'light' || storedTheme === null) {
-      setDark();
-      setPicturesThemed('dark');
-      setMode('dark');
-    } else if (storedTheme === 'dark') {
-      setLight();
-      setPicturesThemed('light');
-      setMode('light');
-    } else if (storedTheme === 'color') {
+    if (storedTheme === 'bwLight' ) {
+      setBwDark();
+      setPicturesThemed('bwDark');
+      setMode('bwDark');
+    } else if (storedTheme === 'bwDark') {
+      setBwLight();
+      setPicturesThemed('bwLight');
+      setMode('bwLight');
+    } else if (storedTheme === 'color' ) {
       setColorDark();
       setPicturesThemed('color');
       setMode('colorDark');
-    } else if (storedTheme === 'colorDark') {
+    } else if (storedTheme === 'colorDark' || storedTheme === null) {
       setColor();
       setPicturesThemed('color');
       setMode('color');
@@ -90,25 +90,25 @@ const DarkMode = () => {
   };
 
   const toggleColor = (e) => {
-    if (storedTheme === 'light') {
+    if (storedTheme === 'bwLight') {
       setColor();
       setPicturesThemed('color');
       setMode('color');
       colorIcon = <VscColorMode />;
-    } else if (storedTheme === 'dark') {
+    } else if (storedTheme === 'bwDark') {
       setColorDark();
       setPicturesThemed('color');
       setMode('colorDark');
       colorIcon = <VscColorMode />;
     } else if (storedTheme === 'color') {
-      setLight();
+      setBwLight();
       setPicturesThemed('light');
-      setMode('light');
+      setMode('bwLight');
       colorIcon = <IoColorPaletteSharp />;
     } else if (storedTheme === 'colorDark') {
-      setDark();
+      setBwDark();
       setPicturesThemed('dark');
-      setMode('dark');
+      setMode('bwDark');
       colorIcon = <IoColorPaletteSharp />;
     }
   };

@@ -9,7 +9,7 @@ import {
   passionProjectsLinks,
   passionProjectsRepositories,
   passionProjectPics,
-} from "../../assests/data.js";
+} from "../../assets/data.js";
 
 const Passion = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
   return (

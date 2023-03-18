@@ -4,7 +4,7 @@ Welcome to my personal portfolio.
 
 This was created to display my past, current and potential future projects.
 
-In this design I was trying to go for a simple, plain, as much b&w/greyscale as possible. Only the screenshots of my past work and the logos for the skills are in color.
+In this design I was trying to go for a simple, plain, as much b&w/gray scale as possible. Only the screenshots of my past work and the logos for the skills are in color.
 
 The site is responsive and should be viewable on most mobile devices.
 
@@ -27,7 +27,7 @@ If you have any questions, or would perhaps like to work with me on any projects
  <img src="https://i.imgur.com/c19pR7gl.png"/>
 </p>
 
-## Assests
+## Assets
 
 [Infinite carousel for react](https://reactjsexample.com/infinite-carousel-for-react/) was used to display my work and passion projects. in the first version of my site (only used in the first iteration of this site.)
 

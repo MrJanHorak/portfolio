@@ -1,4 +1,4 @@
-:root {
+[data-theme='bwLight']{
   --font-color: #333;
   --skill-color: #333;
   --background-color: rgb(255, 255, 255);
@@ -12,7 +12,7 @@
   --scrollbar-background: rgb(255, 255, 255);
 }
 
-[data-theme='dark'] {
+[data-theme='bwDark'] {
   --font-color: #eee;
   --skill-color: #eee;
   --font-weight: 100;
@@ -29,7 +29,7 @@
   --scrollbar-background: rgb(51, 51, 51);
 }
 
-[data-theme='color'] {
+[data-theme='light'] {
   --font-color: white;
   --font-weight: 100;
   --background-color: #0093e9;
@@ -50,7 +50,7 @@
   --scrollbar-background: #be837a;
 }
 
-[data-theme='colorDark'] {
+[data-theme='dark'] {
   --font-color: #8ac19f;
   --skill-color: #8ac19f;
   --font-weight: 300;

@@ -16,7 +16,7 @@ import {
 } from 'react-icons/si';
 import { FaJava, FaNodeJs } from 'react-icons/fa';
 import { TiHtml5 } from 'react-icons/ti';
-import { SiExpress, SiSequelize, SiVite } from 'react-icons/si';
+import { SiExpress, SiSequelize, SiVite, SiVuedotjs, SiFirebase, SiDjango } from 'react-icons/si';
 import { IconContext } from 'react-icons/lib';
 
 const Skills = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
@@ -36,17 +36,20 @@ const Skills = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
           <FaJava />
           <TiHtml5 />
           <IoLogoCss3 />
-          <IoLogoReact />
-          <FaNodeJs />
-          <SiVite />
-          <SiExpress />
-          <SiMongodb />
           <SiJquery />
+          <IoLogoReact />
+          <SiVuedotjs />
+          <FaNodeJs />
+          <SiExpress />
+          <SiVite />
+          <SiDjango />
+          <SiMongodb />
           <SiSequelize />
           <SiPostgresql />
           <SiMysql />
           <SiUbuntu />
           <SiAmazons3 />
+          <SiFirebase />
         </IconContext.Provider>
       </div>
     </div>

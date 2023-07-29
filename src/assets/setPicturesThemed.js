@@ -1,3 +1,5 @@
+import { cloneElement } from "react";
+
 function setPicturesThemed(colorScheme) {
 
   // Clean up all existing picture sources that were cloned
@@ -9,7 +11,7 @@ function setPicturesThemed(colorScheme) {
 
   if (colorScheme) {
 
-    // Find all picture sources with the desired colour scheme
+    // Find all picture sources with the desired color scheme
     document
       .querySelectorAll(
         `picture > source[media="(prefers-color-scheme: ${colorScheme})"]`

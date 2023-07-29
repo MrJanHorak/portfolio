@@ -55,11 +55,11 @@ const Nav = () => {
                 Skills
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/passion" onClick={() => closeMenu()}>
                 Projects
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/contact" onClick={() => closeMenu()}>
                 Contact
@@ -82,9 +82,9 @@ const Nav = () => {
           <NavLink className="custom-btn btn-3 button " to="/skills">
             <span>Skills</span>
           </NavLink>
-          <NavLink className="custom-btn btn-3 button " to="/passion">
+          {/* <NavLink className="custom-btn btn-3 button " to="/passion">
             <span>Projects</span>
-          </NavLink>
+          </NavLink> */}
           <NavLink className="custom-btn btn-3 button " to="/contact">
             <span>Contact</span>
           </NavLink>

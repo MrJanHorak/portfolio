@@ -8,6 +8,7 @@ const work = [
   "Homecooked\n\nA social website for recipe sharing and 7-day meal plan creation. Uses MongoDb and EJS implementing Google OAuth.",
   "Junction\n\nA social networking app for people seeking others with similar interests and hobbies to meet up or share insight, things learned or accomplishments. Using React, JavaScript, MaterialUi.",
   "Battleship2022\n\nA remake of the game Battleship using Vanilla JavaScript. One player places the boats; the second tries to guess where they are at. One twist in this version is that a spy gives away the location of one boat.",
+  "MindMaster\n\nA Mastermind clone using vanilla JavaScript. The computer creates a pattern the user needs to guess it. Drag a game piece and place it where you want to make your guess, the computer will give hints based upon your guess.",
   "Tic-Tac-Toe\n\nThe classic game of Tic-Tac-Toe. This was written in vanilla JavaScript in my early days of learning. I have gone back and added a computer player to the game simply using a series of conditional statements to mimic my own thought process of how I play the game.",
 ];
 
@@ -21,6 +22,7 @@ const links = [
   "https://home-cooked-meal-planner.herokuapp.com/",
   "https://community-junction.fly.dev/",
   "https://battleship2022.netlify.app/",
+  "https://mindmaster.surge.sh/index.html",
   "https://tictactoe-namenottaken.netlify.app/",
 ];
 
@@ -34,6 +36,7 @@ const repositories = [
   "https://github.com/MrJanHorak/home-cooked",
   "https://github.com/MrJanHorak/junction",
   "https://github.com/MrJanHorak/battleship",
+  "https://github.com/MrJanHorak/mastermind",
   "https://github.com/MrJanHorak/ttt-weekend",
 ];
 
@@ -47,6 +50,7 @@ const projectPics = [
   "./homeCookedSamp.gif",
   "./junctionAppSamp.gif",
   "./battleshipSamp.gif",
+  "./MindMaster.gif",
   "./tictactoeSamp.gif",
 ];
 

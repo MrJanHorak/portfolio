@@ -70,7 +70,6 @@
 
 body {
   overflow: hidden;
-  transition: 0.4s;
 }
 
 /*dark / light mode element*/
@@ -152,6 +151,7 @@ input:checked + .slider {
   left: 0;
   width: 250px;
   color: var(--focus-color);
+  transition: 0.4s;
 }
 
 .footer-info a {
@@ -171,7 +171,8 @@ a {
   width: 52px;
   height: 26px;
   margin-right: 5px;
-  color: var(--font-color)
+  color: var(--font-color);
+  transition: 0.4s;
 }
 
 .switch input {
@@ -228,7 +229,7 @@ a {
   fill: #2b5575;
   position: absolute;
   top: 2px;
-  left: 30px;
+  left: 1px;
   z-index: 1;
   width: 24px;
   height: 22px;
@@ -237,7 +238,7 @@ a {
 .palette {
   position: absolute;
   top: 1.3px;
-  left: 1.5px;
+  left: 15px;
   z-index: 1;
   width: 21px;
   height: 21px;
@@ -304,6 +305,7 @@ body {
   font-family: 'Lexend', sans-serif;
   font-weight: var(--font-weight);
   font-size: 1.1em;
+  transition: 0.4s;
 }
 
 .mobileHeaders {
@@ -348,6 +350,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
   border-radius: 5px;
   text-align: right;
+  transition: 0.3s;
 }
 
 .card:nth-child(even) {
@@ -376,6 +379,7 @@ body {
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6eced",GradientType=1);
   border-radius: 5px;
+  transition: 0.4s;
 }
 
 img.card-image {
@@ -517,12 +521,14 @@ img.card-image {
   /* Foreground */
   background: var(--scrollbar-foreground);
   border-radius: 12px;
+  transition: 0.4s;
 }
 ::-webkit-scrollbar-track {
   /* Background */
   background: var(--scrollbar-background);
   border-radius: 12px;
   margin-bottom: 45px;
+  transition: 0.4s;
 }
 
 /*  pages */
@@ -540,12 +546,14 @@ img.card-image {
   transform: translate(-50%, -50%);
   text-align: center;
   background-image: var(--background-image);
+  transition: 0.4s;
 }
 
 .landing img {
   max-width: 90%;
   height: auto;
   filter: var(--filter);
+  transition: 0.5s;
 }
 
 .aboutContainer {
@@ -605,6 +613,7 @@ img.card-image {
   top: 50%;
   transform: translate(-50%, -50%);
   color: var(--skill-color);
+  transition: 0.4s;
 }
 
 /* #gallery-container img{
@@ -640,6 +649,7 @@ img.card-image {
   align-items: center;
   text-align: center;
   filter: var(--filter3);
+  transition: 0.4s;
 }
 
 @media screen and (max-width: 730px) {
@@ -923,6 +933,7 @@ img.card-image {
     background-color: var(--background-color);
     opacity: 0.8;
     z-index: 10;
+    transition: 0.4s;
   }
 }
 

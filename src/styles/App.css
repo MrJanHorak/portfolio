@@ -145,6 +145,7 @@ a {
   opacity: 0;
   width: 0;
   height: 0;
+  z-index: inherit;
 }
 
 .slider {
@@ -167,9 +168,9 @@ a {
   border-radius: 20px;
   left: 2px;
   bottom: 0px;
-  z-index: 26;
   background-color: var(--slider-color);
   transition: 0.4s;
+  z-index: 26;
 }
 
 .sun svg {
@@ -786,6 +787,7 @@ img.card-image {
   z-index: 20;
   background-color: var(--background-color);
   opacity: 0.9;
+  visibility: visible;
 }
 
 .nav-bar a {

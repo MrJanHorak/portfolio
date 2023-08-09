@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { setPicturesThemed } from '../../assets/setPicturesThemed'
 import { FaGithub } from 'react-icons/fa'
-import { CiLight } from 'react-icons/ci'
-import { MdOutlineDarkMode } from 'react-icons/md'
-import { IoColorPaletteSharp } from 'react-icons/io5'
 import { VscColorMode } from 'react-icons/vsc'
 import ColorPalette from '../ColorPalette/ColorPalette'
 
 const DarkMode = () => {
   const [mode, setMode] = useState(localStorage.getItem('theme'))
+  // const [color, setColor] = useState(null)
+  // const [lightDark, setLightDark] = useState(null)
 
   const setDark = () => {
     localStorage.setItem('theme', 'dark')
@@ -39,35 +38,28 @@ const DarkMode = () => {
   const defaultDark =
     storedTheme === 'dark' || (storedTheme === null && prefersDark)
 
-  let themeIcon = <CiLight />
-  let colorIcon = <VscColorMode />
+
+
 
   if (defaultDark && mode !== 'bwDark') {
     setDark()
     setPicturesThemed('colorDark')
-    colorIcon = <VscColorMode />
-    themeIcon = <CiLight />
   }
 
   if (mode === 'light') {
     setLight()
     setPicturesThemed('color')
-    colorIcon = <VscColorMode />
-    themeIcon = <MdOutlineDarkMode />
+    
   }
 
   if (mode === 'bwLight') {
     setBwLight()
     setPicturesThemed('light')
-    colorIcon = <ColorPalette />
-    themeIcon = <MdOutlineDarkMode />
   }
 
   if (mode === 'bwDark') {
     setBwDark()
     setPicturesThemed('dark')
-    colorIcon = <ColorPalette />
-    themeIcon = <CiLight />
   }
 
   const toggleTheme = () => {
@@ -95,22 +87,22 @@ const DarkMode = () => {
       setBwLight()
       setPicturesThemed('light')
       setMode('bwLight')
-      colorIcon = <IoColorPaletteSharp />
+
     } else if (storedTheme === 'dark') {
       setBwDark()
       setPicturesThemed('dark')
       setMode('bwDark')
-      colorIcon = <IoColorPaletteSharp />
+
     } else if (storedTheme === 'bwLight') {
       setLight()
       setPicturesThemed('color')
       setMode('light')
-      colorIcon = <VscColorMode />
+
     } else if (storedTheme === 'bwDark') {
       setDark()
       setPicturesThemed('color')
       setMode('dark')
-      colorIcon = <VscColorMode />
+
     }
   }
 
@@ -119,14 +111,12 @@ const DarkMode = () => {
       setDark()
       setPicturesThemed('colorDark')
       setMode(localStorage.getItem('theme'))
-      colorIcon = <VscColorMode />
-      themeIcon = <CiLight />
     }
   }, [storedTheme])
+
   return (
     <div className="toggle-theme-wrapper">
       <span role="img" aria-label="light theme">
-        {/* <div onClick={toggleColor}>{colorIcon}</div> */}
         <label className="switch">
           <span className="palette">
             <ColorPalette />
@@ -134,12 +124,26 @@ const DarkMode = () => {
           <span className="blackNwhite">
             <VscColorMode />
           </span>
-          <input type="checkbox" className="input" onClick={toggleColor} />
+          <input
+            type="checkbox"
+            className="input"
+            onClick={(e) => {
+              if (
+                e.nativeEvent instanceof PointerEvent &&
+                e.nativeEvent.pointerType === 'touch'
+              ) {
+                toggleColor()
+              } // Touch Event
+              else {
+                toggleColor()
+              } // Mouse Event
+            }}
+            checked={mode==='light'|| mode ==='dark'}
+          />
           <span className="slider"></span>
         </label>
       </span>
       <span role="img" aria-label="light theme">
-        {/* <div onClick={toggleTheme}>{themeIcon}</div> */}
         <label className="switch">
           <span className="sun">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -154,7 +158,22 @@ const DarkMode = () => {
               <path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path>
             </svg>
           </span>
-          <input type="checkbox" className="input" onClick={toggleTheme} />
+          <input
+            type="checkbox"
+            className="input"
+            onClick={(e) => {
+              if (
+                e.nativeEvent instanceof PointerEvent &&
+                e.nativeEvent.pointerType === 'touch'
+              ) {
+                toggleTheme()
+              } // Touch Event
+              else {
+                toggleTheme()
+              } // Mouse Event
+            }}
+            checked={mode==='light' || mode ==='bwLight'}
+          />
           <span className="slider"></span>
         </label>
       </span>

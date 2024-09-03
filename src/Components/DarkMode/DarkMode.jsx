@@ -179,7 +179,7 @@ const DarkMode = () => {
       </span>
       <div className="footer-info">
         <p>
-          ©2023 Jan Horak
+          ©20234 Jan Horak
           <a
             href="https://github.com/MrJanHorak"
             target="_blank"

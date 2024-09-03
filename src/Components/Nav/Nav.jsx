@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from 'react'
+import { HashLink as NavLink } from 'react-router-hash-link'
 
 // Components
-import DarkMode from "../DarkMode/DarkMode";
-import { MdClose } from "react-icons/md";
-import { FiMenu } from "react-icons/fi";
+import DarkMode from '../DarkMode/DarkMode'
+import { MdClose } from 'react-icons/md'
+import { FiMenu } from 'react-icons/fi'
 
 const Nav = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
   const handleToggle = () => {
-    setNavbarOpen((prev) => !prev);
-  };
+    setNavbarOpen((prev) => !prev)
+  }
 
   const closeMenu = () => {
-    setNavbarOpen(false);
-  };
+    setNavbarOpen(false)
+  }
 
   return (
     <>
@@ -27,32 +27,31 @@ const Nav = () => {
             onClick={handleToggle}
           >
             {navbarOpen ? (
-              <MdClose style={{ width: "25px", height: "40px" }} />
+              <MdClose style={{ width: '25px', height: '40px' }} />
             ) : (
-              <FiMenu style={{ width: "25px", height: "40px" }} />
+              <FiMenu style={{ width: '25px', height: '40px' }} />
             )}
           </button>
-          <ul className={`menuNav ${navbarOpen ? "showMenu" : ""}`}>
+          <ul className={`menuNav ${navbarOpen ? 'showMenu' : ''}`}>
             <li>
-              <NavLink to="/" onClick={() => closeMenu()}>
+              <NavLink smooth to="#landing" onClick={() => closeMenu()}>
                 Home
               </NavLink>
             </li>
             <li>
-              {" "}
-              <NavLink to="/about" onClick={() => closeMenu()}>
+              {' '}
+              <NavLink smooth to="#about" onClick={() => closeMenu()}>
                 About Me
               </NavLink>
             </li>
             <li>
-              {" "}
-              <NavLink to="/work" onClick={() => closeMenu()}>
-                My work
+              <NavLink smooth to="#skills" onClick={() => closeMenu()}>
+                Skills
               </NavLink>
             </li>
             <li>
-              <NavLink to="/skills" onClick={() => closeMenu()}>
-                Skills
+              <NavLink smooth to="#projects" onClick={() => closeMenu()}>
+                My work
               </NavLink>
             </li>
             {/* <li>
@@ -61,7 +60,7 @@ const Nav = () => {
               </NavLink>
             </li> */}
             <li>
-              <NavLink to="/contact" onClick={() => closeMenu()}>
+              <NavLink smooth to="#contact" onClick={() => closeMenu()}>
                 Contact
               </NavLink>
             </li>
@@ -69,30 +68,44 @@ const Nav = () => {
         </nav>
       </div>
       <div id="nav-bar">
-        <nav className="nav-bar">
-          <NavLink className="custom-btn btn-3 button " to="/">
-            <span>Home</span>
-          </NavLink>
-          <NavLink className="custom-btn btn-3 button " to="/about">
-            <span>About me</span>
-          </NavLink>
-          <NavLink className="custom-btn btn-3 button " to="/work">
-            <span>My work</span>
-          </NavLink>
-          <NavLink className="custom-btn btn-3 button " to="/skills">
-            <span>Skills</span>
-          </NavLink>
-          {/* <NavLink className="custom-btn btn-3 button " to="/passion">
+        <header className="App-header">
+          <nav className="navbar">
+            <ul>
+              <li>
+                <NavLink smooth to="#landing">
+                  <span>Home</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink smooth to="#about">
+                  <span>About me</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink smooth to="#skills">
+                  <span>Skills</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink smooth to="#projects">
+                  <span>My work</span>
+                </NavLink>
+              </li>
+              {/* <NavLink className="custom-btn btn-3 button " to="/passion">
             <span>Projects</span>
           </NavLink> */}
-          <NavLink className="custom-btn btn-3 button " to="/contact">
-            <span>Contact</span>
-          </NavLink>
-        </nav>
+              <li>
+                <NavLink smooth to="#contact">
+                  <span>Contact</span>
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        </header>
       </div>
       <DarkMode />
     </>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

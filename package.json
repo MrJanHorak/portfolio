@@ -14,7 +14,6 @@
     "react-router-dom": "^6.2.1",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
-    "update": "^0.7.4",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
@@ -44,5 +43,8 @@
   "devDependencies": {
     "@iconify/react": "^4.0.0",
     "@klarr-agency/circum-icons-react": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }

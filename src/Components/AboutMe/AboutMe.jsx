@@ -30,12 +30,16 @@ const AboutMe = ({ onTouchStart, onTouchMove, onTouchEnd }) => {
           <picture>
             <source srcSet={jan} />
             <source
-              media="(prefers-color-scheme: light)"
+              media="(prefers-color-scheme: bwLight)"
               srcSet="./meetJan.png"
             />
             <source
-              media="(prefers-color-scheme: dark)"
+              media="(prefers-color-scheme: bwDark)"
               srcSet="./meetJan.png"
+            />
+            <source
+              srcSet="./meetJanColor.png"
+              media="(prefers-color-scheme: light)"
             />
             <source
               srcSet="./meetJanColor.png"

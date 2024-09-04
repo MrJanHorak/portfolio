@@ -1,5 +1,7 @@
 const work = [
   "Bookends Marketplace\n\nA pioneering platform for content creators and the film industry to buy and sell post-production materials and equipment, promoting a more sustainable approach to production.\n\nTech Stack: Built with Next.js, Tailwind CSS, React Native, Firebase, Node.js, and Stripe.\n\nKey Achievements: Developed the primary React Native app, implemented a robust backend, and integrated Stripe for seamless payments.",
+  "Rubber Duckie\n\nA fun and interactive app that helps developers debug their code by explaining it to a virtual rubber duck.\n\nTech Stack: Built with React, TypeScript, and making use of a local LLM as a backend, also can work with ChatGPT.\n\nKey Achievements: Developed the app from scratch, implemented speech recognition for user input, implemented speech synthesis for computer response as well as manuel user input and computer response in writing. All images for AI generated. User can choose Rubber Duck and background style.",
+  "Pomodoro Timer\n\nA productivity app that helps users manage their time effectively by breaking work into intervals with short breaks in between.\n\nTech Stack: Built with React, TypeScript, and CSS.\n\nKey Achievements: Developed the app from scratch, implemented a timer, dynamic favicon as a visual aid as well as a timer in the browser tab, the background progressively rises as a visual indicator of passing time.There is a setting to integrate a hidden Soundcloud player for personalized soundtrack.",
   "Spelling Bee Prep App\n\nThis passion project is the result of a conversation with my elementary age daughter who recently came home and said she wants to win her class's next year’s spelling bee. As a parent I do not always have the time to sit down and practice with her the way she may need it to reach her goal. So, I thought I should be able to do something about this. My goal is to create an app that will allow my daughter to practice as the app (device) reads the words out loud using speech synthesis and allows her to spell the word back.",
   '3 in 1 Word Puzzle Solving Helpers\n\nThis set of three distinct projects grew out of the Letter Boxed Solver project, which was the first of these three tools. My 8th grade son was always finding better words to solve the New York times word puzzle than I, so I came up with an app to help me find possible solutions. After that I created the Spelling Bee helper, and finally a Wordle Solution helper. Each of these apps uses React, there is no backend and each has a unique algorithm to help find the solution. These were fun projects to practice CSS. After completing them all I wrapped them up in a nav bar linking to each site and gave each one a light and dark mode.',
   'FRY Word Diagnosis Tool\n\nThis app will start as a simple one to help track student acquisition of the first 300 Fry sight words.  Teachers for students in grades K-3 will be able to use the app to track the skill acquisition of individual students and print learning lists per student or for a group of students.  Words themselves will be categorized in order of frequency of occurrence in written text, as well as by regularity of spelling and included spelling patterns, so that teachers can choose word lists for instruction based on those useful characteristics.  Flashcards or word lists for groups or individual students may be printed for teacher reference. Later versions of the app may include research-supported instruction and games that include responsive feedback and track student progress for the teacher.',
@@ -9,6 +11,7 @@ const work = [
   'Homecooked\n\nA social website for recipe sharing and 7-day meal plan creation. Uses MongoDb and EJS implementing Google OAuth.',
   'Junction\n\nA social networking app for people seeking others with similar interests and hobbies to meet up or share insight, things learned or accomplishments. Using React, JavaScript, MaterialUi.',
   'Invaders from Space!\n\nA Space invaders clone using Vanilla Javascript. I am always inspired by the students in Unit 1 of our classes. We end Unit 1 with the assignment of a game to help solidify the essential JavaScript foundations. And I always want to see if I can create a game in the same time.',
+  'Snake\n\nA Snake clone using Vanilla JavaScript. I have always loved the game of Snake and wanted to see if I could create a version of it in a short amount of time. All images are AI generated. WASD key support. Highs score tracking in local storage.',
   'Battleship2022\n\nA remake of the game Battleship using Vanilla JavaScript. One player places the boats; the second tries to guess where they are at. One twist in this version is that a spy gives away the location of one boat.',
   'MindMaster\n\nA Mastermind clone using vanilla JavaScript. The computer creates a pattern the user needs to guess it. Drag a game piece and place it where you want to make your guess, the computer will give hints based upon your guess.',
   'Tic-Tac-Toe\n\nThe classic game of Tic-Tac-Toe. This was written in vanilla JavaScript in my early days of learning. I have gone back and added a computer player to the game simply using a series of conditional statements to mimic my own thought process of how I play the game.'
@@ -16,6 +19,8 @@ const work = [
 
 const links = [
   'https://bookendsmarketplace.com/',
+  '',
+  '',
   'https://spelling-bee-practice-app.netlify.app/',
   'https://wordle-solving-helper.netlify.app/',
   '',
@@ -25,6 +30,7 @@ const links = [
   'https://home-cooked-meal-planner.herokuapp.com/',
   'https://community-junction.fly.dev/',
   'https://invadersfromspace.surge.sh/',
+  'https://theserpantshome.surge.sh/',
   'https://battleship2022.netlify.app/',
   'https://mindmaster.surge.sh/index.html',
   'https://tictactoe-namenottaken.netlify.app/'
@@ -32,6 +38,8 @@ const links = [
 
 const repositories = [
   'https://github.com/MrJanHorak/bookendsPromoWeb',
+  'https://github.com/MrJanHorak/rubber-duckie',
+  'https://github.com/MrJanHorak/pomodoro-timer',
   'https://github.com/MrJanHorak/spelling-bee-practice-tool',
   'https://github.com/MrJanHorak/wordle-solution-helper',
   'https://github.com/MrJanHorak/high-frequency-word-diagnosis-tool',
@@ -41,6 +49,7 @@ const repositories = [
   'https://github.com/MrJanHorak/home-cooked',
   'https://github.com/MrJanHorak/junction',
   'https://github.com/MrJanHorak/invadersFromSpace',
+  'https://github.com/MrJanHorak/snake',
   'https://github.com/MrJanHorak/battleship',
   'https://github.com/MrJanHorak/mastermind',
   'https://github.com/MrJanHorak/ttt-weekend'
@@ -48,6 +57,8 @@ const repositories = [
 
 const projectPics = [
   './bookendspromo2.PNG',
+  './projectImages/rubberDuck5.png',
+  './projectImages/pomodoro3.png',
   './passionProjects/spellingbeeappanimated.gif',
   './passionProjects/word-puzzle-helpers.gif',
   './passionProjects/sightWords.jpg',
@@ -57,6 +68,7 @@ const projectPics = [
   './homeCookedSamp.gif',
   './junctionAppSamp.gif',
   './invadersfromspace.gif',
+  './projectImages/snake1.png',
   './battleshipSamp.gif',
   './MindMaster.gif',
   './tictactoeSamp.gif'

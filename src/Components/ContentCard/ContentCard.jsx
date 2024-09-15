@@ -5,64 +5,52 @@ const ContentCard = (props) => {
   return (
     <div className="slider-card">
       {props.work.map((element, index) => (
-        <div key={1 + index} className="card">
-          <div className="card-info" key={index}>
-            {element}
-            <br />
-            <br />
-            {props.links[index] !== "" ? (
+        <div key={index} className="card">
+          <div className="card-image-wrapper">
+            <div className="card-image">
+              <img
+                src={props.projectPics[index]}
+                alt="project"
+                className="project-image"
+              />
+            </div>
+             <div className="image-stack">
+             {props.projectPics[index].map((image, index) => (
+          <img 
+            key={index} 
+            src={image} 
+            alt={`${element.title} - ${index + 1}`} 
+            className="project-image"
+          />
+        ))}
+      </div>
+          </div>
+          <div className="card-info">
+            <h3>{element}</h3>
+            {props.links[index] ? (
               <a
-                key={20 + index}
                 href={props.links[index]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLink /> explore the site
+                <FaLink /> Explore the site
               </a>
             ) : (
-              <>
-                <FaLink /> Link coming soon!
-              </>
+              <p>Link coming soon!</p>
             )}
             <br />
-            {props.repositories[index] !== "" ? (
+            {props.repositories[index] ? (
               <a
-                key={22 + index}
                 href={props.repositories[index]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub /> explore the code
+                <FaGithub /> Explore the code
               </a>
             ) : (
-              <>
-                <FaLink /> Link coming soon!
-              </>
+              <p>Repository coming soon!</p>
             )}
           </div>
-          {props.links[index] !== "" ? (
-            <div key={30 + index} className="card-image">
-              <a
-                href={props.links[index]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="card-image"
-                  src={props.projectPics[index]}
-                  alt="passed-project"
-                />
-              </a>
-            </div>
-          ) : (
-            <div key={30 + index} className="card-image">
-              <img
-                className="card-image"
-                src={props.projectPics[index]}
-                alt="passion-project"
-              />
-            </div>
-          )}
         </div>
       ))}
     </div>

@@ -138,7 +138,7 @@ const DarkMode = () => {
                 toggleColor()
               } // Mouse Event
             }}
-            checked={mode==='light'|| mode ==='dark'}
+            // checked={mode==='light'|| mode ==='dark'}
           />
           <span className="slider"></span>
         </label>
@@ -172,7 +172,7 @@ const DarkMode = () => {
                 toggleTheme()
               } // Mouse Event
             }}
-            checked={mode==='light' || mode ==='bwLight'}
+            // checked={mode==='light' || mode ==='bwLight'}
           />
           <span className="slider"></span>
         </label>

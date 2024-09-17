@@ -7,13 +7,13 @@ const ContentCard = (props) => {
       {props.work.map((element, index) => (
         <div key={index} className="card">
           <div className="card-image-wrapper">
-            <div className="card-image">
-              <img
+            {/* <div className="card-image"> */}
+              {/* <img
                 src={props.projectPics[index]}
                 alt="project"
                 className="project-image"
-              />
-            </div>
+              /> */}
+            {/* </div> */}
              <div className="image-stack">
              {props.projectPics[index].map((image, index) => (
           <img 

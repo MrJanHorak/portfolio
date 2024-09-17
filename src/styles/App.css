@@ -32,7 +32,7 @@
 }
 
 [data-theme='light'] {
-  --nav-color:#0093e9;
+  --nav-color: #0093e9;
   --font-color: white;
   --font-weight: 100;
   --background-color: #0093e9;
@@ -54,7 +54,7 @@
 }
 
 [data-theme='dark'] {
-  --nav-color:#06466a;
+  --nav-color: #06466a;
   --font-color: #8ac19f;
   --skill-color: #8ac19f;
   --font-weight: 300;
@@ -73,7 +73,7 @@
 }
 
 [data-theme='light'] .slider {
-  background-color:#333;
+  background-color: #333;
   toggle-theme-wrapper {
     background-color: #333;
   }
@@ -212,7 +212,7 @@ a {
   height: 28px;
   transition: 0.4s;
   margin-right: 10px;
-  margin-bottom: 3PX;
+  margin-bottom: 3px;
   margin-top: 3px;
 }
 
@@ -258,7 +258,7 @@ a {
 }
 
 .moon svg {
-  fill: #abbecd;;
+  fill: #abbecd;
   position: absolute;
   top: 3.5px;
   left: 2px;
@@ -420,13 +420,9 @@ body {
   z-index: 1;
 }
 
-.card:nth-child(odd) .card-image-wrapper {
-  left: -15px;
-}
-
-.card:nth-child(even) .card-image-wrapper {
+/* .card:nth-child(even) .card-image-wrapper {
   right: -15px;
-}
+} */
 
 .card:hover .card-image-wrapper {
   z-index: 1;
@@ -452,13 +448,24 @@ body {
 
 /* Slight offset for the stacking effect */
 .project-image:nth-child(2) {
-  left: 20px;
+  left: 40px;
+  top: 20px;
 }
 
 .project-image:nth-child(3) {
-  left: 40px;
+  left: 80px;
+  top: 40px;
 }
 
+.project-image:nth-child(4) {
+  left: 120px;
+  top: 60px;
+}
+
+.project-image:nth-child() {
+  left: 160px;
+  top: 60px;
+}
 
 /* .slider-card {
   width: 700px;
@@ -698,20 +705,32 @@ img.card-image {
   transition: 0.5s;
 }
 
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-image: var(--background-image);
+  /* transition: 0.4s; */
+}
+
 .aboutContainer {
   height: 100vh;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 10px;
   display: flex;
 }
 
 .about-info {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .aboutMeInfo {
@@ -720,12 +739,12 @@ img.card-image {
 }
 
 .aboutMeInfo p {
+  text-align: left;
   margin-top: 6px;
 }
 
 .meetJan img {
   width: 350px;
-  margin-top: 10px;
   border-radius: 8px;
 }
 
@@ -801,22 +820,20 @@ img.card-image {
   }
 
   .aboutMeInfo {
-    width: 310px;
-    margin-left: 5px;
+    width: 80%;
+    /* margin-left: 5px; */
   }
 
   .meetJan img {
-    width: 100%;
+    width: 80%;
     margin-top: 10px;
     border-radius: 8px;
   }
 
   .slider-card {
-    width: 365px;
-    margin-top: 0px;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 35px;
+    border-radius: 8px;
   }
 
   .card:nth-child(odd) {
@@ -875,23 +892,13 @@ img.card-image {
   }
 
   .card {
-    padding: 5px;
+    padding: 15px;
     height: auto;
   }
 
-  .card-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card-image img {
-    display: block;
-    max-width: 300px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
+  .card-image-wrapper {
+    left: -65px;
+    height: 200px;
   }
 
   #passion-intro {

@@ -810,6 +810,8 @@ img.card-image {
   transition: 0.4s;
 }
 
+
+
 @media screen and (max-width: 730px) {
   .aboutContainer {
     flex-direction: column;

@@ -65,50 +65,62 @@ const repositories = [
 ]
 
 const projectPics = [
-  ['./bookendspromo2.PNG'],
-  [
-    './projectImages/rubberDuckie/rubberDuck1.png',
-    './projectImages/rubberDuckie/rubberDuck2.png',
-    './projectImages/rubberDuckie/rubberDuck3.png',
-    './projectImages/rubberDuckie/rubberDuck4.png',
-    './projectImages/rubberDuckie/rubberDuck5.png'
-  ],
-  [
-    './projectImages/pomodoro/pomodoro1.png',
-    './projectImages/pomodoro/pomodoro2.png',
-    './projectImages/pomodoro/pomodoro3.png',
-    './projectImages/pomodoro/pomodoro4.png'
-  ],
-  ['./passionProjects/spellingbeeappanimated.gif'],
-  ['./passionProjects/word-puzzle-helpers.gif'],
-  ['./passionProjects/word-puzzle-helpers.gif'],
-  ['./passionProjects/word-puzzle-helpers.gif'],
-  [
-    './projectImages/strandsHelper/strands-helper1.png',
-    './projectImages/strandsHelper/strands-helper2.png',
-    './projectImages/strandsHelper/strands-helper3.png',
-    './projectImages/strandsHelper/strands-helper4.png',
-    './projectImages/strandsHelper/strands-helper5.png'
-  ],
-  ['./passionProjects/sightWords.jpg'],
-  ['./bridgeApp.gif'],
-  ['./ease.gif'],
-  ['./stickyNoteSamp.gif'],
-  ['./homeCookedSamp.gif'],
-  ['./junctionAppSamp.gif'],
-  ['./invadersfromspace.gif'],
-  [
-    './projectImages/snake/snake1.png',
-    './projectImages/snake/snake2.png',
-    './projectImages/snake/snake3.png',
-    './projectImages/snake/snake4.png',
-    './projectImages/snake/snake5.png',
-    './projectImages/snake/snake6.png'
-  ],
-  ['./battleshipSamp.gif'],
-  ['./MindMaster.gif'],
-  ['./tictactoeSamp.gif']
-]
+  { type: 'single', images: ['./bookendspromo2.PNG'] },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/rubberDuckie/rubberDuck1.png',
+      './projectImages/rubberDuckie/rubberDuck2.png',
+      './projectImages/rubberDuckie/rubberDuck3.png',
+      './projectImages/rubberDuckie/rubberDuck4.png',
+      './projectImages/rubberDuckie/rubberDuck5.png'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/pomodoro/pomodoro1.png',
+      './projectImages/pomodoro/pomodoro2.png',
+      './projectImages/pomodoro/pomodoro3.png',
+      './projectImages/pomodoro/pomodoro4.png'
+    ]
+  },
+  { type: 'mobile', images: ['./passionProjects/spellingbeeappanimated.gif'] },
+  { type: 'mobile', images: ['./passionProjects/word-puzzle-helpers.gif'] },
+  { type: 'mobile', images: ['./passionProjects/word-puzzle-helpers.gif'] },
+  { type: 'mobile', images: ['./passionProjects/word-puzzle-helpers.gif'] },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/strandsHelper/strands-helper1.png',
+      './projectImages/strandsHelper/strands-helper2.png',
+      './projectImages/strandsHelper/strands-helper3.png',
+      './projectImages/strandsHelper/strands-helper4.png',
+      './projectImages/strandsHelper/strands-helper5.png'
+    ]
+  },
+  { type: 'single', images: ['./passionProjects/sightWords.jpg'] },
+  { type: 'mobile', images: ['./bridgeApp.gif'] },
+  { type: 'mobile', images: ['./ease.gif'] },
+  { type: 'single', images: ['./stickyNoteSamp.gif'] },
+  { type: 'single', images: ['./homeCookedSamp.gif'] },
+  { type: 'single', images: ['./junctionAppSamp.gif'] },
+  { type: 'single', images: ['./invadersfromspace.gif'] },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/snake/snake1.png',
+      './projectImages/snake/snake2.png',
+      './projectImages/snake/snake3.png',
+      './projectImages/snake/snake4.png',
+      './projectImages/snake/snake5.png',
+      './projectImages/snake/snake6.png'
+    ]
+  },
+  { type: 'mobile', images: ['./battleshipSamp.gif'] },
+  { type: 'mobile', images: ['./MindMaster.gif'] },
+  { type: 'single', images: ['./tictactoeSamp.gif'] }
+];
 
 const passionProjects = [
   "Spelling Bee Prep App\n\nThis passion project is the result of a conversation with my elementary age daughter who recently came home and said she wants to win her class's next year’s spelling bee. As a parent I do not always have the time to sit down and practice with her the way she may need it to reach her goal. So, I thought I should be able to do something about this. My goal is to create an app that will allow my daughter to practice as the app (device) reads the words out loud using speech synthesis and allows her to spell the word back.",

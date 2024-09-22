@@ -1,4 +1,4 @@
-.slider-card {
+/* .slider-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +33,23 @@
   width: 250px;
   height: 150px;
   perspective: 1000px;
+}
+
+.card-image-wrapper.single {
+  width: 100%;
+  height: auto;
+}
+
+.card-image-wrapper.multiple {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-image-wrapper.mobile {
+  top: 0;
+  width: 100%;
+  height: auto;
 }
 
 .image-stack {
@@ -76,11 +93,127 @@
 
 .card-info h3 {
   margin: 0;
-  font-weight: normal;
+  font-weight: bold;
 }
 
-.card-info a,
 .card-info p {
+  margin: 0;
+  font-weight: normal;
+  color: var(--font-color);
+  white-space: pre-wrap; /* Preserve whitespace and line breaks 
+
+.card-info a {
+  margin: 0;
+  font-weight: normal;
+  color: var(--font-color);
+} */ 
+
+.slider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px;
+  padding: 20px;
+  background: var(--carousel-background1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card-left {
+  flex-direction: row;
+}
+
+.card-right {
+  flex-direction: row-reverse;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.card-image-wrapper.single {
+  width: 90%;
+  height: 90%;
+  align-self: flex-start; 
+}
+
+.card-image-wrapper.multiple {
+  flex-wrap: wrap;
+  gap: 10px;
+  align-self: flex-start; 
+}
+
+.card-image-wrapper.mobile {
+  width: 100%;
+  height: auto;
+}
+
+.image-stack {
+  position: relative;
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: translateY(-10px);
+  z-index: 2;
+}
+
+.project-image:nth-child(2) {
+  left: 0px;
+  top: 0px;
+}
+
+.project-image:nth-child(3) {
+  left: 10px;
+  top: 20px;
+}
+
+.project-image:nth-child(4) {
+  left: -10px;
+  top: 0px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-info p {
+  margin: 0;
+  font-weight: normal;
+  color: var(--font-color);
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+.card-info a {
   margin: 0;
   font-weight: normal;
   color: var(--font-color);

@@ -65,7 +65,7 @@ const repositories = [
 ]
 
 const projectPics = [
-  { type: 'single', images: ['./bookendspromo2.PNG'] },
+  { type: 'mobile', images: ['./bookendspromo2.PNG'] },
   {
     type: 'multiple',
     images: [

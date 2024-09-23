@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import './styles/App.css';
 
 // Components

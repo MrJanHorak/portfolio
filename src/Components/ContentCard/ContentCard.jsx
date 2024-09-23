@@ -13,14 +13,14 @@ const ContentCard = (props) => {
 
         return (
           <div key={index} className={`card ${index % 2 === 0 ? "card-left" : "card-right"}`}>
-            <div className={`card-image-wrapper ${projectPic.type}`}>
+            <div className="card-image-wrapper">
               <div className="image-stack">
                 {projectPic.images.map((image, imgIndex) => (
                   <img 
                     key={imgIndex} 
                     src={image} 
                     alt={`${title} - ${imgIndex + 1}`} 
-                    className="project-image"
+                    className={`project-image  ${projectPic.type}`}
                   />
                 ))}
               </div>

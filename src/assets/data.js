@@ -113,8 +113,8 @@ const projectPics = [
       './projectImages/snake/snake2.png',
       './projectImages/snake/snake3.png',
       './projectImages/snake/snake4.png',
-      './projectImages/snake/snake5.png',
-      './projectImages/snake/snake6.png'
+      // './projectImages/snake/snake5.png',
+      // './projectImages/snake/snake6.png'
     ]
   },
   { type: 'mobile', images: ['./battleshipSamp.gif'] },

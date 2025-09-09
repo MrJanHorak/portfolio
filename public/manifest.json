@@ -1,0 +1,27 @@
+{
+  "name": "Jan Horak Portfolio",
+  "short_name": "JH Portfolio",
+  "description": "Full Stack Developer Portfolio - Jan Horak",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fef7f0",
+  "theme_color": "#ff6b35",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

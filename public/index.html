@@ -4,7 +4,40 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Modern Favicon System with Theme Support -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.svg" />
+
+    <!-- Theme-specific favicons for advanced browsers -->
+    <link
+      rel="icon"
+      href="%PUBLIC_URL%/favicon-light.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="%PUBLIC_URL%/favicon-dark.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Theme colors for mobile browsers -->
+    <meta
+      name="theme-color"
+      content="#ff6b35"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#2c1810"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="msapplication-TileColor" content="#ff6b35" />
     <!-- HTML Meta Tags -->
     <title>Jan Horak Portfolio</title>
     <!-- Google tag (gtag.js) -->
@@ -13,13 +46,13 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-P0J1FRYN3R"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
+      gtag('js', new Date())
 
-      gtag("config", "G-P0J1FRYN3R");
+      gtag('config', 'G-P0J1FRYN3R')
     </script>
     <meta
       name="description"
@@ -65,7 +98,7 @@ See some of my work and current passion projects here!"
       rel="stylesheet"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400&display=swap');
     </style>
   </head>
 

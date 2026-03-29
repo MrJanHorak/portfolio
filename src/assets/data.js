@@ -24,8 +24,8 @@ const work = [
 ]
 
 const links = [
-  '', // fire-pit-planning-tool (no live link)
-  '', // adventCalendar (no live link)
+  'https://fire-pit-planning-tool.vercel.app/', 
+  'https://doorly-advent.vercel.app/', 
   '', // ledCubeWebInterface (no live link)
   'https://bookendsmarketplace.com/',
   '',

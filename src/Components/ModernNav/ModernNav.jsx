@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Logo from '../Logo/Logo'
 
-const ModernNav = ({ theme = 'light' }) => {
+const ModernNav = ({ theme = 'light', logoColors }) => {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -34,8 +34,21 @@ const ModernNav = ({ theme = 'light' }) => {
 
   return (
     <nav className={`modern-nav ${isVisible ? '' : 'nav-hidden'}`}>
-      <div className="nav-content">
-        <Logo size={32} theme={theme} className="nav-logo" />
+      <div
+        className="nav-content"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: 24
+        }}
+      >
+        <Logo
+          size={32}
+          theme={theme}
+          colors={logoColors}
+          className="nav-logo"
+        />
         <ul className="nav-list">
           <li className="nav-item">
             <button

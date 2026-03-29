@@ -1,25 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Logo = ({
   size = 40,
   className = '',
   showText = false,
-  theme = 'light'
-}) => {
-  const colors = {
-    light: {
-      gradient: 'url(#warmGradientLight)',
-      text: '#fef7f0',
-      border: '#fef7f0'
-    },
-    dark: {
-      gradient: 'url(#warmGradientDark)',
-      text: '#2c1810',
-      border: '#2c1810'
-    }
+  theme = 'light',
+  colors = {
+    primary: '#ff6b35',
+    secondary: '#f7931e',
+    accent: '#ffb627',
+    text: '#2c1810',
+    border: '#ff6b35'
   }
-
-  const currentColors = colors[theme]
+}) => {
+  const { primary, secondary, accent, text, border } = colors
+  const gradientId = `logo-gradient-${primary.replace('#', '')}-${secondary.replace('#', '')}`
+  const gradientDef = (
+    <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor={primary} />
+      <stop offset="50%" stopColor={secondary} />
+      <stop offset="100%" stopColor={accent} />
+    </linearGradient>
+  )
 
   return (
     <div
@@ -27,61 +29,21 @@ const Logo = ({
       style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
     >
       <svg
+        key={theme}
         width={size}
         height={size}
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <defs>
-          <linearGradient
-            id="warmGradientLight"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
-            <stop
-              offset="0%"
-              style={{ stopColor: '#ff6b35', stopOpacity: 1 }}
-            />
-            <stop
-              offset="50%"
-              style={{ stopColor: '#f7931e', stopOpacity: 1 }}
-            />
-            <stop
-              offset="100%"
-              style={{ stopColor: '#ffb627', stopOpacity: 1 }}
-            />
-          </linearGradient>
-          <linearGradient
-            id="warmGradientDark"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
-            <stop
-              offset="0%"
-              style={{ stopColor: '#ff6b35', stopOpacity: 1 }}
-            />
-            <stop
-              offset="50%"
-              style={{ stopColor: '#f7931e', stopOpacity: 1 }}
-            />
-            <stop
-              offset="100%"
-              style={{ stopColor: '#ffb627', stopOpacity: 1 }}
-            />
-          </linearGradient>
-        </defs>
+        <defs>{gradientDef}</defs>
 
         {/* Background circle */}
         <circle
           cx="16"
           cy="16"
           r="15"
-          fill={currentColors.gradient}
-          stroke={currentColors.border}
+          fill={`url(#${gradientId})`}
+          stroke={border}
           strokeWidth="1"
         />
 
@@ -89,7 +51,7 @@ const Logo = ({
         <path
           d="M18 8 L18 18 Q18 22 14 22 Q10 22 10 18 L10 16"
           fill="none"
-          stroke={currentColors.text}
+          stroke={text}
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -99,7 +61,7 @@ const Logo = ({
         <path
           d="M22 8 L22 24 M22 16 L26 16 M26 8 L26 24"
           fill="none"
-          stroke={currentColors.text}
+          stroke={text}
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -111,7 +73,7 @@ const Logo = ({
           cy="16"
           r="15"
           fill="none"
-          stroke={currentColors.gradient}
+          stroke={`url(#${gradientId})`}
           strokeWidth="0.6"
           opacity="0.7"
         />

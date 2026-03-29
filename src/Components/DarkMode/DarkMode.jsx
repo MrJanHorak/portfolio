@@ -1,183 +1,116 @@
 import React, { useEffect, useState } from 'react'
 import { setPicturesThemed } from '../../assets/setPicturesThemed'
 import { FaGithub } from 'react-icons/fa'
-import { VscColorMode } from 'react-icons/vsc'
-import ColorPalette from '../ColorPalette/ColorPalette'
+
+const THEMES = [
+  {
+    key: 'light',
+    label: 'Modern Light',
+    preview: 'linear-gradient(135deg, #fef7f0 0%, #fff8e1 100%)'
+  },
+  {
+    key: 'dark',
+    label: 'Modern Dark',
+    preview: 'linear-gradient(135deg, #2c1810 0%, #3e2723 100%)'
+  },
+  {
+    key: 'light-original',
+    label: 'Classic Light',
+    preview: 'linear-gradient(160deg, #0093e9 0%, #80d0c7 100%)'
+  },
+  {
+    key: 'dark-original',
+    label: 'Classic Dark',
+    preview: 'linear-gradient(160deg, #04456a 0%, #48746e 100%)'
+  },
+  {
+    key: 'bwLight',
+    label: 'B&W Light',
+    preview: 'linear-gradient(135deg, #fff 0%, #eee 100%)'
+  },
+  {
+    key: 'bwDark',
+    label: 'B&W Dark',
+    preview: 'linear-gradient(135deg, #333 0%, #111 100%)'
+  }
+]
+
+const themeToPicture = {
+  light: 'color',
+  dark: 'colorDark',
+  'light-original': 'color',
+  'dark-original': 'colorDark',
+  bwLight: 'light',
+  bwDark: 'dark'
+}
 
 const DarkMode = () => {
-  const [mode, setMode] = useState(localStorage.getItem('theme'))
-  // const [color, setColor] = useState(null)
-  // const [lightDark, setLightDark] = useState(null)
-
-  const setDark = () => {
-    localStorage.setItem('theme', 'dark')
-    document.documentElement.setAttribute('data-theme', 'dark')
-  }
-
-  const setLight = () => {
-    localStorage.setItem('theme', 'light')
-    document.documentElement.setAttribute('data-theme', 'light')
-  }
-
-  const setBwLight = () => {
-    localStorage.setItem('theme', 'bwLight')
-    document.documentElement.setAttribute('data-theme', 'bwLight')
-  }
-
-  const setBwDark = () => {
-    localStorage.setItem('theme', 'bwDark')
-    document.documentElement.setAttribute('data-theme', 'bwDark')
-  }
-
-  const storedTheme = localStorage.getItem('theme')
-
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-
-  const defaultDark =
-    storedTheme === 'dark' || (storedTheme === null && prefersDark)
-
-
-
-
-  if (defaultDark && mode !== 'bwDark') {
-    setDark()
-    setPicturesThemed('colorDark')
-  }
-
-  if (mode === 'light') {
-    setLight()
-    setPicturesThemed('color')
-    
-  }
-
-  if (mode === 'bwLight') {
-    setBwLight()
-    setPicturesThemed('light')
-  }
-
-  if (mode === 'bwDark') {
-    setBwDark()
-    setPicturesThemed('dark')
-  }
-
-  const toggleTheme = () => {
-    if (storedTheme === 'light' || storedTheme === null) {
-      setDark()
-      setPicturesThemed('color')
-      setMode('dark')
-    } else if (storedTheme === 'dark') {
-      setLight()
-      setPicturesThemed('color')
-      setMode('light')
-    } else if (storedTheme === 'bwLight') {
-      setBwDark()
-      setPicturesThemed('dark')
-      setMode('bwDark')
-    } else if (storedTheme === 'bwDark') {
-      setBwLight()
-      setPicturesThemed('light')
-      setMode('bwLight')
-    }
-  }
-
-  const toggleColor = () => {
-    if (storedTheme === 'light') {
-      setBwLight()
-      setPicturesThemed('light')
-      setMode('bwLight')
-
-    } else if (storedTheme === 'dark') {
-      setBwDark()
-      setPicturesThemed('dark')
-      setMode('bwDark')
-
-    } else if (storedTheme === 'bwLight') {
-      setLight()
-      setPicturesThemed('color')
-      setMode('light')
-
-    } else if (storedTheme === 'bwDark') {
-      setDark()
-      setPicturesThemed('color')
-      setMode('dark')
-
-    }
-  }
+  const [mode, setMode] = useState(localStorage.getItem('theme') || 'light')
 
   useEffect(() => {
-    if (storedTheme === null) {
-      setDark()
-      setPicturesThemed('colorDark')
-      setMode(localStorage.getItem('theme'))
-    }
-  }, [storedTheme])
+    document.documentElement.setAttribute('data-theme', mode)
+    setPicturesThemed(themeToPicture[mode] || 'color')
+    localStorage.setItem('theme', mode)
+  }, [mode])
 
   return (
-    <div className="toggle-theme-wrapper">
-      <span role="img" aria-label="light theme">
-        <label className="switch">
-          <span className="palette">
-            <ColorPalette />
-          </span>
-          <span className="blackNwhite">
-            <VscColorMode />
-          </span>
-          <input
-            type="checkbox"
-            className="input"
-            onClick={(e) => {
-              if (
-                e.nativeEvent instanceof PointerEvent &&
-                e.nativeEvent.pointerType === 'touch'
-              ) {
-                toggleColor()
-              } // Touch Event
-              else {
-                toggleColor()
-              } // Mouse Event
+    <div
+      className="toggle-theme-wrapper"
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 16,
+        justifyContent: 'center',
+        margin: '1rem 0'
+      }}
+    >
+      <div style={{ display: 'flex', gap: 12 }}>
+        {THEMES.map((theme) => (
+          <button
+            key={theme.key}
+            title={theme.label}
+            aria-label={theme.label}
+            onClick={() => setMode(theme.key)}
+            style={{
+              width: 36,
+              height: 36,
+              borderRadius: '50%',
+              border:
+                mode === theme.key
+                  ? '3px solid var(--primary-color)'
+                  : '2px solid #ccc',
+              outline:
+                mode === theme.key
+                  ? '2px solid var(--secondary-color)'
+                  : 'none',
+              background: theme.preview,
+              cursor: 'pointer',
+              boxShadow:
+                mode === theme.key ? '0 0 8px var(--primary-color)' : 'none',
+              transition: 'all 0.2s',
+              position: 'relative'
             }}
-            // checked={mode==='light'|| mode ==='dark'}
-          />
-          <span className="slider"></span>
-        </label>
-      </span>
-      <span role="img" aria-label="light theme">
-        <label className="switch">
-          <span className="sun">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g fill="#ffd43b">
-                <circle r="5" cy="12" cx="12"></circle>
-                <path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path>
-              </g>
-            </svg>
-          </span>
-          <span className="moon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path>
-            </svg>
-          </span>
-          <input
-            type="checkbox"
-            className="input"
-            onClick={(e) => {
-              if (
-                e.nativeEvent instanceof PointerEvent &&
-                e.nativeEvent.pointerType === 'touch'
-              ) {
-                toggleTheme()
-              } // Touch Event
-              else {
-                toggleTheme()
-              } // Mouse Event
-            }}
-            // checked={mode==='light' || mode ==='bwLight'}
-          />
-          <span className="slider"></span>
-        </label>
-      </span>
-      <div className="footer-info">
+          >
+            {mode === theme.key && (
+              <span
+                style={{
+                  position: 'absolute',
+                  top: 2,
+                  right: 2,
+                  width: 10,
+                  height: 10,
+                  borderRadius: '50%',
+                  background: 'var(--primary-color)',
+                  border: '2px solid #fff',
+                  boxShadow: '0 0 2px #000'
+                }}
+              />
+            )}
+          </button>
+        ))}
+      </div>
+      <div className="footer-info" style={{ marginLeft: 24 }}>
         <p>
           ©2024 Jan Horak
           <a

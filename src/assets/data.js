@@ -1,5 +1,8 @@
 const work = [
-  'Bookends Marketplace\n\nA pioneering platform for content creators and the film industry to buy and sell post-production materials and equipment, promoting a more sustainable approach to production.\n\nTech Stack: Built with Next.js, Tailwind CSS, React Native, Firebase, Node.js, and Stripe.\n\nKey Achievements: Developed the primary React Native app, implemented a robust backend, and integrated Stripe for seamless payments.',
+  'Fire Pit Planning Tool\n\nA fun little afternoon project to help plan, improve and implement another fun afternoon project that should help me enjoy some evenings better.\n\nTech Stack: TypeScript, React.\n\nKey Achievements: Built a UI for planning, implemented calculations and visualizations for fire pit design.',
+  'Advent Calendar\n\nA holiday-themed project to create shareable, personalized advent calendars.\n\nTech Stack: TypeScript, React.\n\nKey Achievements: Created a dynamic calendar generator, implemented sharing features, and festive UI.',
+  'LED Cube Web Interface\n\nA tool to help create animations for an 8x8x8 LED Cube using React and Arduino via serial connection.\n\nTech Stack: JavaScript, React, Arduino.\n\nKey Achievements: Built a web interface for animation design, enabled serial communication with hardware.',
+  'Bookends Marketplace\n\nA pioneering platform for content creators and the film industry to buy and sell post-production materials and equipment, promoting a more sustainable approach to production.\n\nTech Stack: Built with Next.js, Tailwind CSS, React Native, Firebase, Node.js, and Stripe.\n\nKey Achievements: Developed the primary React Native app, implemented a robust backend, integrated Stripe for seamless payments, added bulk upload and posting capabilities to help vendors quickly post inventory from other tools.',
   'Rubber Duckie\n\nA fun and interactive app that helps developers debug their code by explaining it to a virtual rubber duck.\n\nTech Stack: Built with React, TypeScript, making use of a local LLM as a backend running on LLM studio, can also be used with  the ChatGPT api.\n\nKey Achievements: Developed the app from scratch, implemented speech recognition for user input, implemented speech synthesis for computer response as well as manuel user input and computer response in writing. All images are AI generated. User can choose a Rubber Duck and background style.',
   'Pomodoro Timer\n\nA productivity app that helps users manage their time effectively by breaking work into intervals with short breaks in between.\n\nTech Stack: Built with React, TypeScript, and CSS.\n\nKey Achievements: Developed the app from scratch, implemented a timer, dynamic timer favicon, a dynamic title displaying the timer in the browser tab, the background progressively rises as a visual indicator of passing time. In the settings users can set the length for the focus and break sessions, as well as drop a link for Soundcloud player that plays hidden in the background for a personalized focus soundtrack.',
   "Spelling Bee Prep App\n\nThis passion project is the result of a conversation with my elementary age daughter who recently came home and said she wants to win her class's next year’s spelling bee. As a parent I do not always have the time to sit down and practice with her the way she may need it to reach her goal. So, I thought I should be able to do something about this. My goal is to create an app that will allow my daughter to practice as the app (device) reads the words out loud using speech synthesis and allows her to spell the word back.",
@@ -21,6 +24,9 @@ const work = [
 ]
 
 const links = [
+  '', // fire-pit-planning-tool (no live link)
+  '', // adventCalendar (no live link)
+  '', // ledCubeWebInterface (no live link)
   'https://bookendsmarketplace.com/',
   '',
   '',
@@ -43,6 +49,9 @@ const links = [
 ]
 
 const repositories = [
+  'https://github.com/MrJanHorak/fire-pit-planning-tool',
+  'https://github.com/MrJanHorak/adventCalendar',
+  'https://github.com/MrJanHorak/ledCubeWebInterface',
   'https://github.com/MrJanHorak/bookendsPromoWeb',
   'https://github.com/MrJanHorak/rubber-duckie',
   'https://github.com/MrJanHorak/pomodoro-timer',
@@ -65,6 +74,9 @@ const repositories = [
 ]
 
 const projectPics = [
+  { type: 'single', images: ['./projectImages/firepit/firepit1.png'] },
+  { type: 'single', images: ['./projectImages/adventCalendar/advent1.png'] },
+  { type: 'single', images: ['./projectImages/ledCube/ledcube1.png'] },
   { type: 'mobile', images: ['./bookendspromo2.PNG'] },
   {
     type: 'multiple',
@@ -112,7 +124,7 @@ const projectPics = [
       './projectImages/snake/snake1.png',
       './projectImages/snake/snake2.png',
       './projectImages/snake/snake3.png',
-      './projectImages/snake/snake4.png',
+      './projectImages/snake/snake4.png'
       // './projectImages/snake/snake5.png',
       // './projectImages/snake/snake6.png'
     ]
@@ -120,7 +132,7 @@ const projectPics = [
   { type: 'mobile', images: ['./battleshipSamp.gif'] },
   { type: 'mobile', images: ['./MindMaster.gif'] },
   { type: 'single', images: ['./tictactoeSamp.gif'] }
-];
+]
 
 const passionProjects = [
   "Spelling Bee Prep App\n\nThis passion project is the result of a conversation with my elementary age daughter who recently came home and said she wants to win her class's next year’s spelling bee. As a parent I do not always have the time to sit down and practice with her the way she may need it to reach her goal. So, I thought I should be able to do something about this. My goal is to create an app that will allow my daughter to practice as the app (device) reads the words out loud using speech synthesis and allows her to spell the word back.",

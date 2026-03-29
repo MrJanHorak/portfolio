@@ -3,9 +3,10 @@ import { work, links, repositories, projectPics } from '../../assets/data'
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(null)
+  const [showAll, setShowAll] = useState(false)
 
-  // Featured projects (first 6)
-  const featuredProjects = work.slice(0, 6).map((project, index) => {
+  // All projects
+  const allProjects = work.map((project, index) => {
     const title = project.split('\n')[0]
     const description = project.split('\n\n')[1]
     const techStack = project.split('Tech Stack: ')[1]?.split('\n')[0] || ''
@@ -23,6 +24,9 @@ const ProjectsSection = () => {
     }
   })
 
+  // Show 6 or all
+  const displayedProjects = showAll ? allProjects : allProjects.slice(0, 6)
+
   const openProjectModal = (project) => {
     setSelectedProject(project)
   }
@@ -39,7 +43,7 @@ const ProjectsSection = () => {
       </p>
 
       <div className="projects-grid">
-        {featuredProjects.map((project) => (
+        {displayedProjects.map((project) => (
           <div key={project.id} className="project-card">
             {project.images[0] && (
               <img
@@ -103,6 +107,21 @@ const ProjectsSection = () => {
           </div>
         ))}
       </div>
+
+      {!showAll && allProjects.length > 6 && (
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <button className="cta-button" onClick={() => setShowAll(true)}>
+            Show More
+          </button>
+        </div>
+      )}
+      {showAll && allProjects.length > 6 && (
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <button className="cta-button" onClick={() => setShowAll(false)}>
+            Show Less
+          </button>
+        </div>
+      )}
 
       {/* Project Modal */}
       {selectedProject && (

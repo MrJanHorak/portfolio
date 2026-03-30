@@ -7,7 +7,7 @@
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
     "ajv": "^8.18.0",
-    "ajv-keywords": "^3.5.2",
+    "ajv-keywords": "^5.0.0",
     "ga-gtag": "^1.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

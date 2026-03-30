@@ -1,8 +1,9 @@
 const work = [
+  'Bookends Marketplace\n\nA pioneering platform for content creators and the film industry to buy and sell post-production materials and equipment, promoting a more sustainable approach to production. Live marketplace on the web and on Google Play and Apple App store.\n\nTech Stack: Built with Next.js, Tailwind CSS, React Native, Firebase, Node.js, and Stripe.\n\nKey Achievements: Developed the primary React Native app, implemented a robust backend, integrated Stripe for seamless payments, added bulk upload and posting capabilities to help vendors quickly post inventory from other tools.',
   'Fire Pit Planning Tool\n\nA fun little afternoon project to help plan, improve and implement another fun afternoon project that should help me enjoy some evenings better.\n\nTech Stack: TypeScript, React.\n\nKey Achievements: Built a UI for planning, implemented calculations and visualizations for fire pit design.',
+  'Spot on Shelves\n\nA web app to help users track and visualize the placement of products on store shelves.\n\nTech Stack: React, TypeScript, Node.js, Express, MongoDB.\n\nKey Achievements: Built a user-friendly interface for shelf management, implemented drag-and-drop product placement, and provided real-time visualization of shelf layouts.',
   'Advent Calendar\n\nA holiday-themed project to create shareable, personalized advent calendars.\n\nTech Stack: TypeScript, React.\n\nKey Achievements: Created a dynamic calendar generator, implemented sharing features, and festive UI.',
   'LED Cube Web Interface\n\nA tool to help create animations for an 8x8x8 LED Cube using React and Arduino via serial connection.\n\nTech Stack: JavaScript, React, Arduino.\n\nKey Achievements: Built a web interface for animation design, enabled serial communication with hardware.',
-  'Bookends Marketplace\n\nA pioneering platform for content creators and the film industry to buy and sell post-production materials and equipment, promoting a more sustainable approach to production.\n\nTech Stack: Built with Next.js, Tailwind CSS, React Native, Firebase, Node.js, and Stripe.\n\nKey Achievements: Developed the primary React Native app, implemented a robust backend, integrated Stripe for seamless payments, added bulk upload and posting capabilities to help vendors quickly post inventory from other tools.',
   'Rubber Duckie\n\nA fun and interactive app that helps developers debug their code by explaining it to a virtual rubber duck.\n\nTech Stack: Built with React, TypeScript, making use of a local LLM as a backend running on LLM studio, can also be used with  the ChatGPT api.\n\nKey Achievements: Developed the app from scratch, implemented speech recognition for user input, implemented speech synthesis for computer response as well as manuel user input and computer response in writing. All images are AI generated. User can choose a Rubber Duck and background style.',
   'Pomodoro Timer\n\nA productivity app that helps users manage their time effectively by breaking work into intervals with short breaks in between.\n\nTech Stack: Built with React, TypeScript, and CSS.\n\nKey Achievements: Developed the app from scratch, implemented a timer, dynamic timer favicon, a dynamic title displaying the timer in the browser tab, the background progressively rises as a visual indicator of passing time. In the settings users can set the length for the focus and break sessions, as well as drop a link for Soundcloud player that plays hidden in the background for a personalized focus soundtrack.',
   "Spelling Bee Prep App\n\nThis passion project is the result of a conversation with my elementary age daughter who recently came home and said she wants to win her class's next year’s spelling bee. As a parent I do not always have the time to sit down and practice with her the way she may need it to reach her goal. So, I thought I should be able to do something about this. My goal is to create an app that will allow my daughter to practice as the app (device) reads the words out loud using speech synthesis and allows her to spell the word back.",
@@ -24,10 +25,11 @@ const work = [
 ]
 
 const links = [
-  'https://fire-pit-planning-tool.vercel.app/', 
-  'https://doorly-advent.vercel.app/', 
-  '', // ledCubeWebInterface (no live link)
   'https://bookendsmarketplace.com/',
+  'https://fire-pit-planning-tool.vercel.app/',
+  'https://spot-on-shelves.netlify.app/',
+  'https://doorly-advent.vercel.app/',
+  'https://3d-led-cube-programmer.netlify.app/',
   '',
   '',
   'https://spelling-bee-practice-app.netlify.app/',
@@ -49,10 +51,11 @@ const links = [
 ]
 
 const repositories = [
+  'https://github.com/MrJanHorak/bookendsPromoWeb',
   'https://github.com/MrJanHorak/fire-pit-planning-tool',
+  'https://github.com/MrJanHorak/spotOnShelves',
   'https://github.com/MrJanHorak/adventCalendar',
   'https://github.com/MrJanHorak/ledCubeWebInterface',
-  'https://github.com/MrJanHorak/bookendsPromoWeb',
   'https://github.com/MrJanHorak/rubber-duckie',
   'https://github.com/MrJanHorak/pomodoro-timer',
   'https://github.com/MrJanHorak/spelling-bee-practice-tool',
@@ -74,10 +77,54 @@ const repositories = [
 ]
 
 const projectPics = [
-  { type: 'single', images: ['./projectImages/firepit/firepit1.png'] },
-  { type: 'single', images: ['./projectImages/adventCalendar/advent1.png'] },
-  { type: 'single', images: ['./projectImages/ledCube/ledcube1.png'] },
-  { type: 'mobile', images: ['./bookendspromo2.PNG'] },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/bookendsMarketplace/bookends1.jpg',
+      './projectImages/bookendsMarketplace/bookends2.jpg',
+      './projectImages/bookendsMarketplace/bookends3.jpg',
+      './projectImages/bookendsMarketplace/bookends4.jpg',
+      './projectImages/bookendsMarketplace/bookends5.jpg',
+      './projectImages/bookendsMarketplace/bookends6.jpg',
+      './projectImages/bookendsMarketplace/bookends7.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/firepitPlanner/firepit1.jpg',
+      './projectImages/firepitPlanner/firepit2.jpg',
+      './projectImages/firepitPlanner/firepit3.jpg',
+      './projectImages/firepitPlanner/firepit4.jpg',
+      './projectImages/firepitPlanner/firepit5.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/spotOnShelves/spoton1.jpg',
+      './projectImages/spotOnShelves/spoton2.jpg',
+      './projectImages/spotOnShelves/spoton3.jpg',
+      './projectImages/spotOnShelves/spoton4.jpg',
+      './projectImages/spotOnShelves/spoton5.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/doorlyAdvent/doorly1.jpg',
+      './projectImages/doorlyAdvent/doorly2.jpg',
+      './projectImages/doorlyAdvent/doorly3.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/ledCube/ledCube.jpg',
+      './projectImages/ledCube/ledCube1.jpg',
+      './projectImages/ledCube/ledCube2.jpg'
+    ]
+  },
   {
     type: 'multiple',
     images: [

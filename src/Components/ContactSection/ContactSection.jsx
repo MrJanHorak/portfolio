@@ -19,7 +19,7 @@ const ContactSection = () => {
     // Create mailto link
     const subject = `Portfolio Contact from ${formData.name}`
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
-    window.location.href = `mailto:jan.horak.dev@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:jan-horak@gmx.de?subject=${subject}&body=${body}`
   }
 
   return (
@@ -42,8 +42,8 @@ const ContactSection = () => {
               <span className="contact-icon">📧</span>
               <div>
                 <h4>Email</h4>
-                <a href="mailto:jan.horak.dev@gmail.com">
-                  jan.horak.dev@gmail.com
+                <a href="mailto: jan-horak@gmx.de">
+                  jan-horak@gmx.de
                 </a>
               </div>
             </div>
@@ -53,7 +53,7 @@ const ContactSection = () => {
               <div>
                 <h4>LinkedIn</h4>
                 <a
-                  href="https://www.linkedin.com/in/jan-horak-33bb3280/"
+                  href="https://www.linkedin.com/in/jan-horak/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

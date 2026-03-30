@@ -25,7 +25,7 @@ const AboutSection = () => {
 
             <div className="resume-download">
               <a
-                href="/Horak Resume.pdf"
+                href="/Jan-Horak-Resume-2026.pdf"
                 className="cta-button"
                 target="_blank"
                 rel="noopener noreferrer"

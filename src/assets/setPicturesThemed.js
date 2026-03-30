@@ -1,5 +1,3 @@
-import { cloneElement } from "react";
-
 function setPicturesThemed(colorScheme) {
 
   // Clean up all existing picture sources that were cloned

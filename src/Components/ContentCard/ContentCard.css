@@ -1,0 +1,164 @@
+/* Existing styles */
+
+.slider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px;
+  padding: 20px;
+  background: var(--carousel-background1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card-left {
+  flex-direction: row;
+}
+
+.card-right {
+  flex-direction: row-reverse;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  position: relative;
+  width: 250px;
+  height: auto;
+}
+
+.image-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; 
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.project-image.multiple {
+  width: 100%;
+}
+
+.project-image.single {
+  max-height: 400px;
+  width: 250px;
+}
+
+.project-image.mobile {
+  max-height: 430px;
+  width: auto;
+  margin-left: 20px;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-image.fade-out {
+  opacity: 0;
+}
+
+.project-image:hover {
+  transform: translateY(-10px);
+  z-index: 2;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-info p {
+  margin: 0;
+  font-weight: normal;
+  color: var(--font-color);
+  white-space: pre-wrap;
+}
+
+.card-info a {
+  margin: 0;
+  font-weight: normal;
+  color: var(--font-color);
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 70vh;
+  border-radius: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}

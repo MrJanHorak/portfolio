@@ -1,9 +1,16 @@
 const work = [
-  "Bookends Marketplace\n\nA pioneering platform for content creators and the film industry to buy and sell post-production materials and equipment, promoting a more sustainable approach to production.\n\nTech Stack: Built with Next.js, Tailwind CSS, React Native, Firebase, Node.js, and Stripe.\n\nKey Achievements: Developed the primary React Native app, implemented a robust backend, and integrated Stripe for seamless payments.",
-  "Rubber Duckie\n\nA fun and interactive app that helps developers debug their code by explaining it to a virtual rubber duck.\n\nTech Stack: Built with React, TypeScript, making use of a local LLM as a backend running on LLM studio, can also be used with  the ChatGPT api.\n\nKey Achievements: Developed the app from scratch, implemented speech recognition for user input, implemented speech synthesis for computer response as well as manuel user input and computer response in writing. All images are AI generated. User can choose a Rubber Duck and background style.",
-  "Pomodoro Timer\n\nA productivity app that helps users manage their time effectively by breaking work into intervals with short breaks in between.\n\nTech Stack: Built with React, TypeScript, and CSS.\n\nKey Achievements: Developed the app from scratch, implemented a timer, dynamic timer favicon, a dynamic title displaying the timer in the browser tab, the background progressively rises as a visual indicator of passing time. In the settings users can set the length for the focus and break sessions, as well as drop a link for Soundcloud player that plays hidden in the background for a personalized focus soundtrack.",
+  'Bookends Marketplace\n\nA pioneering platform for content creators and the film industry to buy and sell post-production materials and equipment, promoting a more sustainable approach to production. Live marketplace on the web and on Google Play and Apple App store.\n\nTech Stack: Built with Next.js, Tailwind CSS, React Native, Firebase, Node.js, and Stripe.\n\nKey Achievements: Developed the primary React Native app, implemented a robust backend, integrated Stripe for seamless payments, added bulk upload and posting capabilities to help vendors quickly post inventory from other tools.',
+  'Fire Pit Planning Tool\n\nA fun little afternoon project to help plan, improve and implement another fun afternoon project that should help me enjoy some evenings better.\n\nTech Stack: TypeScript, React.\n\nKey Achievements: Built a UI for planning, implemented calculations and visualizations for fire pit design.',
+  'Spot on Shelves\n\nA web app to help users track and visualize the placement of products on store shelves.\n\nTech Stack: React, TypeScript, Node.js, Express, MongoDB.\n\nKey Achievements: Built a user-friendly interface for shelf management, implemented drag-and-drop product placement, and provided real-time visualization of shelf layouts.',
+  'Advent Calendar\n\nA holiday-themed project to create shareable, personalized advent calendars.\n\nTech Stack: TypeScript, React.\n\nKey Achievements: Created a dynamic calendar generator, implemented sharing features, and festive UI.',
+  'LED Cube Web Interface\n\nA tool to help create animations for an 8x8x8 LED Cube using React and Arduino via serial connection.\n\nTech Stack: JavaScript, React, Arduino.\n\nKey Achievements: Built a web interface for animation design, enabled serial communication with hardware.',
+  'Rubber Duckie\n\nA fun and interactive app that helps developers debug their code by explaining it to a virtual rubber duck.\n\nTech Stack: Built with React, TypeScript, making use of a local LLM as a backend running on LLM studio, can also be used with  the ChatGPT api.\n\nKey Achievements: Developed the app from scratch, implemented speech recognition for user input, implemented speech synthesis for computer response as well as manuel user input and computer response in writing. All images are AI generated. User can choose a Rubber Duck and background style.',
+  'Pomodoro Timer\n\nA productivity app that helps users manage their time effectively by breaking work into intervals with short breaks in between.\n\nTech Stack: Built with React, TypeScript, and CSS.\n\nKey Achievements: Developed the app from scratch, implemented a timer, dynamic timer favicon, a dynamic title displaying the timer in the browser tab, the background progressively rises as a visual indicator of passing time. In the settings users can set the length for the focus and break sessions, as well as drop a link for Soundcloud player that plays hidden in the background for a personalized focus soundtrack.',
   "Spelling Bee Prep App\n\nThis passion project is the result of a conversation with my elementary age daughter who recently came home and said she wants to win her class's next year’s spelling bee. As a parent I do not always have the time to sit down and practice with her the way she may need it to reach her goal. So, I thought I should be able to do something about this. My goal is to create an app that will allow my daughter to practice as the app (device) reads the words out loud using speech synthesis and allows her to spell the word back.",
-  '3 in 1 Word Puzzle Solving Helpers\n\nThis set of three distinct projects grew out of the Letter Boxed Solver project, which was the first of these three tools. My 8th grade son was always finding better words to solve the New York times word puzzle than I, so I came up with an app to help me find possible solutions. After that I created the Spelling Bee helper, and finally a Wordle Solution helper. Each of these apps uses React, there is no backend and each has a unique algorithm to help find the solution. These were fun projects to practice CSS. After completing them all I wrapped them up in a nav bar linking to each site and gave each one a light and dark mode.',
+  'NYT Letter Boxed Solver\n\nThis set of three distinct projects grew out of the Letter Boxed Solver project, which was the first of these three tools. My 8th grade son was always finding better words to solve the New York times word puzzle than I, so I came up with an app to help me find possible solutions. After that I created the Spelling Bee helper, and finally a Wordle Solution helper. Each of these apps uses React, there is no backend and each has a unique algorithm to help find the solution. These were fun projects to practice CSS. After completing them all I wrapped them up in a nav bar linking to each site and gave each one a light and dark mode.',
+  'NYT Spelling Bee Solver\n\nThis set of three distinct projects grew out of the Letter Boxed Solver project, which was the first of these three tools. My 8th grade son was always finding better words to solve the New York times word puzzle than I, so I came up with an app to help me find possible solutions. After that I created the Spelling Bee helper, and finally a Wordle Solution helper. Each of these apps uses React, there is no backend and each has a unique algorithm to help find the solution. These were fun projects to practice CSS. After completing them all I wrapped them up in a nav bar linking to each site and gave each one a light and dark mode.',
+  'NYT Wordle Helper\n\nThis set of three distinct projects grew out of the Letter Boxed Solver project, which was the first of these three tools. My 8th grade son was always finding better words to solve the New York times word puzzle than I, so I came up with an app to help me find possible solutions. After that I created the Spelling Bee helper, and finally a Wordle Solution helper. Each of these apps uses React, there is no backend and each has a unique algorithm to help find the solution. These were fun projects to practice CSS. After completing them all I wrapped them up in a nav bar linking to each site and gave each one a light and dark mode.',
+  'NYT Strands Helper\n\nThis set of three distinct projects grew out of the Letter Boxed Solver project, which was the first of these three tools. My 8th grade son was always finding better words to solve the New York times word puzzle than I, so I came up with an app to help me find possible solutions. After that I created the Spelling Bee helper, and finally a Wordle Solution helper. Each of these apps uses React, there is no backend and each has a unique algorithm to help find the solution. These were fun projects to practice CSS. After completing them all I wrapped them up in a nav bar linking to each site and gave each one a light and dark mode.',
   'FRY Word Diagnosis Tool\n\nThis app will start as a simple one to help track student acquisition of the first 300 Fry sight words.  Teachers for students in grades K-3 will be able to use the app to track the skill acquisition of individual students and print learning lists per student or for a group of students.  Words themselves will be categorized in order of frequency of occurrence in written text, as well as by regularity of spelling and included spelling patterns, so that teachers can choose word lists for instruction based on those useful characteristics.  Flashcards or word lists for groups or individual students may be printed for teacher reference. Later versions of the app may include research-supported instruction and games that include responsive feedback and track student progress for the teacher.',
   'Bridge\n\n An environmental and climate oriented social app to share, learn and communicate about climate change related topics. This decoupled MERN app is from a 3-day hackathon in a cross functional team. I worked on the backend data models, routes, controllers and implemented the frontend services, AWS S3 upload, CSS and submission form for forum posts.',
   'ea$e\n\nA personal finance app to help track spending, set goals and save money. This decoupled MERN app is from a 3-day hackathon in a cross functional team. I worked on the backend data models, routes, controllers and implemented the frontend logic for the dashboard.',
@@ -19,10 +26,17 @@ const work = [
 
 const links = [
   'https://bookendsmarketplace.com/',
+  'https://fire-pit-planning-tool.vercel.app/',
+  'https://spot-on-shelves.netlify.app/',
+  'https://doorly-advent.vercel.app/',
+  'https://3d-led-cube-programmer.netlify.app/',
   '',
   '',
   'https://spelling-bee-practice-app.netlify.app/',
+  'https://letter-boxed-solver.netlify.app/',
+  'https://spelling-bee-word-puzzle-solver.netlify.app/',
   'https://wordle-solving-helper.netlify.app/',
+  'https://nyt-strands-solver.netlify.app/',
   '',
   'https://bridge-climate-app.netlify.app/',
   'https://frontend-nine-tawny.vercel.app/',
@@ -38,10 +52,17 @@ const links = [
 
 const repositories = [
   'https://github.com/MrJanHorak/bookendsPromoWeb',
+  'https://github.com/MrJanHorak/fire-pit-planning-tool',
+  'https://github.com/MrJanHorak/spotOnShelves',
+  'https://github.com/MrJanHorak/adventCalendar',
+  'https://github.com/MrJanHorak/ledCubeWebInterface',
   'https://github.com/MrJanHorak/rubber-duckie',
   'https://github.com/MrJanHorak/pomodoro-timer',
   'https://github.com/MrJanHorak/spelling-bee-practice-tool',
   'https://github.com/MrJanHorak/wordle-solution-helper',
+  'https://github.com/RunningTest/spelling-bee-puzzle-solver',
+  'https://github.com/MrJanHorak/wordle-solution-helper',
+  'https://github.com/MrJanHorak/nyt_strands_solver',
   'https://github.com/MrJanHorak/high-frequency-word-diagnosis-tool',
   'https://github.com/International-Aid-Hackathon-Team-7/frontend',
   'https://github.com/MrJanHorak/frontend',
@@ -56,22 +77,108 @@ const repositories = [
 ]
 
 const projectPics = [
-  './bookendspromo2.PNG',
-  './projectImages/rubberDuck5.png',
-  './projectImages/pomodoro3.png',
-  './passionProjects/spellingbeeappanimated.gif',
-  './passionProjects/word-puzzle-helpers.gif',
-  './passionProjects/sightWords.jpg',
-  './bridgeApp.gif',
-  './ease.gif',
-  './stickyNoteSamp.gif',
-  './homeCookedSamp.gif',
-  './junctionAppSamp.gif',
-  './invadersfromspace.gif',
-  './projectImages/snake1.png',
-  './battleshipSamp.gif',
-  './MindMaster.gif',
-  './tictactoeSamp.gif'
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/bookendsMarketplace/bookends1.jpg',
+      './projectImages/bookendsMarketplace/bookends2.jpg',
+      './projectImages/bookendsMarketplace/bookends3.jpg',
+      './projectImages/bookendsMarketplace/bookends4.jpg',
+      './projectImages/bookendsMarketplace/bookends5.jpg',
+      './projectImages/bookendsMarketplace/bookends6.jpg',
+      './projectImages/bookendsMarketplace/bookends7.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/firepitPlanner/firepit1.jpg',
+      './projectImages/firepitPlanner/firepit2.jpg',
+      './projectImages/firepitPlanner/firepit3.jpg',
+      './projectImages/firepitPlanner/firepit4.jpg',
+      './projectImages/firepitPlanner/firepit5.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/spotOnShelves/spoton1.jpg',
+      './projectImages/spotOnShelves/spoton2.jpg',
+      './projectImages/spotOnShelves/spoton3.jpg',
+      './projectImages/spotOnShelves/spoton4.jpg',
+      './projectImages/spotOnShelves/spoton5.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/doorlyAdvent/doorly1.jpg',
+      './projectImages/doorlyAdvent/doorly2.jpg',
+      './projectImages/doorlyAdvent/doorly3.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/ledCube/ledCube.jpg',
+      './projectImages/ledCube/ledCube1.jpg',
+      './projectImages/ledCube/ledCube2.jpg'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/rubberDuckie/rubberDuck1.png',
+      './projectImages/rubberDuckie/rubberDuck2.png',
+      './projectImages/rubberDuckie/rubberDuck3.png',
+      './projectImages/rubberDuckie/rubberDuck4.png',
+      './projectImages/rubberDuckie/rubberDuck5.png'
+    ]
+  },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/pomodoro/pomodoro1.png',
+      './projectImages/pomodoro/pomodoro2.png',
+      './projectImages/pomodoro/pomodoro3.png',
+      './projectImages/pomodoro/pomodoro4.png'
+    ]
+  },
+  { type: 'mobile', images: ['./passionProjects/spellingbeeappanimated.gif'] },
+  { type: 'mobile', images: ['./passionProjects/word-puzzle-helpers.gif'] },
+  { type: 'mobile', images: ['./passionProjects/word-puzzle-helpers.gif'] },
+  { type: 'mobile', images: ['./passionProjects/word-puzzle-helpers.gif'] },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/strandsHelper/strands-helper1.png',
+      './projectImages/strandsHelper/strands-helper2.png',
+      './projectImages/strandsHelper/strands-helper3.png',
+      './projectImages/strandsHelper/strands-helper4.png',
+      './projectImages/strandsHelper/strands-helper5.png'
+    ]
+  },
+  { type: 'single', images: ['./passionProjects/sightWords.jpg'] },
+  { type: 'mobile', images: ['./bridgeApp.gif'] },
+  { type: 'mobile', images: ['./ease.gif'] },
+  { type: 'single', images: ['./stickyNoteSamp.gif'] },
+  { type: 'single', images: ['./homeCookedSamp.gif'] },
+  { type: 'single', images: ['./junctionAppSamp.gif'] },
+  { type: 'single', images: ['./invadersfromspace.gif'] },
+  {
+    type: 'multiple',
+    images: [
+      './projectImages/snake/snake1.png',
+      './projectImages/snake/snake2.png',
+      './projectImages/snake/snake3.png',
+      './projectImages/snake/snake4.png'
+      // './projectImages/snake/snake5.png',
+      // './projectImages/snake/snake6.png'
+    ]
+  },
+  { type: 'mobile', images: ['./battleshipSamp.gif'] },
+  { type: 'mobile', images: ['./MindMaster.gif'] },
+  { type: 'single', images: ['./tictactoeSamp.gif'] }
 ]
 
 const passionProjects = [

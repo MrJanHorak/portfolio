@@ -38,11 +38,53 @@ const COMMANDS = [
     action: () => scrollToSection('contact')
   },
   {
+    id: 'open-bookends',
+    label: 'Open Bookends Marketplace',
+    description: 'Launch live marketplace site',
+    keywords: 'bookends marketplace business app demo',
+    action: () => openExternal('https://bookendsmarketplace.com/')
+  },
+  {
+    id: 'open-firepit',
+    label: 'Open Fire Pit Planning Tool',
+    description: 'Launch masonry design planner',
+    keywords: 'firepit fire pit planning tool app demo',
+    action: () => openExternal('https://fire-pit-planning-tool.vercel.app/')
+  },
+  {
+    id: 'open-spot-on-shelves',
+    label: 'Open Spot on Shelves',
+    description: 'Launch shelf layout planning app',
+    keywords: 'spoton spot on shelves layout planner app demo',
+    action: () => openExternal('https://spot-on-shelves.netlify.app/')
+  },
+  {
+    id: 'open-advent-calendar',
+    label: 'Open Advent Calendar',
+    description: 'Launch Doorly Advent project',
+    keywords: 'advent advently doorly calendar holiday app',
+    action: () => openExternal('https://doorly-advent.vercel.app/')
+  },
+  {
     id: 'open-pacman',
     label: 'Open Pac-Man Clone',
     description: 'Launch live game demo',
     keywords: 'pacman game demo',
     action: () => openExternal('https://pacmanclone.surge.sh/')
+  },
+  {
+    id: 'open-resume',
+    label: 'Open Resume PDF',
+    description: 'View current resume',
+    keywords: 'resume cv download pdf',
+    action: () => openExternal('/Jan-Horak-Resume-2026.pdf')
+  },
+  {
+    id: 'open-portfolio-source',
+    label: 'Open Portfolio Source Code',
+    description: 'View this portfolio repository',
+    keywords: 'portfolio source code repo github',
+    action: () => openExternal('https://github.com/MrJanHorak/portfolio')
   },
   {
     id: 'open-github',

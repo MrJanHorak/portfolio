@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { work, links, repositories, projectPics } from '../../assets/data'
 
 const ProjectsSection = () => {
@@ -42,6 +42,32 @@ const ProjectsSection = () => {
     setSelectedProject(null)
     setModalImageIndex(0)
   }
+
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow
+
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+    }
+  }, [selectedProject])
+
+  useEffect(() => {
+    if (!selectedProject) return undefined
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeProjectModal()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [selectedProject])
 
   return (
     <section id="projects" className="section">
@@ -175,7 +201,7 @@ const ProjectsSection = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link"
+                      className="project-link project-link-primary"
                     >
                       <span>🔗</span> Live Demo
                     </a>
@@ -185,13 +211,14 @@ const ProjectsSection = () => {
                       href={project.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link"
+                      className="project-link project-link-secondary"
                     >
                       <span>📦</span> GitHub
                     </a>
                   )}
                   <button
-                    className="project-link"
+                    type="button"
+                    className="project-link project-link-secondary"
                     onClick={() => openProjectModal(project, project.id)}
                   >
                     <span>ℹ️</span> Details
@@ -221,129 +248,124 @@ const ProjectsSection = () => {
       {/* Project Modal */}
       {selectedProject && (
         <div className="project-modal-overlay" onClick={closeProjectModal}>
-          <div className="project-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeProjectModal}>
+          <div
+            className="project-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-modal-title"
+          >
+            <button
+              type="button"
+              className="modal-close"
+              onClick={closeProjectModal}
+              aria-label="Close project details"
+            >
               ×
             </button>
-            {/* Modal carousel */}
-            {selectedProject.images && selectedProject.images.length > 0 && (
-              <div style={{ position: 'relative', marginBottom: 24 }}>
-                <img
-                  src={selectedProject.images[modalImageIndex]}
-                  alt={selectedProject.title}
-                  style={{
-                    width: '100%',
-                    maxHeight: 350,
-                    objectFit: 'contain',
-                    borderRadius: 8
-                  }}
-                />
-                {selectedProject.images.length > 1 && (
-                  <>
-                    <button
-                      className="carousel-arrow left"
-                      style={{
-                        position: 'absolute',
-                        left: 10,
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        zIndex: 2
-                      }}
-                      onClick={() =>
-                        setModalImageIndex(
-                          (modalImageIndex -
-                            1 +
-                            selectedProject.images.length) %
-                            selectedProject.images.length
-                        )
-                      }
-                      aria-label="Previous image"
-                    >
-                      ◀
-                    </button>
-                    <button
-                      className="carousel-arrow right"
-                      style={{
-                        position: 'absolute',
-                        right: 10,
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        zIndex: 2
-                      }}
-                      onClick={() =>
-                        setModalImageIndex(
-                          (modalImageIndex + 1) % selectedProject.images.length
-                        )
-                      }
-                      aria-label="Next image"
-                    >
-                      ▶
-                    </button>
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: 8,
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        display: 'flex',
-                        gap: 4,
-                        zIndex: 2
-                      }}
-                    >
-                      {selectedProject.images.map((_, i) => (
-                        <span
-                          key={i}
-                          style={{
-                            width: 10,
-                            height: 10,
-                            borderRadius: '50%',
-                            background: i === modalImageIndex ? '#333' : '#ccc',
-                            display: 'inline-block',
-                            cursor: 'pointer'
-                          }}
-                          onClick={() => setModalImageIndex(i)}
-                        />
-                      ))}
-                    </div>
-                  </>
+            <div className="project-modal-layout">
+              {selectedProject.images && selectedProject.images.length > 0 && (
+                <div className="project-modal-media">
+                  <div className="project-modal-image-frame">
+                    <img
+                      src={selectedProject.images[modalImageIndex]}
+                      alt={selectedProject.title}
+                      className="project-modal-image"
+                    />
+                    {selectedProject.images.length > 1 && (
+                      <>
+                        <button
+                          type="button"
+                          className="carousel-arrow left"
+                          onClick={() =>
+                            setModalImageIndex(
+                              (modalImageIndex -
+                                1 +
+                                selectedProject.images.length) %
+                                selectedProject.images.length
+                            )
+                          }
+                          aria-label="Previous image"
+                        >
+                          ◀
+                        </button>
+                        <button
+                          type="button"
+                          className="carousel-arrow right"
+                          onClick={() =>
+                            setModalImageIndex(
+                              (modalImageIndex + 1) %
+                                selectedProject.images.length
+                            )
+                          }
+                          aria-label="Next image"
+                        >
+                          ▶
+                        </button>
+                        <div className="modal-image-dots">
+                          {selectedProject.images.map((_, i) => (
+                            <button
+                              key={i}
+                              type="button"
+                              className={`carousel-dot ${
+                                i === modalImageIndex ? 'active' : ''
+                              }`}
+                              onClick={() => setModalImageIndex(i)}
+                              aria-label={`View screenshot ${i + 1}`}
+                            />
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              <div className="project-modal-content">
+                <h3 id="project-modal-title" className="project-modal-title">
+                  {selectedProject.title}
+                </h3>
+                <p className="project-modal-copy">{selectedProject.description}</p>
+
+                {selectedProject.techStack && (
+                  <div className="project-modal-section">
+                    <h4>Technology Stack</h4>
+                    <p className="project-modal-copy">{selectedProject.techStack}</p>
+                  </div>
                 )}
+
+                {selectedProject.achievements && (
+                  <div className="project-modal-section">
+                    <h4>Key Achievements</h4>
+                    <p className="project-modal-copy">
+                      {selectedProject.achievements}
+                    </p>
+                  </div>
+                )}
+
+                <div className="modal-links">
+                  {selectedProject.link && (
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link project-link-primary"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {selectedProject.repo && (
+                    <a
+                      href={selectedProject.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link project-link-secondary"
+                    >
+                      GitHub Repository
+                    </a>
+                  )}
+                </div>
               </div>
-            )}
-            <h3>{selectedProject.title}</h3>
-            <p>{selectedProject.description}</p>
-            {selectedProject.techStack && (
-              <div>
-                <h4>Technology Stack:</h4>
-                <p>{selectedProject.techStack}</p>
-              </div>
-            )}
-            {selectedProject.achievements && (
-              <div>
-                <h4>Key Achievements:</h4>
-                <p>{selectedProject.achievements}</p>
-              </div>
-            )}
-            <div className="modal-links">
-              {selectedProject.link && (
-                <a
-                  href={selectedProject.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  Live Demo
-                </a>
-              )}
-              {selectedProject.repo && (
-                <a
-                  href={selectedProject.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  GitHub Repository
-                </a>
-              )}
             </div>
           </div>
         </div>

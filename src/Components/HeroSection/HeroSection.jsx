@@ -29,12 +29,6 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="hero-section" ref={heroRef}>
-      <div className="floating-elements">
-        <div className="floating-shape"></div>
-        <div className="floating-shape"></div>
-        <div className="floating-shape"></div>
-      </div>
-
       <div className="hero-content">
         <h1 className="hero-title">Jan Horak</h1>
         <p className="hero-subtitle">

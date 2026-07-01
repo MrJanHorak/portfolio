@@ -7,6 +7,7 @@ import ScrollProgress from './Components/ScrollProgress/ScrollProgress'
 import ParticleSystem from './Components/ParticleSystem/ParticleSystem'
 import ThemeSelector from './Components/ThemeSelector/ThemeSelector'
 import LoadingSpinner from './Components/LoadingSpinner/LoadingSpinner'
+import CommandPalette from './Components/CommandPalette/CommandPalette'
 
 // Lazy load components
 const HeroSection = lazy(() => import('./Components/HeroSection/HeroSection'))
@@ -45,32 +46,26 @@ const THEME_COLORS = {
     accent: '#006db2',
     text: '#222',
     border: '#0093e9'
-  },
-  'dark-original': {
-    primary: '#04456a',
-    secondary: '#48746e',
-    accent: '#8ac19f',
-    text: '#8ac19f',
-    border: '#04456a'
-  },
-  bwLight: {
-    primary: '#333',
-    secondary: '#bbb',
-    accent: '#888',
-    text: '#222',
-    border: '#333'
-  },
-  bwDark: {
-    primary: '#eee',
-    secondary: '#888',
-    accent: '#fff',
-    text: '#eee',
-    border: '#eee'
   }
 }
 
+const AVAILABLE_THEMES = new Set(['light', 'dark', 'light-original'])
+
+const THEME_MIGRATION = {
+  'dark-original': 'dark',
+  bwDark: 'dark',
+  bwLight: 'light'
+}
+
+const normalizeTheme = (theme) => {
+  const migratedTheme = THEME_MIGRATION[theme] || theme
+  return AVAILABLE_THEMES.has(migratedTheme) ? migratedTheme : 'light'
+}
+
 const App = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+  const [theme, setTheme] = useState(() =>
+    normalizeTheme(localStorage.getItem('theme'))
+  )
   const [konamiActivated, setKonamiActivated] = useState(false)
   const [showSecretMessage, setShowSecretMessage] = useState(false)
 
@@ -108,15 +103,26 @@ const App = () => {
 
   // Theme management for all themes
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
+    const normalizedTheme = normalizeTheme(theme)
+
+    if (normalizedTheme !== theme) {
+      setTheme(normalizedTheme)
+      return
+    }
+
+    document.documentElement.setAttribute('data-theme', normalizedTheme)
+    localStorage.setItem('theme', normalizedTheme)
   }, [theme])
 
   return (
     <div className={`App ${konamiActivated ? 'konami-activated' : ''}`}>
       <ScrollProgress />
       <ParticleSystem />
-      <ModernNav theme={theme} logoColors={THEME_COLORS[theme]} />
+      <ModernNav
+        theme={theme}
+        logoColors={THEME_COLORS[theme] || THEME_COLORS.light}
+      />
+      <CommandPalette />
       <ThemeSelector theme={theme} setTheme={setTheme} />
 
       <main>

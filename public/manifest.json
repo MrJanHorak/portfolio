@@ -1,7 +1,7 @@
 {
   "name": "Jan Horak Portfolio",
   "short_name": "JH Portfolio",
-  "description": "Full Stack Developer Portfolio - Jan Horak",
+  "description": "Full Stack Developer portfolio featuring React, TypeScript, Node.js, and interactive project builds by Jan Horak.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fef7f0",

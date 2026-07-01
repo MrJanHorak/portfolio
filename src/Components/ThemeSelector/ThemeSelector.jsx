@@ -16,23 +16,8 @@ const THEMES = [
   },
   {
     key: 'light-original',
-    label: 'Classic Light',
+    label: 'Playful Gradient',
     preview: 'linear-gradient(160deg, #0093e9 0%, #80d0c7 100%)'
-  },
-  {
-    key: 'dark-original',
-    label: 'Classic Dark',
-    preview: 'linear-gradient(160deg, #04456a 0%, #48746e 100%)'
-  },
-  {
-    key: 'bwLight',
-    label: 'B&W Light',
-    preview: 'linear-gradient(135deg, #fff 0%, #eee 100%)'
-  },
-  {
-    key: 'bwDark',
-    label: 'B&W Dark',
-    preview: 'linear-gradient(135deg, #333 0%, #111 100%)'
   }
 ]
 
@@ -50,8 +35,7 @@ export default function ThemeSelector({ theme, setTheme }) {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  const isDark =
-    theme === 'dark' || theme === 'dark-original' || theme === 'bwDark'
+  const isDark = theme === 'dark'
 
   return (
     <div

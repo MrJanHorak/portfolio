@@ -668,6 +668,11 @@ body {
   transition: transform var(--transition-medium);
 }
 
+.project-card picture,
+.project-modal-image-frame picture {
+  display: block;
+}
+
 .project-card:hover .project-image {
   transform: scale(1.05);
 }
@@ -1355,6 +1360,25 @@ body {
   100% {
     transform: translateY(-100px) rotate(360deg);
     opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .particles {
+    display: none;
   }
 }
 

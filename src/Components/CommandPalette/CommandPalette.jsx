@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { getScrollBehavior } from '../../utils/motion'
 
 const COMMANDS = [
   {
@@ -71,7 +72,7 @@ const COMMANDS = [
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId)
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    element.scrollIntoView({ behavior: getScrollBehavior(), block: 'start' })
   }
 }
 

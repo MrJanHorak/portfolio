@@ -1,5 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { work, links, repositories, projectPics } from '../../assets/data'
+
+const WEBP_COMPATIBLE_EXT = /\.(png|jpe?g)$/i
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+
+const getWebpSource = (imagePath = '') => {
+  if (!WEBP_COMPATIBLE_EXT.test(imagePath)) return null
+  return imagePath.replace(WEBP_COMPATIBLE_EXT, '.webp')
+}
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -10,6 +19,8 @@ const ProjectsSection = () => {
   )
   // Track image index for modal
   const [modalImageIndex, setModalImageIndex] = useState(0)
+  const modalRef = useRef(null)
+  const previousFocusedElementRef = useRef(null)
 
   // All projects
   const allProjects = work.map((project, index) => {
@@ -32,16 +43,21 @@ const ProjectsSection = () => {
 
   // Show 6 or all
   const displayedProjects = showAll ? allProjects : allProjects.slice(0, 6)
+  const modalImage = selectedProject?.images?.[modalImageIndex] || ''
+  const modalImageWebp = getWebpSource(modalImage)
 
   const openProjectModal = (project, idx) => {
+    if (document.activeElement instanceof HTMLElement) {
+      previousFocusedElementRef.current = document.activeElement
+    }
     setSelectedProject(project)
     setModalImageIndex(imageIndexes[idx] || 0)
   }
 
-  const closeProjectModal = () => {
+  const closeProjectModal = useCallback(() => {
     setSelectedProject(null)
     setModalImageIndex(0)
-  }
+  }, [])
 
   useEffect(() => {
     const originalOverflow = document.body.style.overflow
@@ -53,21 +69,72 @@ const ProjectsSection = () => {
     return () => {
       document.body.style.overflow = originalOverflow
     }
-  }, [selectedProject])
+  }, [selectedProject, closeProjectModal])
 
   useEffect(() => {
-    if (!selectedProject) return undefined
+    if (selectedProject) return
+
+    if (previousFocusedElementRef.current) {
+      previousFocusedElementRef.current.focus()
+    }
+  }, [selectedProject, closeProjectModal])
+
+  useEffect(() => {
+    if (!selectedProject || !modalRef.current) return undefined
+
+    const modalElement = modalRef.current
+
+    const getFocusableElements = () =>
+      Array.from(modalElement.querySelectorAll(FOCUSABLE_SELECTOR))
+
+    const initialFocusable = getFocusableElements()[0]
+    if (initialFocusable) {
+      initialFocusable.focus()
+    } else {
+      modalElement.focus()
+    }
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
+        event.preventDefault()
         closeProjectModal()
+        return
+      }
+
+      if (event.key !== 'Tab') return
+
+      const focusableElements = getFocusableElements()
+
+      if (focusableElements.length === 0) {
+        event.preventDefault()
+        modalElement.focus()
+        return
+      }
+
+      const firstElement = focusableElements[0]
+      const lastElement = focusableElements[focusableElements.length - 1]
+      const activeElement = document.activeElement
+
+      if (event.shiftKey) {
+        if (activeElement === firstElement || activeElement === modalElement) {
+          event.preventDefault()
+          lastElement.focus()
+        }
+        return
+      }
+
+      if (activeElement === lastElement) {
+        event.preventDefault()
+        firstElement.focus()
       }
     }
 
-    window.addEventListener('keydown', handleKeyDown)
+    modalElement.addEventListener('keydown', handleKeyDown)
 
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [selectedProject])
+    return () => {
+      modalElement.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [selectedProject, closeProjectModal])
 
   return (
     <section id="projects" className="section">
@@ -77,19 +144,27 @@ const ProjectsSection = () => {
       </p>
 
       <div className="projects-grid">
-        {displayedProjects.map((project, idx) => {
+        {displayedProjects.map((project) => {
           const currentImageIdx = imageIndexes[project.id] || 0
           const images = project.images
           const currentImage = images[currentImageIdx]
+          const currentImageWebp = getWebpSource(currentImage)
           return (
             <div key={project.id} className="project-card">
               {images.length > 0 && (
                 <div style={{ position: 'relative' }}>
-                  <img
-                    src={currentImage}
-                    alt={project.title}
-                    className="project-image"
-                  />
+                  <picture>
+                    {currentImageWebp && (
+                      <source srcSet={currentImageWebp} type="image/webp" />
+                    )}
+                    <img
+                      src={currentImage}
+                      alt={project.title}
+                      className="project-image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                   {images.length > 1 && (
                     <>
                       <button
@@ -250,10 +325,12 @@ const ProjectsSection = () => {
         <div className="project-modal-overlay" onClick={closeProjectModal}>
           <div
             className="project-modal"
+            ref={modalRef}
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-modal-title"
+            tabIndex={-1}
           >
             <button
               type="button"
@@ -267,11 +344,18 @@ const ProjectsSection = () => {
               {selectedProject.images && selectedProject.images.length > 0 && (
                 <div className="project-modal-media">
                   <div className="project-modal-image-frame">
-                    <img
-                      src={selectedProject.images[modalImageIndex]}
-                      alt={selectedProject.title}
-                      className="project-modal-image"
-                    />
+                    <picture>
+                      {modalImageWebp && (
+                        <source srcSet={modalImageWebp} type="image/webp" />
+                      )}
+                      <img
+                        src={modalImage}
+                        alt={selectedProject.title}
+                        className="project-modal-image"
+                        loading="eager"
+                        decoding="async"
+                      />
+                    </picture>
                     {selectedProject.images.length > 1 && (
                       <>
                         <button

@@ -1,15 +1,11 @@
 import React, { useEffect, useRef } from 'react'
+import { prefersReducedMotion } from '../../utils/motion'
 
 const ParticleSystem = () => {
   const particlesRef = useRef(null)
 
   useEffect(() => {
-    const prefersReducedMotion =
-      typeof window !== 'undefined' &&
-      typeof window.matchMedia === 'function' &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion()) {
       return undefined
     }
 

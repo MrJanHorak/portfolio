@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { getScrollBehavior } from '../../utils/motion'
 
 const HeroSection = () => {
   const heroRef = useRef(null)
@@ -22,7 +23,7 @@ const HeroSection = () => {
 
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({
-      behavior: 'smooth',
+      behavior: getScrollBehavior(),
       block: 'start'
     })
   }

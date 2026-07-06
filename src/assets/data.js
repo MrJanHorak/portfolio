@@ -32,7 +32,7 @@ const links = [
   'https://doorly-advent.vercel.app/',
   'https://3d-led-cube-programmer.netlify.app/',
   '',
-  '',
+  'https://focus-music-timer.netlify.app/',
   'https://spelling-bee-practice-app.netlify.app/',
   'https://letter-boxed-solver.netlify.app/',
   'https://spelling-bee-word-puzzle-solver.netlify.app/',
@@ -53,9 +53,9 @@ const links = [
 ]
 
 const repositories = [
-  'https://github.com/MrJanHorak/bookendsPromoWeb',
-  'https://github.com/MrJanHorak/fire-pit-planning-tool',
   '',
+  'https://github.com/MrJanHorak/fire-pit-planning-tool',
+  'https://github.com/MrJanHorak/spotOnShelves',
   'https://github.com/MrJanHorak/adventCalendar',
   'https://github.com/MrJanHorak/ledCubeWebInterface',
   'https://github.com/MrJanHorak/rubber-duckie',
